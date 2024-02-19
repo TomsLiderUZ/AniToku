@@ -15,81 +15,6 @@ body{
 }
 
 
-.NotFundBg{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: rgb(20, 20, 20);
-    z-index: 900;
-    overflow: hidden;
-}
-.NotFundBg .NotFundIcon{
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 120px;
-    font-family: sans-serif;
-    font-weight: 1000;
-    letter-spacing: 8px;
-    cursor: default;
-    margin-top: 6%;
-}
-.NotFundBg .NotFundText{
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    color: white;
-    font-size: 50px;
-    font-family: sans-serif;
-    letter-spacing: 8px;
-    cursor: default;
-    margin-top: -8%;
-}
-.NotFundBg .NotFundTextBtnBg{
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    color: white;
-    font-size: 20px;
-    font-family: sans-serif;
-    letter-spacing: 2px;
-    cursor: default;
-    margin-top: -8%;
-}
-.NotFundBg .NotFundTextBtn{
-    width: 20%;
-    height: 30%;
-    border: 3px solid white;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 0 0 0 20px;
-    box-sizing: border-box;
-    cursor: pointer;
-    border-radius: 10px;
-    font-weight: 600;
-    transition: 0.2s all;
-}
-.NotFundBg .NotFundTextBtn:hover{
-    background-color: white;
-    color: red;
-    transition: 0.2s all;
-}
-.NotFundBg .fa-bounce{
-    color: red;
-}
 
 
 .navBarBg{
@@ -116,13 +41,12 @@ body{
     cursor: pointer;
     /* background-color: aqua; */
     margin-left: 30px;
+    text-decoration: none;
 }
 .navBarLogo .fa-feather-pointed{
     color: red;
     font-size: 35px;
 }
-
-
 
 .navBarMenus{
     color: white;
@@ -152,7 +76,21 @@ body{
     margin-right: 10px;
     color: white;
     text-decoration: none;
+    animation: JoinAnimatoinNavMenuOwn 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
+@keyframes JoinAnimatoinNavMenuOwn {
+    0% {
+        opacity: 0;
+        margin-top: -30%;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+  }
+
+
 .navBarMenuItemNotOwn{
     height: 60%;
     width: 25%;
