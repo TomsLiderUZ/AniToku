@@ -1,7 +1,17 @@
+let navBarMenu_1 = "Home"
+let navBarMenu_2 = "Genres"
+let navBarMenu_3 = "Subscriptions"
+document.querySelector(".navBarLogo").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
+
+
+
+
 if (location.href.endsWith("index.html")) {
-    location = "?=Home"
-}else if (location.href.endsWith("?=Home")) {
+    location = `http://${location.host}/?=${navBarMenu_1}`
+}else if (location.href.endsWith(`?=${navBarMenu_1}`)) {
     location.reload
+    document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?=${navBarMenu_2}`);
+    document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?=${navBarMenu_3}`);
     document.querySelector(".navBarMenuItem_1").removeAttribute("href");
     document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemOwn")
     document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemNotOwn")
@@ -10,8 +20,10 @@ if (location.href.endsWith("index.html")) {
     document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn")
     document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn")
     document.querySelector("title").innerHTML = "AkokitoMedia - Asosiy"
-}else if (location.href.endsWith("?=Genres")) {
+}else if (location.href.endsWith(`?=${navBarMenu_2}`)) {
     location.reload
+    document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
+    document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?=${navBarMenu_3}`);
     document.querySelector(".navBarMenuItem_2").removeAttribute("href");
     document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemOwn")
     document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemNotOwn")
@@ -21,8 +33,10 @@ if (location.href.endsWith("index.html")) {
     document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn")
 
     document.querySelector("title").innerHTML = "AkokitoMedia - Janrlar"
-}else if (location.href.endsWith("?=Subscriptions")) {
+}else if (location.href.endsWith(`?=${navBarMenu_3}`)) {
     location.reload
+    document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
+    document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?=${navBarMenu_2}`);
     document.querySelector(".navBarMenuItem_3").removeAttribute("href");
     document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemOwn")
     document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemNotOwn")
@@ -131,12 +145,12 @@ if (location.href.endsWith("index.html")) {
     </div>
         `
         document.querySelector("title").innerHTML = "404 Not Fund"
-        console.warn("404 Not Fund \n\n"+`🔶Back to Home🔶 \nhttp://${location.host}/?=Home`)
+        console.warn("404 Not Fund \n\n"+`🔶Back to Home🔶 \nhttp://${location.host}/?=${navBarMenu_1}`)
         document.querySelector(".NotFundTextBtn").addEventListener("click", ()=>{
-            location = `http://${location.host}/?=Home`
+            location = `http://${location.host}/?=${navBarMenu_1}`
         })
     } else {
-        location = `http://${location.host}/?=Home`
+        location = `http://${location.host}/?=${navBarMenu_1}`
     }
 }
 
