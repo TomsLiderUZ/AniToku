@@ -1,0 +1,238 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+
+.NotFundBg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(20, 20, 20);
+    z-index: 900;
+    overflow: hidden;
+}
+.NotFundBg .NotFundIcon{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 120px;
+    font-family: sans-serif;
+    font-weight: 1000;
+    letter-spacing: 8px;
+    cursor: default;
+    margin-top: 6%;
+}
+.NotFundBg .NotFundText{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    color: white;
+    font-size: 50px;
+    font-family: sans-serif;
+    letter-spacing: 8px;
+    cursor: default;
+    margin-top: -8%;
+}
+.NotFundBg .NotFundTextBtnBg{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    cursor: default;
+    margin-top: -8%;
+}
+.NotFundBg .NotFundTextBtn{
+    width: 20%;
+    height: 30%;
+    border: 3px solid white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 0 0 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.2s all;
+}
+.NotFundBg .NotFundTextBtn:hover{
+    background-color: white;
+    color: red;
+    transition: 0.2s all;
+}
+.NotFundBg .fa-bounce{
+    color: red;
+}
+
+
+.navBarBg{
+    width: 100%;
+    height: 12%;
+    background-color: black;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 500;
+}
+.navBarLogo{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 550;
+    cursor: pointer;
+    /* background-color: aqua; */
+    margin-left: 30px;
+}
+.navBarLogo .fa-feather-pointed{
+    color: red;
+    font-size: 35px;
+}
+
+
+
+.navBarMenus{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: sans-serif;
+    /* background-color: green; */
+    margin-left: 110px;
+}
+
+.navBarMenuItemOwn{
+    height: 60%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    border-radius: 10px;
+    background-color: red;
+    transition: 0.2s all;
+    border-bottom: 3px solid transparent;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+.navBarMenuItemNotOwn{
+    height: 60%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s all;
+    border-bottom: 3px solid transparent;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.navBarMenuItemNotOwn:hover{
+    border-color: white;
+    transition: 0.2s all;
+}
+
+
+
+.navBarUnicalMenus{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 16%;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: sans-serif;
+    /* background-color: purple; */
+    margin-left: 10px;
+}
+
+.navBarUnicalMenuItem{
+    height: 55px;
+    width: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: 0.2s all;
+    background-color: red;
+}
+
+.navBarUnicalMenuItem:hover{
+    background-color: white;
+    color: red;
+    transition: 0.2s all;
+}
+
+
+
+
+.contentsBg{
+    width: 100%;
+    height: 88%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.932);
+    color: whitesmoke;
+    overflow: auto;
+}
+.contentsBg::-webkit-scrollbar {
+    width: 8px;
+} 
+.contentsBg::-webkit-scrollbar-track {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: transparent;
+}  
+.contentsBg::-webkit-scrollbar-thumb {
+    background: black;  
+    transition: 1s all;
+    height: 10px;
+}
+.contentsBg::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;    
+    background: gray; 
+}
