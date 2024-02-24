@@ -1,0 +1,22 @@
+{
+    "AnimeNames":{
+        "1": "Buyuk Daydi Itlar",
+        "2": "Tokyo Qasoskorlari",
+        "3": "Bu Dunyo"
+    },
+    "AnimeVideos":{
+        "1": "../AnimeVide/Buyuk_Daydi_Itlar.mp3",
+        "2": "../AnimeVide/Tokyo_Qasoskorlari.mp3",
+        "3": "../AnimeVide/Bu_Dunyo.mp3"
+    },
+    "AnimeImgs":{
+        "1": "../AnimeVide/Buyuk_Daydi_Itlar.jpg",
+        "2": "../AnimeVide/Tokyo_Qasoskorlari.jpg",
+        "3": "../AnimeVide/Bu_Dunyo.jpg"
+    },
+    "AnimeAbout":{
+        "1": "Hulas Bilmeman",
+        "2": "1 ta Takemichidigan yig'loqi bor edi",
+        "3": "Bita qayta tug'ilgan o'g'irlash qoblyatiga ega tursik yechar bo'gan ekan"
+    }
+}
