@@ -29,7 +29,7 @@ let setContentHomePage = `
 let contentCaruselPageNext = 1;
 let contentCaruselPageClicked = true
 setInterval(() => {
-    contentCaruselPageNext += 1
+    // contentCaruselPageNext += 1
 }, 10000);
 
 document.querySelector(".contentCaruselPageNumber_1").addEventListener("click", ()=>{
@@ -50,7 +50,6 @@ document.querySelector(".contentCaruselPageNumber_5").addEventListener("click", 
 document.querySelector(".contentCaruselPageNumber_6").addEventListener("click", ()=>{
     contentCaruselPageNext = 6;
 });
-
 document.querySelector(".contentCaruselPageNextBtnBg").addEventListener("click", ()=>{
     if (contentCaruselPageClicked === true) {
         contentCaruselPageClicked = false
@@ -75,6 +74,9 @@ setInterval(() => {
             contentCaruselPageNext = 6;
             break;
         case 1:
+            setTimeout(() => {
+                document.querySelector(".contentCaruselBg").style.backgroundImage = `url("https://i.pinimg.com/originals/cb/4e/79/cb4e79665378231ae9de235fa4767696.jpg")`
+            }, 300);
             document.querySelector(".contentCaruselPage_1").classList.add("contentCaruselPageOwn")
             document.querySelector(".contentCaruselPage_1").classList.remove("contentCaruselPageNotOwn")
     
@@ -97,6 +99,9 @@ setInterval(() => {
             document.querySelector(".contentCaruselPageNumber_6").classList.remove("contentCaruselPageNumberOwn")
             break;
         case 2:
+        setTimeout(() => {
+            document.querySelector(".contentCaruselBg").style.backgroundImage = `url("https://mobimg.b-cdn.net/v3/fetch/1b/1b6ea69b908d07301dab0b81f1c3812c.jpeg")`
+        }, 300);
         document.querySelector(".contentCaruselPage_2").classList.add("contentCaruselPageOwn")
         document.querySelector(".contentCaruselPage_2").classList.remove("contentCaruselPageNotOwn")
 
@@ -119,6 +124,9 @@ setInterval(() => {
         document.querySelector(".contentCaruselPageNumber_6").classList.remove("contentCaruselPageNumberOwn")
             break;
         case 3:
+            setTimeout(() => {
+                document.querySelector(".contentCaruselBg").style.backgroundImage = `url("https://wallpapercave.com/wp/wp8170194.jpg")`
+            }, 300);
         document.querySelector(".contentCaruselPage_3").classList.add("contentCaruselPageOwn")
         document.querySelector(".contentCaruselPage_3").classList.remove("contentCaruselPageNotOwn")
 
@@ -141,6 +149,9 @@ setInterval(() => {
         document.querySelector(".contentCaruselPageNumber_6").classList.remove("contentCaruselPageNumberOwn")
             break;
         case 4:
+            setTimeout(() => {
+                document.querySelector(".contentCaruselBg").style.backgroundImage = `url("https://steamuserimages-a.akamaihd.net/ugc/1768204333759567764/379BF4BFEDE6DDA380C632C732661444D04D5611/?imw=512&amp;&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=false")`
+            }, 300);
         document.querySelector(".contentCaruselPage_4").classList.add("contentCaruselPageOwn")
         document.querySelector(".contentCaruselPage_4").classList.remove("contentCaruselPageNotOwn")
 
@@ -163,6 +174,9 @@ setInterval(() => {
         document.querySelector(".contentCaruselPageNumber_6").classList.remove("contentCaruselPageNumberOwn")
             break;
         case 5:
+            setTimeout(() => {
+                document.querySelector(".contentCaruselBg").style.backgroundImage = `url("https://somoskudasai.com/wp-content/uploads/2021/04/portada_solo-leveling-3.jpg")`
+            }, 300);
         document.querySelector(".contentCaruselPage_5").classList.add("contentCaruselPageOwn")
         document.querySelector(".contentCaruselPage_5").classList.remove("contentCaruselPageNotOwn")
 
@@ -185,6 +199,9 @@ setInterval(() => {
         document.querySelector(".contentCaruselPageNumber_6").classList.remove("contentCaruselPageNumberOwn")
             break;
         case 6:
+            setTimeout(() => {
+                document.querySelector(".contentCaruselBg").style.backgroundImage = `url("http://coub-attachments.akamaized.net/coub_storage/coub/simple/cw_image/0f36d9d1e1e/34b7afa1ecbb8bf87e7a6/1597225520_00028.jpg")`
+            }, 300);
         document.querySelector(".contentCaruselPage_6").classList.add("contentCaruselPageOwn")
         document.querySelector(".contentCaruselPage_6").classList.remove("contentCaruselPageNotOwn")
 
