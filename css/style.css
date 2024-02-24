@@ -355,8 +355,8 @@ body{
 }
 
 .contentCaruselPageRightItemImgBg{
-    width: 70%;
-    height: 75%;
+    width: 220px;
+    height: 380px;
     overflow: hidden;
     border-radius: 10px;
     border: 1px solid white;
