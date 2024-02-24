@@ -186,7 +186,6 @@ body{
 .contentCaruselBg{
     width: 100%;
     height: 100%;
-    /* background-color: rgba(255, 0, 0, 0.185); */
     margin-bottom: 80px;
     display: flex;
     justify-content: left;
@@ -195,32 +194,68 @@ body{
 .contentCaruselPageBtnBg{
     min-width: 4%;
     height: 100%;
-    /* background-color: rgba(255, 0, 0, 0.185);  */
-    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     font-size: 40px;
+    transition: 0.3s all;
 }
+.contentCaruselPageBtnBg:hover{
+    background-color: rgba(110, 110, 110, 0.432);
+    transition: 0.3s all;
+}
+
 .contentCaruselPageOwn{
     width: 100%;
     height: 100%;
     opacity: 1;
-    background-color: green;
+}
+.contentCaruselPageCenterItem{
+    width: 100%;
+    height: 100%;
 }
 .contentCaruselPageItemsBg{
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: flex;
     justify-content: left;
     align-items: center;
+    flex-wrap: wrap;
 }
+.contentCaruselPageNumbersBg{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 0 500px 0 500px;
+    box-sizing: border-box;
+}
+.contentCaruselPageNumber{
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 5000px;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+.contentCaruselPageNumberOwn{
+    background-color: red;
+}
+
 .contentCaruselPage{
     transition: 0.5s all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: sans-serif;
 }
 .contentCaruselPageNotOwn{
     height: 0%;
     width: 0%;
     opacity: 0;
+    /* background-color: white; */
+    overflow: hidden;
 }
