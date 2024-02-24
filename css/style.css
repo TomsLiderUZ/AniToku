@@ -302,6 +302,9 @@ body{
     margin-top: 60px;
 }
 .contentCaruselPageLeftItemAbout{
+    display: none;
+}
+.contentCaruselPageOwn .contentCaruselPageLeftItemAbout{
     width: 65%;
     height: 30%;
     /* background-color: red; */

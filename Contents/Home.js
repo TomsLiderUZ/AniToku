@@ -153,7 +153,7 @@ document.querySelector(".conentsBg").innerHTML = setContentHomePage
 let contentCaruselPageNext = 1;
 let contentCaruselPageClicked = true
 setInterval(() => {
-    // contentCaruselPageNext += 1
+    contentCaruselPageNext += 1
 }, 10000);
 
 document.querySelector(".contentCaruselPageNumber_1").addEventListener("click", ()=>{
