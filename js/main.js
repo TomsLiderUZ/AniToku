@@ -1,35 +1,35 @@
 fetch('../config.json')
   .then(response => response.json())
   .then(app => {
-    let version = app.config.document_version
+    let version = app.config.document_version;
 
-    let documentTitleName = app.data.title.titleName
-    let documentLogName = `<i class="fa-solid fa-feather-pointed"></i>`+app.data.title.logoName
+    let documentTitleName = app.data.title.titleName;
+    let documentLogName = `<i class="fa-solid fa-feather-pointed"></i>`+app.data.title.logoName;
 
-    let documentNavMenuContnet_1 = app.data.nawBarMenus.menu_1.content
-    let documentNavMenuTitle_1 = app.data.nawBarMenus.menu_1.title
-    let documentNavMenuURL_1 = app.data.nawBarMenus.menu_1.url
+    let documentNavMenuContnet_1 = app.data.nawBarMenus.menu_1.content;
+    let documentNavMenuTitle_1 = app.data.nawBarMenus.menu_1.title;
+    let documentNavMenuURL_1 = app.data.nawBarMenus.menu_1.url;
 
-    let documentNavMenuContnet_2 = app.data.nawBarMenus.menu_2.content
-    let documentNavMenuTitle_2 = app.data.nawBarMenus.menu_2.title
-    let documentNavMenuURL_2 = app.data.nawBarMenus.menu_2.url
+    let documentNavMenuContnet_2 = app.data.nawBarMenus.menu_2.content;
+    let documentNavMenuTitle_2 = app.data.nawBarMenus.menu_2.title;
+    let documentNavMenuURL_2 = app.data.nawBarMenus.menu_2.url;
 
-    let documentNavMenuContnet_3 = app.data.nawBarMenus.menu_3.content
-    let documentNavMenuTitle_3 = app.data.nawBarMenus.menu_3.title
-    let documentNavMenuURL_3 = app.data.nawBarMenus.menu_3.url
+    let documentNavMenuContnet_3 = app.data.nawBarMenus.menu_3.content;
+    let documentNavMenuTitle_3 = app.data.nawBarMenus.menu_3.title;
+    let documentNavMenuURL_3 = app.data.nawBarMenus.menu_3.url;
 
     
-    let navBarMenu_1 = documentNavMenuURL_1
-    let navBarMenu_2 = documentNavMenuURL_2
-    let navBarMenu_3 = documentNavMenuURL_3
+    let navBarMenu_1 = documentNavMenuURL_1;
+    let navBarMenu_2 = documentNavMenuURL_2;
+    let navBarMenu_3 = documentNavMenuURL_3;
 
 
-    document.querySelector(".navBarLogo").innerHTML = documentLogName
+    document.querySelector(".navBarLogo").innerHTML = documentLogName;
     document.querySelector(".navBarLogo").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
     
-    document.querySelector(".navBarMenuItem_1").innerHTML = documentNavMenuContnet_1
-    document.querySelector(".navBarMenuItem_2").innerHTML = documentNavMenuContnet_2
-    document.querySelector(".navBarMenuItem_3").innerHTML = documentNavMenuContnet_3
+    document.querySelector(".navBarMenuItem_1").innerHTML = documentNavMenuContnet_1;
+    document.querySelector(".navBarMenuItem_2").innerHTML = documentNavMenuContnet_2;
+    document.querySelector(".navBarMenuItem_3").innerHTML = documentNavMenuContnet_3;
     
     let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
     navBarMenuItems.forEach(function(element) {
@@ -40,19 +40,19 @@ fetch('../config.json')
     
     
     if (location.href.endsWith("index.html")) {
-        location = `http://${location.host}/?=${navBarMenu_1}`
+        location = `http://${location.host}/?=${navBarMenu_1}`;
     }else if (location.href.endsWith(`?=${navBarMenu_1}`)) {
         location.reload
         document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?=${navBarMenu_2}`);
         document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?=${navBarMenu_3}`);
         document.querySelector(".navBarMenuItem_1").removeAttribute("href");
-        document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemOwn")
-        document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemNotOwn")
-        document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn")
-        document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn")
-        document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn")
-        document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn")
-        document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_1}`
+        document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemOwn");
+        document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemNotOwn");
+        document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
+        document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
+        document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
+        document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
+        document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_1}`;
     
         let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
         navBarMenuItems.forEach(function(element) {
@@ -63,17 +63,17 @@ fetch('../config.json')
         document.body.appendChild(link);
         
     }else if (location.href.endsWith(`?=${navBarMenu_2}`)) {
-        location.reload
+        location.reload;
         document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
         document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?=${navBarMenu_3}`);
         document.querySelector(".navBarMenuItem_2").removeAttribute("href");
-        document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemOwn")
-        document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemNotOwn")
-        document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn")
-        document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn")
-        document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn")
-        document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn")
-        document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_2}`
+        document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemOwn");
+        document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemNotOwn");
+        document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
+        document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
+        document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
+        document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
+        document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_2}`;
         
         let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
         navBarMenuItems.forEach(function(element) {
@@ -84,17 +84,17 @@ fetch('../config.json')
         document.body.appendChild(link);
     
     }else if (location.href.endsWith(`?=${navBarMenu_3}`)) {
-        location.reload
+        location.reload;
         document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
         document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?=${navBarMenu_2}`);
         document.querySelector(".navBarMenuItem_3").removeAttribute("href");
-        document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemOwn")
-        document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemNotOwn")
-        document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn")
-        document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn")
-        document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn")
-        document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn")
-        document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_3}`
+        document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemOwn");
+        document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemNotOwn");
+        document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
+        document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
+        document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
+        document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
+        document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_3}`;
         
         let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
         navBarMenuItems.forEach(function(element) {
@@ -105,7 +105,7 @@ fetch('../config.json')
         document.body.appendChild(link);
     
     }else{
-        location.reload
+        location.reload;
         
         let url404 = window.location.href;
         let ipAddress404 = url404.split('/')[2];
@@ -202,14 +202,14 @@ fetch('../config.json')
             <div class="NotFundTextBtn">Back to Home&nbsp; <i class="fa-solid fa-chevron-right"></i></div>
           </div>
         </div>
-            `
-            document.querySelector("title").innerHTML = "404 Not Fund"
-            console.warn("404 Not Fund \n\n"+`🔶Back to Home🔶 \nhttp://${location.host}/?=${navBarMenu_1}`)
+            `;
+            document.querySelector("title").innerHTML = "404 Not Fund";
+            console.warn("404 Not Fund \n\n"+`🔶Back to Home🔶 \nhttp://${location.host}/?=${navBarMenu_1}`);
             document.querySelector(".NotFundTextBtn").addEventListener("click", ()=>{
-            location = `http://${location.host}/?=${navBarMenu_1}`
+            location = `http://${location.host}/?=${navBarMenu_1}`;
             })
         } else {
-            location = `http://${location.host}/?=${navBarMenu_1}`
+            location = `http://${location.host}/?=${navBarMenu_1}`;
         }
     }
     
