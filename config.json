@@ -1,0 +1,28 @@
+{
+    "data":{
+        "title":{
+            "titleName": "AkokitoMedia",
+            "logoName": "AkokitoMedia"
+        },
+        "nawBarMenus":{
+            "menu_1":{
+                "content": "Asosiy",
+                "url": "Home",
+                "title": "Asosoy"
+            },
+            "menu_2":{
+                "content": "Yangiliklar",
+                "url": "News",
+                "title": "Yangiliklar"
+            },
+            "menu_3":{
+                "content": "Janrlar",
+                "url": "Genres",
+                "title": "Janrlar"
+            }
+        }
+    },
+    "config":{
+        "document_version": "1.7.3"
+    }
+}
