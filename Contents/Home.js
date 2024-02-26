@@ -29,24 +29,174 @@
         let caruselURL5 = "?Anime/play?=" + CaruselValue.C5.URL;
         let caruselURL6 = "?Anime/play?=" + CaruselValue.C6.URL;
 
+
+
+
+        let caruselIMG1 = "";
+        let caruselIMG2 = "";
+        let caruselIMG3 = "";
+        let caruselIMG4 = "";
+        let caruselIMG5 = "";
+        let caruselIMG6 = "";
+
+        function FUNCcaruselIMG1() {
+          if (CaruselValue.C1.Image.mode === "file") {
+            caruselIMG1 = "Animes/Carusel/IMG/" + CaruselValue.C1.Image.src;
+          }else if (CaruselValue.C1.Image.mode === "url") {
+            caruselIMG1 = CaruselValue.C1.Image.src;
+          }else{
+            caruselIMG1 = "Animes/Alert-Imgs/Error.jpg";
+            console.error(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 7-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+            alert(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 7-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+          }
+        }
+        function FUNCcaruselIMG2() {
+          if (CaruselValue.C2.Image.mode === "file") {
+            caruselIMG2 = "Animes/Carusel/IMG/" + CaruselValue.C2.Image.src;
+          }else if (CaruselValue.C2.Image.mode === "url") {
+            caruselIMG2 = CaruselValue.C2.Image.src;
+          }else{
+            caruselIMG2 = "Animes/Alert-Imgs/Error.jpg";
+            console.error(`http://${location.host}/Animes/AnimeAbout/Carusel.json faylining 22-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+            alert(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 22-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+          }
+        }
+        function FUNCcaruselIMG3() {
+          if (CaruselValue.C3.Image.mode === "file") {
+            caruselIMG3 = "Animes/Carusel/IMG/" + CaruselValue.C3.Image.src;
+          }else if (CaruselValue.C3.Image.mode === "url") {
+            caruselIMG3 = CaruselValue.C3.Image.src;
+          }else{
+            caruselIMG3 = "Animes/Alert-Imgs/Error.jpg";
+            console.error(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 37-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+            alert(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 37-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+          }
+        }
+        function FUNCcaruselIMG4() {
+          if (CaruselValue.C4.Image.mode === "file") {
+            caruselIMG4 = "Animes/Carusel/IMG/" + CaruselValue.C4.Image.src;
+          }else if (CaruselValue.C4.Image.mode === "url") {
+            caruselIMG4 = CaruselValue.C4.Image.src;
+          }else{
+            caruselIMG4 = "Animes/Alert-Imgs/Error.jpg";
+            console.error(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 52-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+            alert(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 52-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+          }
+        }
+        function FUNCcaruselIMG5() {
+          if (CaruselValue.C5.Image.mode === "file") {
+            caruselIMG5 = "Animes/Carusel/IMG/" + CaruselValue.C5.Image.src;
+          }else if (CaruselValue.C5.Image.mode === "url") {
+            caruselIMG5 = CaruselValue.C5.Image.src;
+          }else{
+            caruselIMG5 = "Animes/Alert-Imgs/Error.jpg";
+            console.error(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 67-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+            alert(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 67-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+          }
+        }
+        function FUNCcaruselIMG6() {
+          if (CaruselValue.C6.Image.mode === "file") {
+            caruselIMG6 = "Animes/Carusel/IMG/" + CaruselValue.C6.Image.src;
+          }else if (CaruselValue.C6.Image.mode === "url") {
+            caruselIMG6 = CaruselValue.C6.Image.src;
+          }else{
+            caruselIMG6 = "Animes/Alert-Imgs/Error.jpg";
+            console.error(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 82-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+            alert(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 82-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+          }
+        }
+
+        FUNCcaruselIMG1();
+        FUNCcaruselIMG2();
+        FUNCcaruselIMG3();
+        FUNCcaruselIMG4();
+        FUNCcaruselIMG5();
+        FUNCcaruselIMG6();
+
+
+
         
 
-        let caruselIMG1 = "Animes/Carusel/IMG/" + CaruselValue.C1.Image;
-        let caruselIMG2 = "Animes/Carusel/IMG/" + CaruselValue.C2.Image;
-        let caruselIMG3 = "Animes/Carusel/IMG/" + CaruselValue.C3.Image;
-        let caruselIMG4 = "Animes/Carusel/IMG/" + CaruselValue.C4.Image;
-        let caruselIMG5 = "Animes/Carusel/IMG/" + CaruselValue.C5.Image;
-        let caruselIMG6 = "Animes/Carusel/IMG/" + CaruselValue.C6.Image;
+        let caruselBgIMG1 = "";
+        let caruselBgIMG2 = "";
+        let caruselBgIMG3 = "";
+        let caruselBgIMG4 = "";
+        let caruselBgIMG5 = "";
+        let caruselBgIMG6 = "";
 
+        function FUNCcaruselBgIMG1() {
+          if (CaruselValue.C1.BgImage.mode === "file") {
+            caruselBgIMG1 = "Animes/Carusel/BgIMG/" + CaruselValue.C1.BgImage.src;
+          }else if (CaruselValue.C1.BgImage.mode === "url") {
+            caruselBgIMG1 = CaruselValue.C1.BgImage.src;
+          }else{
+            caruselBgIMG1 = "Animes/Alert-Imgs/Error.jpg";
+            console.error(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 12-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+            alert(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 12-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+          }
+        }
+        function FUNCcaruselBgIMG2() {
+          if (CaruselValue.C2.BgImage.mode === "file") {
+            caruselBgIMG2 = "Animes/Carusel/BgIMG/" + CaruselValue.C2.BgImage.src;
+          }else if (CaruselValue.C2.BgImage.mode === "url") {
+            caruselBgIMG2 = CaruselValue.C2.BgImage.src;
+          }else{
+            caruselBgIMG2 = "Animes/Alert-Imgs/Error.jpg";
+            console.error(`http://${location.host}/Animes/AnimeAbout/Carusel.json faylining 27-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+            alert(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 27-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+          }
+        }
+        function FUNCcaruselBgIMG3() {
+          if (CaruselValue.C3.BgImage.mode === "file") {
+            caruselBgIMG3 = "Animes/Carusel/BgIMG/" + CaruselValue.C3.BgImage.src;
+          }else if (CaruselValue.C3.BgImage.mode === "url") {
+            caruselBgIMG3 = CaruselValue.C3.BgImage.src;
+          }else{
+            caruselBgIMG3 = "Animes/Alert-Imgs/Error.jpg";
+            console.error(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 42-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+            alert(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 42-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+          }
+        }
+        function FUNCcaruselBgIMG4() {
+          if (CaruselValue.C4.BgImage.mode === "file") {
+            caruselBgIMG4 = "Animes/Carusel/BgIMG/" + CaruselValue.C4.BgImage.src;
+          }else if (CaruselValue.C4.BgImage.mode === "url") {
+            caruselBgIMG4 = CaruselValue.C4.BgImage.src;
+          }else{
+            caruselBgIMG4 = "Animes/Alert-Imgs/Error.jpg";
+            console.error(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 57-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+            alert(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 57-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+          }
+        }
+        function FUNCcaruselBgIMG5() {
+          if (CaruselValue.C5.BgImage.mode === "file") {
+            caruselBgIMG5 = "Animes/Carusel/BgIMG/" + CaruselValue.C5.BgImage.src;
+          }else if (CaruselValue.C5.BgImage.mode === "url") {
+            caruselBgIMG5 = CaruselValue.C5.BgImage.src;
+          }else{
+            caruselBgIMG5 = "Animes/Alert-Imgs/Error.jpg";
+            console.error(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 71-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+            alert(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 71-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+          }
+        }
+        function FUNCcaruselBgIMG6() {
+          if (CaruselValue.C6.BgImage.mode === "file") {
+            caruselBgIMG6 = "Animes/Carusel/BgIMG/" + CaruselValue.C6.BgImage.src;
+          }else if (CaruselValue.C6.BgImage.mode === "url") {
+            caruselBgIMG6 = CaruselValue.C6.BgImage.src;
+          }else{
+            caruselBgIMG6 = "Animes/Alert-Imgs/Error.jpg";
+            console.error(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 86-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+            alert(`http://${location.host}/Animes/AnimeAbout/Carusel.json \nfaylinig 86-qatorida xatolik bor \n\nXatolik:\n{\n  "mode": "file" \nyoki\n   "mode": "url" \n} \nBo'lishi kerak`);
+          }
+        }
 
-
-        let caruselBgIMG1 = "Animes/Carusel/BgIMG/" + CaruselValue.C1.BgImage;
-        let caruselBgIMG2 = "Animes/Carusel/BgIMG/" + CaruselValue.C2.BgImage;
-        let caruselBgIMG3 = "Animes/Carusel/BgIMG/" + CaruselValue.C3.BgImage;
-        let caruselBgIMG4 = "Animes/Carusel/BgIMG/" + CaruselValue.C4.BgImage;
-        let caruselBgIMG5 = "Animes/Carusel/BgIMG/" + CaruselValue.C5.BgImage;
-        let caruselBgIMG6 = "Animes/Carusel/BgIMG/" + CaruselValue.C6.BgImage;
-
+        FUNCcaruselBgIMG1();
+        FUNCcaruselBgIMG2();
+        FUNCcaruselBgIMG3();
+        FUNCcaruselBgIMG4();
+        FUNCcaruselBgIMG5();
+        FUNCcaruselBgIMG6();
 
 
 
@@ -170,7 +320,7 @@
                       ${caruselAbout6}
                     </div>
                     <div class="contentCaruselPageLeftItemBtnBg">
-                      <a href="${caruselURL5}" class="contentCaruselPageLeftItemBtn"><i class="fa-solid fa-eye"></i>&nbsp;Ko'rish</a>
+                      <a href="${caruselURL6}" class="contentCaruselPageLeftItemBtn"><i class="fa-solid fa-eye"></i>&nbsp;Ko'rish</a>
                     </div>
                   </div>
                   <div class="contentCaruselPageRightItem">
@@ -424,13 +574,5 @@
 
     xhr.open("GET", "../Animes/AnimeAbout/Carusel.json", true);
     xhr.send();
-
-
-
-
-
-
-
-
 
 

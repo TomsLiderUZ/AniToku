@@ -289,10 +289,8 @@ body{
     padding: 0 0 0 20px;
     box-sizing: border-box;
 }
+
 .contentCaruselPageLeftItemTitel{
-    display: none;
-}
-.contentCaruselPageOwn .contentCaruselPageLeftItemTitel{
     width: 100%;
     height: 17%;
     /* background-color: blueviolet; */
@@ -304,10 +302,12 @@ body{
     font-weight: 1000;    
     overflow: hidden;
     margin-top: 60px;
+    text-wrap: nowrap;
 }
 .contentCaruselPageLeftItemAbout{
     display: none;
 }
+
 .contentCaruselPageOwn .contentCaruselPageLeftItemAbout{
     width: 65%;
     height: 30%;
@@ -333,8 +333,8 @@ body{
 .contentCaruselPageLeftItemBtn{
     cursor: pointer;
     background-color: red;
-    width: 150px;
-    height: 50px;
+    width: 120px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -345,6 +345,14 @@ body{
     text-decoration: none;
     color: white;
 }
+.contentCaruselPageOwn .contentCaruselPageLeftItemBtn{
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    transition: 0.2s all;
+}
+
+
 .contentCaruselPageLeftItemBtn:hover{
     background-color: white;
     color: red;
@@ -361,8 +369,6 @@ body{
 
 }
 .contentCaruselPageOwn .contentCaruselPageRightItemImgBg{
-    border: 1px solid white;
-    box-shadow: 0px 0px 10px 2px white;
     transition: 0.5s all;
 }
 .contentCaruselPageRightItemImgBg{
@@ -375,6 +381,8 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border: 1px solid white;
+    box-shadow: 0px 0px 10px 2px white;
 }
 
 

@@ -3,42 +3,88 @@
         "Name": "Yolg'izlikda daraja ko'tarish",
         "About": "Sehrli qobiliyatga ega bo'lgan ovchilar, insoniyatni ma'lum bir halokatdan himoya qilish uchun halokatli yirtqich hayvonlarga qarshi kurashishi kerak bo'lgan dunyoda, Sung Jinwoo ismli zaif ovchi o'zini omon qolish uchun cheksiz kurashda topadi.",
         "URL": "solo-leveling",
-        "Image": "Img_1.jpg",
-        "BgImage": "BgImg_1.jpg"
+        "Image": {
+                "mode": "file",
+                "src": "Img_1.jpg"
+            },
+        "BgImage": {
+                "mode": "file",
+                "src": "BgImg_1.jpg"
+            }
     },
+
+
     "C2":{
         "Name": "Davolsh Sehridan foydalanish...",
         "About": "Syujet. Usato uyiga qaytayotgan sinfdoshlari Suzune va Kazuki bilan uchrashar ekan, ular to'satdan Llinger qirolligini Demon Lord va uning armiyasidan qutqarish uchun boshqa dunyoga olib ketiladi. Ko'p o'tmay, Rouz shohlikda kamdan-kam uchraydigan shifobaxsh sehrga ega ekanligini bilib, uni qutqaruv guruhiga jalb qiladi.",
         "URL": "using-healing-magic",
-        "Image": "Img_2.jpg",
-        "BgImage": "BgImg_2.jpg"
+        "Image": {
+                "mode": "file",
+                "src": "Img_2.jpg"
+            },
+        "BgImage": {
+                "mode": "file",
+                "src": "BgImg_2.jpg"
+            }
     },
+
+
     "C3":{
         "Name": "Oy Sayohati: O'zga dunyo",
         "About": "Konspekt. Ko'p yillar oldin ma'buda va uning ota-onasi tomonidan kelishilgan sirli shartnomaning bir qismi sifatida Makoto Misumi o'zini ma'buda bilan uchrashish va qahramon bo'lish uchun boshqa dunyoga yuborilganini topadi. Biroq, xudo Makotoni 'jirkanch' deb hisoblaydi, hatto unga qarashni ham rad etadi va uning qahramonlik unvonini bekor qiladi.",
         "URL": "moon-trip",
-        "Image": "Img_3.jpg",
-        "BgImage": "BgImg_3.jpg"
+        "Image": {
+                "mode": "file",
+                "src": "Img_3.jpg"
+            },
+        "BgImage": {
+                "mode": "file",
+                "src": "BgImg_3.jpg"
+            }
     },
+
+
     "C4":{
         "Name": "Hech narsa yo'q [4]",
         "About": "Hech narsa yo'q [4]",
-        "URL": "Hech narsa yo'q",
-        "Image": "Img_4.jpg",
-        "BgImage": "BgImg_4.jpg"
-    },    
+        "URL": "Null-4",
+        "Image": {
+                "mode": "file",
+                "src": "Null.jpg"
+            },
+        "BgImage": {
+                "mode": "file",
+                "src": "Null.jpg"
+            }
+    },  
+
+
     "C5":{
         "Name": "Hech narsa yo'q [5]",
         "About": "Hech narsa yo'q [5]",
-        "URL": "Hech narsa yo'q",
-        "Image": "Img_5.jpg",
-        "BgImage": "BgImg_5.jpg"
+        "URL": "Null-5",
+        "Image": {
+                "mode": "file",
+                "src": "Null.jpg"
+            },
+        "BgImage": {
+                "mode": "file",
+                "src": "Null.jpg"
+            }
     },
+
+
     "C6":{
         "Name": "Hech narsa yo'q [6]",
         "About": "Hech narsa yo'q [6]",
-        "URL": "Hech narsa yo'q",
-        "Image": "Img_6.jpg",
-        "BgImage": "BgImg_6.jpg"
+        "URL": "Null-6",
+        "Image": {
+                "mode": "file",
+                "src": "Null.jpg"
+            },
+        "BgImage": {
+                "mode": "file",
+                "src": "Null.jpg"
+            }
     }
 }
