@@ -1,0 +1,148 @@
+.footerBarBg{
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footerBarTop{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footerBarTopLeft{
+    width: 60%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 0 20px 0;
+    box-sizing: border-box;
+}
+.footerBarTopLeftTitleBg{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 600;
+    cursor: default;
+    color: orangered;
+}
+.footerBarTopLeftCardBg{
+    width: 60%;
+    height: 70px;
+    border: 1px solid red;
+    border-radius: 20px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footerBarTopLeftCardIconBg{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+.footerBarTopLeftCardTextBg{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: 25px;
+    overflow: hidden;
+    padding: 0 0 0 20px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    cursor: default;
+    text-wrap: nowrap;
+}
+
+.footerBarTopRight{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.footerBarTopRightTitleBg{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 600;
+    cursor: default;
+    color: orangered;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+.footerBarTopRightLinksBg{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 0 120px 0 120px;
+}
+.footerBarTopRightLinkCard{
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: red;
+    text-decoration: none;
+    font-size: 35px;
+    border-radius: 500px;
+    transition: 0.3s all;
+}
+.footerBarTopRightLinkCard:hover{
+    background-color: red;
+    color: white;
+    transition: 0.3s all;
+}
+
+.footerBarBottom{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: gray;
+    border-top: 1px solid rgba(128, 128, 128, 0.384);
+    cursor: default;
+}
+.footerBarBottom a{
+    text-decoration: none;
+    color: gray;
+    cursor: pointer;
+}
+
+.footerBarBottom a:hover{
+    text-decoration: underline;
+    color: red;
+}

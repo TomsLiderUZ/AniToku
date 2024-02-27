@@ -45,46 +45,46 @@
 
 
     "C4":{
-        "Name": "Hech narsa yo'q [4]",
-        "About": "Hech narsa yo'q [4]",
-        "URL": "Null-4",
+        "Name": " ",
+        "About": " ",
+        "URL": " ",
         "Image": {
                 "mode": "file",
-                "src": "Null.jpg"
+                "src": " "
             },
         "BgImage": {
                 "mode": "file",
-                "src": "Null.jpg"
+                "src": " "
             }
     },  
 
 
     "C5":{
-        "Name": "Hech narsa yo'q [5]",
-        "About": "Hech narsa yo'q [5]",
-        "URL": "Null-5",
+        "Name": " ",
+        "About": " ",
+        "URL": " ",
         "Image": {
                 "mode": "file",
-                "src": "Null.jpg"
+                "src": " "
             },
         "BgImage": {
                 "mode": "file",
-                "src": "Null.jpg"
+                "src": " "
             }
     },
 
 
     "C6":{
-        "Name": "Hech narsa yo'q [6]",
-        "About": "Hech narsa yo'q [6]",
-        "URL": "Null-6",
+        "Name": " ",
+        "About": " ",
+        "URL": " ",
         "Image": {
                 "mode": "file",
-                "src": "Null.jpg"
+                "src": " "
             },
         "BgImage": {
                 "mode": "file",
-                "src": "Null.jpg"
+                "src": " "
             }
     }
 }

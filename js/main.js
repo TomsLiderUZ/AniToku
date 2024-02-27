@@ -1,6 +1,15 @@
+
 fetch('../config.json')
   .then(response => response.json())
   .then(app => {
+
+    let footerBarLinkStyle = document.createElement('link');
+    footerBarLinkStyle.setAttribute("rel", "stylesheet");
+    footerBarLinkStyle.setAttribute("href", "Contents/FooterBar.css");
+    document.head.appendChild(footerBarLinkStyle);
+
+    localStorage.setItem('dataLogoName', app.data.title.logoName);
+
     let version = app.config.document_version;
 
     let documentTitleName = app.data.title.titleName;
@@ -23,7 +32,6 @@ fetch('../config.json')
     let navBarMenu_2 = documentNavMenuURL_2;
     let navBarMenu_3 = documentNavMenuURL_3;
 
-
     document.querySelector(".navBarLogo").innerHTML = documentLogName;
     document.querySelector(".navBarLogo").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
     
@@ -36,6 +44,16 @@ fetch('../config.json')
         element.style.display = 'flex';
     });
     
+
+    function sendFooterBar() {
+        let footerBarLink = document.createElement('script');
+        footerBarLink.src = `Contents/FooterBar.js`;
+        document.body.appendChild(footerBarLink);
+    }
+    let link = document.createElement('script');
+    link.src = `../Animes/AnimeAbout/footer.config.js`;
+    document.body.appendChild(link);
+
     
     
     
@@ -58,9 +76,13 @@ fetch('../config.json')
         navBarMenuItems.forEach(function(element) {
             element.style.display = 'flex';
         });
+
+        sendFooterBar()
+
         let link = document.createElement('script');
         link.src = `Contents/${navBarMenu_1}.js`;
         document.body.appendChild(link);
+
         
     }else if (location.href.endsWith(`?=${navBarMenu_2}`)) {
         location.reload;
@@ -79,10 +101,13 @@ fetch('../config.json')
         navBarMenuItems.forEach(function(element) {
             element.style.display = 'flex';
         });
+
+        sendFooterBar()
+        
         let link = document.createElement('script');
         link.src = `Contents/${navBarMenu_2}.js`;
         document.body.appendChild(link);
-    
+
     }else if (location.href.endsWith(`?=${navBarMenu_3}`)) {
         location.reload;
         document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
@@ -100,10 +125,13 @@ fetch('../config.json')
         navBarMenuItems.forEach(function(element) {
             element.style.display = 'flex';
         });
+    
+        sendFooterBar()
+
         let link = document.createElement('script');
         link.src = `Contents/${navBarMenu_3}.js`;
         document.body.appendChild(link);
-    
+
     }else{
         location.reload;
         
@@ -219,3 +247,4 @@ fetch('../config.json')
   .catch(error => {
     console.error('Xatolik yuz berdi:', error);
   });
+

@@ -247,7 +247,16 @@ body{
     cursor: pointer;
     transition: 0.2s all;
 }
+.contentCaruselPageNumber:hover{
+    background-color: white;
+    transition: 0.2s all;
+}
+
 .contentCaruselPageNumberOwn{
+    background-color: red;
+    cursor: default;
+}
+.contentCaruselPageNumberOwn:hover{
     background-color: red;
 }
 
