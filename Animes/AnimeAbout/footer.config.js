@@ -1,4 +1,4 @@
-const data_config = {
+const mainDataConfig = {
     contact_number : ` `,
     contact_email : ` `,
     contact_telegram : ` `,

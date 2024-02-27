@@ -14,59 +14,59 @@ let dataLinkInstagram = ""
 
 
 function FUNCdataNumber() {
-    if (data_config.contact_number === " ") {
+    if (mainDataConfig.contact_number === " ") {
         dataNumber = "Number not available"
-    }else if (data_config.contact_number === " ") {
+    }else if (mainDataConfig.contact_number === " ") {
         dataNumber = "Number not available"
     }else{
-        dataNumber = data_config.contact_number
+        dataNumber = mainDataConfig.contact_number
     }
 }
 function FUNCdataEmail() {
-    if (data_config.contact_email === "") {
+    if (mainDataConfig.contact_email === "") {
         dataEmail = "Email not available"
-    }else if (data_config.contact_email === " ") {
+    }else if (mainDataConfig.contact_email === " ") {
         dataEmail = "Email not available"
     }else{
-        dataEmail = data_config.contact_email
+        dataEmail = mainDataConfig.contact_email
     }
 }
 function FUNCdataCurrentYear() {
-    if (data_config.current_year === "") {
+    if (mainDataConfig.current_year === "") {
         dataCurrentYear = `${currentYear}`
-    }else if (data_config.current_year === " ") {
+    }else if (mainDataConfig.current_year === " ") {
         dataCurrentYear = `${currentYear}`
     }else{
-        dataCurrentYear = data_config.current_year
+        dataCurrentYear = mainDataConfig.current_year
     }
 }
 
 
 function FUNCdataLinkTelegram() {
-    if (data_config.contact_telegram === "") {
+    if (mainDataConfig.contact_telegram === "") {
         dataLinkTelegram = `.`
-    }else if (data_config.contact_telegram === " ") {
+    }else if (mainDataConfig.contact_telegram === " ") {
         dataLinkTelegram = `.`
     }else{
-        dataLinkTelegram = data_config.contact_telegram
+        dataLinkTelegram = mainDataConfig.contact_telegram
     }
 }
 function FUNCdataLinkYoutube() {
-    if (data_config.contact_youtube === "") {
+    if (mainDataConfig.contact_youtube === "") {
         dataLinkYoutube = `.`
-    }else if (data_config.contact_youtube === " ") {
+    }else if (mainDataConfig.contact_youtube === " ") {
         dataLinkYoutube = `.`
     }else{
-        dataLinkYoutube = data_config.contact_youtube
+        dataLinkYoutube = mainDataConfig.contact_youtube
     }
 }
 function FUNCdataLinkInstagram() {
-    if (data_config.contact_youtube === "") {
+    if (mainDataConfig.contact_youtube === "") {
         dataLinkInstagram = `.`
-    }else if (data_config.contact_youtube === " ") {
+    }else if (mainDataConfig.contact_youtube === " ") {
         dataLinkInstagram = `.`
     }else{
-        dataLinkInstagram = data_config.contact_youtube
+        dataLinkInstagram = mainDataConfig.contact_youtube
     }
 }
 
