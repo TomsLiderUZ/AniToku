@@ -8,7 +8,6 @@ fetch('../config.json')
     footerBarLinkStyle.setAttribute("href", "Contents/FooterBar.css");
     document.head.appendChild(footerBarLinkStyle);
 
-    localStorage.setItem('dataLogoName', app.data.title.logoName);
 
     let version = app.config.document_version;
 
@@ -32,6 +31,91 @@ fetch('../config.json')
     let navBarMenu_2 = documentNavMenuURL_2;
     let navBarMenu_3 = documentNavMenuURL_3;
 
+
+
+const currentYear = new Date().getFullYear(); 
+let mainDataNumber = ""
+let mainDataEmail = ""
+let mainDataCurrentYear = ""
+let mainDataLinkTelegram = ""
+let mainDataLinkYoutube = ""
+let mainDataLinkInstagram = ""
+
+
+function FUNCmainDataNumber() {
+    if (app.config.contact_number === " ") {
+        mainDataNumber = "Number not available"
+    }else if (app.config.contact_number === " ") {
+        mainDataNumber = "Number not available"
+    }else{
+        mainDataNumber = app.config.contact_number
+    }
+}
+function FUNCmainDataEmail() {
+    if (app.config.contact_email === "") {
+        mainDataEmail = "Email not available"
+    }else if (app.config.contact_email === " ") {
+        mainDataEmail = "Email not available"
+    }else{
+        mainDataEmail = app.config.contact_email
+    }
+}
+function FUNCmainDataCurrentYear() {
+    if (app.config.current_year === "") {
+        mainDataCurrentYear = `${currentYear}`
+    }else if (app.config.current_year === " ") {
+        mainDataCurrentYear = `${currentYear}`
+    }else{
+        mainDataCurrentYear = app.config.current_year
+    }
+}
+
+
+function FUNCmainDataLinkTelegram() {
+    if (app.config.contact_telegarm === "") {
+        mainDataLinkTelegram = `http://${location.host}/?=${navBarMenu_1}`
+    }else if (app.config.contact_telegarm === " ") {
+        mainDataLinkTelegram = `http://${location.host}/?=${navBarMenu_1}`
+    }else{
+        mainDataLinkTelegram = app.config.contact_telegarm
+    }
+}
+function FUNCmainDataLinkYoutube() {
+    if (app.config.contact_youtube === "") {
+        mainDataLinkYoutube = `http://${location.host}/?=${navBarMenu_1}`
+    }else if (app.config.contact_youtube === " ") {
+        mainDataLinkYoutube = `http://${location.host}/?=${navBarMenu_1}`
+    }else{
+        mainDataLinkYoutube = app.config.contact_youtube
+    }
+}
+function FUNCmainDataLinkInstagram() {
+    if (app.config.contact_instagram === "") {
+        mainDataLinkInstagram = `http://${location.host}/?=${navBarMenu_1}`
+    }else if (app.config.contact_instagram === " ") {
+        mainDataLinkInstagram = `http://${location.host}/?=${navBarMenu_1}`
+    }else{
+        mainDataLinkInstagram = app.config.contact_instagram
+    }
+}
+
+
+
+
+FUNCmainDataNumber()
+FUNCmainDataEmail()
+FUNCmainDataCurrentYear()
+FUNCmainDataLinkTelegram()
+FUNCmainDataLinkYoutube()
+FUNCmainDataLinkInstagram()
+
+
+
+
+
+
+
+
     document.querySelector(".navBarLogo").innerHTML = documentLogName;
     document.querySelector(".navBarLogo").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
     
@@ -50,11 +134,17 @@ fetch('../config.json')
         footerBarLink.src = `Contents/FooterBar.js`;
         document.body.appendChild(footerBarLink);
     }
-    let link = document.createElement('script');
-    link.src = `../Animes/AnimeAbout/footer.config.js`;
-    document.body.appendChild(link);
 
-    
+
+    setTimeout(() => {
+        document.querySelector(".footerBarTopLeftCardTextEmailBg").innerHTML = mainDataNumber
+        document.querySelector(".footerBarTopLeftCardTextNumberBg").innerHTML = mainDataEmail
+        document.querySelector(".footerBarTopRightLinkCardTelegram").setAttribute("href", mainDataLinkTelegram)
+        document.querySelector(".footerBarTopRightLinkCardYoutube").setAttribute("href", mainDataLinkYoutube)
+        document.querySelector(".footerBarTopRightLinkCardInstagram").setAttribute("href", mainDataLinkInstagram)
+        document.querySelector(".footerBarBottom").innerHTML = `© 2023 - ${mainDataCurrentYear} &nbsp;<a href="http://${location.host}/?=${navBarMenu_1}" title="${app.data.title.logoName}">${app.data.title.logoName}</a>&nbsp;  &nbsp;|&nbsp; Sponsor &nbsp;<a href="https://ft-games.vercel.app/" target="_blank" title="FT GAMES">FT GAMES</a>&nbsp;`
+
+    }, 500);
     
     
     if (location.href.endsWith("index.html")) {

@@ -23,6 +23,12 @@
         }
     },
     "config":{
+        "contact_number": " ",
+        "contact_email": " ",
+        "contact_telegarm": " ",
+        "contact_youtube": " ",
+        "contact_instagram": " ",
+        "current_year": " ",
         "document_version": "1.7.3"
     }
 }
