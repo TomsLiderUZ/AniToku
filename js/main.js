@@ -43,7 +43,7 @@ let mainDataLinkInstagram = ""
 
 
 function FUNCmainDataNumber() {
-    if (app.config.contact_number === " ") {
+    if (app.config.contact_number === "") {
         mainDataNumber = "Number not available"
     }else if (app.config.contact_number === " ") {
         mainDataNumber = "Number not available"
@@ -137,8 +137,8 @@ FUNCmainDataLinkInstagram()
 
 
     setTimeout(() => {
-        document.querySelector(".footerBarTopLeftCardTextEmailBg").innerHTML = mainDataNumber
-        document.querySelector(".footerBarTopLeftCardTextNumberBg").innerHTML = mainDataEmail
+        document.querySelector(".footerBarTopLeftCardTextEmailBg").innerHTML = mainDataEmail
+        document.querySelector(".footerBarTopLeftCardTextNumberBg").innerHTML = mainDataNumber
         document.querySelector(".footerBarTopRightLinkCardTelegram").setAttribute("href", mainDataLinkTelegram)
         document.querySelector(".footerBarTopRightLinkCardYoutube").setAttribute("href", mainDataLinkYoutube)
         document.querySelector(".footerBarTopRightLinkCardInstagram").setAttribute("href", mainDataLinkInstagram)
