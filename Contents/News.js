@@ -1,6 +1,23 @@
 let setContentNewsPageValues = `
 
-Yangiliklar bo'limi hali yasalmoqda !
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<h1 align="center">Yangiliklar bo'limi hali yasalmoqda !</h1>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 `;
 
