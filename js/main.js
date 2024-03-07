@@ -129,11 +129,7 @@ FUNCmainDataLinkInstagram()
     });
     
 
-    function sendFooterBar() {
-        let footerBarLink = document.createElement('script');
-        footerBarLink.src = `Contents/FooterBar.js`;
-        document.body.appendChild(footerBarLink);
-    }
+
 
 
     setTimeout(() => {
@@ -167,7 +163,6 @@ FUNCmainDataLinkInstagram()
             element.style.display = 'flex';
         });
 
-        sendFooterBar()
 
         let link = document.createElement('script');
         link.src = `Contents/${navBarMenu_1}.js`;
@@ -192,7 +187,7 @@ FUNCmainDataLinkInstagram()
             element.style.display = 'flex';
         });
 
-        sendFooterBar()
+    
         
         let link = document.createElement('script');
         link.src = `Contents/${navBarMenu_2}.js`;
@@ -216,7 +211,7 @@ FUNCmainDataLinkInstagram()
             element.style.display = 'flex';
         });
     
-        sendFooterBar()
+        
 
         let link = document.createElement('script');
         link.src = `Contents/${navBarMenu_3}.js`;
