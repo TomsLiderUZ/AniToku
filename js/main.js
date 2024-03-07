@@ -11,20 +11,166 @@ fetch('../config.json')
 
     let version = app.config.document_version;
 
-    let documentTitleName = app.data.title.titleName;
-    let documentLogName = `<i class="fa-solid fa-feather-pointed"></i>`+app.data.title.logoName;
 
-    let documentNavMenuContnet_1 = app.data.nawBarMenus.menu_1.content;
-    let documentNavMenuTitle_1 = app.data.nawBarMenus.menu_1.title;
-    let documentNavMenuURL_1 = app.data.nawBarMenus.menu_1.url;
 
-    let documentNavMenuContnet_2 = app.data.nawBarMenus.menu_2.content;
-    let documentNavMenuTitle_2 = app.data.nawBarMenus.menu_2.title;
-    let documentNavMenuURL_2 = app.data.nawBarMenus.menu_2.url;
+    let documentTitleName = "";
+    let documentLogName = "";
+    let documentLogNameFooter = "";
+    
 
-    let documentNavMenuContnet_3 = app.data.nawBarMenus.menu_3.content;
-    let documentNavMenuTitle_3 = app.data.nawBarMenus.menu_3.title;
-    let documentNavMenuURL_3 = app.data.nawBarMenus.menu_3.url;
+    function FUNCdocumentTitleName() {
+        if (app.data.title.titleName === "") {
+            documentTitleName = "Document"
+        }else if (app.data.title.titleName === " ") {
+            documentTitleName = "Document"
+        }else{
+            documentTitleName = app.data.title.titleName
+        }
+    }
+    function FUNCdocumentLogName() {
+        if (app.data.title.logoName === "") {
+            documentLogName = `<i class="fa-solid fa-feather-pointed"></i>` + "Document"
+        }else if (app.data.title.logoName === " ") {
+            documentLogName = `<i class="fa-solid fa-feather-pointed"></i>` + "Document"
+        }else{
+            documentLogName = `<i class="fa-solid fa-feather-pointed"></i>` + app.data.title.logoName
+        }
+    }
+    function FUNCdocumentLogNameFooter() {
+        if (app.data.title.logoName === "") {
+            documentLogNameFooter = "Document"
+        }else if (app.data.title.logoName === " ") {
+            documentLogNameFooter = "Document"
+        }else{
+            documentLogNameFooter = app.data.title.logoName
+        }
+    }
+
+
+    FUNCdocumentTitleName()
+    FUNCdocumentLogName()
+    FUNCdocumentLogNameFooter()
+
+
+
+
+    let documentNavMenuContnet_1 = "";
+    let documentNavMenuContnet_2 = "";
+    let documentNavMenuContnet_3 = "";
+
+    function FUNCdocumentNavMenuContnet_1() {
+        if (app.data.nawBarMenus.menu_1.content === "") {
+            documentNavMenuContnet_1 = "Menu-1"
+        }else if (app.data.nawBarMenus.menu_1.content === " ") {
+            documentNavMenuContnet_1 = "Menu-1"
+        }else{
+            documentNavMenuContnet_1 = app.data.nawBarMenus.menu_1.content
+        }
+    }
+    function FUNCdocumentNavMenuContnet_2() {
+        if (app.data.nawBarMenus.menu_2.content === "") {
+            documentNavMenuContnet_2 = "Menu-2"
+        }else if (app.data.nawBarMenus.menu_2.content === " ") {
+            documentNavMenuContnet_2 = "Menu-2"
+        }else{
+            documentNavMenuContnet_2 = app.data.nawBarMenus.menu_2.content
+        }
+    }
+    function FUNCdocumentNavMenuContnet_3() {
+        if (app.data.nawBarMenus.menu_3.content === "") {
+            documentNavMenuContnet_3 = "Menu-3"
+        }else if (app.data.nawBarMenus.menu_3.content === " ") {
+            documentNavMenuContnet_3 = "Menu-3"
+        }else{
+            documentNavMenuContnet_3 = app.data.nawBarMenus.menu_3.content
+        }
+    }
+
+
+    FUNCdocumentNavMenuContnet_1()
+    FUNCdocumentNavMenuContnet_2()
+    FUNCdocumentNavMenuContnet_3()
+
+
+
+    let documentNavMenuTitle_1 = "";
+    let documentNavMenuTitle_2 = "";
+    let documentNavMenuTitle_3 = "";
+
+
+
+    function FUNCdocumentNavMenuTitle_1() {
+        if (app.data.nawBarMenus.menu_1.title === "") {
+            documentNavMenuTitle_1 = "Menu-1"
+        }else if (app.data.nawBarMenus.menu_1.title === " ") {
+            documentNavMenuTitle_1 = "Menu-1"
+        }else{
+            documentNavMenuTitle_1 = app.data.nawBarMenus.menu_1.title
+        }
+    }
+    function FUNCdocumentNavMenuTitle_2() {
+        if (app.data.nawBarMenus.menu_2.title === "") {
+            documentNavMenuTitle_2 = "Menu-2"
+        }else if (app.data.nawBarMenus.menu_2.title === " ") {
+            documentNavMenuTitle_2 = "Menu-2"
+        }else{
+            documentNavMenuTitle_2 = app.data.nawBarMenus.menu_2.title
+        }
+    }
+    function FUNCdocumentNavMenuTitle_3() {
+        if (app.data.nawBarMenus.menu_3.title === "") {
+            documentNavMenuTitle_3 = "Menu-3"
+        }else if (app.data.nawBarMenus.menu_3.title === " ") {
+            documentNavMenuTitle_3 = "Menu-3"
+        }else{
+            documentNavMenuTitle_3 = app.data.nawBarMenus.menu_3.title
+        }
+    }
+
+    FUNCdocumentNavMenuTitle_1()
+    FUNCdocumentNavMenuTitle_2()
+    FUNCdocumentNavMenuTitle_3()
+
+
+    let documentNavMenuURL_1 = "";
+    let documentNavMenuURL_2 = "";
+    let documentNavMenuURL_3 = "";
+
+    function FUNCdocumentNavMenuURL_1() {
+        if (app.data.nawBarMenus.menu_1.url === "") {
+            documentNavMenuURL_1 = "Menu-1"
+        }else if (app.data.nawBarMenus.menu_1.url === " ") {
+            documentNavMenuURL_1 = "Menu-1"
+        }else{
+            documentNavMenuURL_1 = app.data.nawBarMenus.menu_1.url
+        }
+    }
+    function FUNCdocumentNavMenuURL_2() {
+        if (app.data.nawBarMenus.menu_2.url === "") {
+            documentNavMenuURL_2 = "Menu-2"
+        }else if (app.data.nawBarMenus.menu_2.url === " ") {
+            documentNavMenuURL_2 = "Menu-2"
+        }else{
+            documentNavMenuURL_2 = app.data.nawBarMenus.menu_2.url
+        }
+    }
+    function FUNCdocumentNavMenuURL_3() {
+        if (app.data.nawBarMenus.menu_3.url === "") {
+            documentNavMenuURL_3 = "Menu-3"
+        }else if (app.data.nawBarMenus.menu_3.url === " ") {
+            documentNavMenuURL_3 = "Menu-3"
+        }else{
+            documentNavMenuURL_3 = app.data.nawBarMenus.menu_3.url
+        }
+    }
+
+
+    FUNCdocumentNavMenuURL_1()
+    FUNCdocumentNavMenuURL_2()
+    FUNCdocumentNavMenuURL_3()
+
+
+
 
     
     let navBarMenu_1 = documentNavMenuURL_1;
@@ -112,9 +258,64 @@ FUNCmainDataLinkInstagram()
 
 
 
+document.querySelector(".body").innerHTML +=
+`
+<style>
+.contentsBgScrollRestartBtnBg{
+    width: 150px;
+    height: 80px;
+    z-index: 999;
+    position: absolute;
+    top: 85%;
+    right: 0;
+    margin-right: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s all;
+    overflow: hidden;
+}
+.contentsBgScrollRestartBtn{
+    width: 55px;
+    height: 55px;
+    border-radius: 50000px;
+    background-color: rgba(255, 0, 0, 0.4);
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    margin-right: -200%;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s all;
+    font-size: 20px;
+}
+.contentsBgScrollRestartBtn:hover{
+    background-color: red;
+    color: white;
+    width: 58px;
+    height: 58px;
+    transition: 0.3s all;
+}
+</style>
+<div class="contentsBgScrollRestartBtnBg">
+<div class="contentsBgScrollRestartBtn"><i class="fa-solid fa-chevron-up"></i></div>
+</div>
+`
 
-
-
+document.querySelector(".contentsBgScrollRestartBtn").addEventListener("click", ()=>{
+    document.querySelector(".conentsBg").scrollTop = 0;
+})
+setInterval(() => {
+    if (document.querySelector(".conentsBg").scrollTop >= 120) {
+            document.querySelector(".contentsBgScrollRestartBtn").style.opacity = "1"
+            document.querySelector(".contentsBgScrollRestartBtn").style.marginRight = "0%"
+    }else{
+        document.querySelector(".contentsBgScrollRestartBtn").style.opacity = "0"
+        document.querySelector(".contentsBgScrollRestartBtn").style.marginRight = "-200%"
+    }
+});
 
     document.querySelector(".navBarLogo").innerHTML = documentLogName;
     document.querySelector(".navBarLogo").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
@@ -130,23 +331,26 @@ FUNCmainDataLinkInstagram()
     
 
 
+    function FUNCfooterBarSendValue() {
+        setTimeout(() => {
+            document.querySelector(".footerBarTopLeftCardTextEmailBg").innerHTML = mainDataEmail
+            document.querySelector(".footerBarTopLeftCardTextNumberBg").innerHTML = mainDataNumber
+            document.querySelector(".footerBarTopRightLinkCardTelegram").setAttribute("href", mainDataLinkTelegram)
+            document.querySelector(".footerBarTopRightLinkCardYoutube").setAttribute("href", mainDataLinkYoutube)
+            document.querySelector(".footerBarTopRightLinkCardInstagram").setAttribute("href", mainDataLinkInstagram)
+            document.querySelector(".footerBarBottom").innerHTML = `© 2023 - ${mainDataCurrentYear} &nbsp;<a href="http://${location.host}/?=${navBarMenu_1}" title="${documentLogNameFooter}">${documentLogNameFooter}</a>&nbsp;  &nbsp;|&nbsp; Sponsor &nbsp;<a href="https://ft-games.vercel.app/" target="_blank" title="FT GAMES">FT GAMES</a>&nbsp;`
+        }, 600);
+    }
 
 
-    setTimeout(() => {
-        document.querySelector(".footerBarTopLeftCardTextEmailBg").innerHTML = mainDataEmail
-        document.querySelector(".footerBarTopLeftCardTextNumberBg").innerHTML = mainDataNumber
-        document.querySelector(".footerBarTopRightLinkCardTelegram").setAttribute("href", mainDataLinkTelegram)
-        document.querySelector(".footerBarTopRightLinkCardYoutube").setAttribute("href", mainDataLinkYoutube)
-        document.querySelector(".footerBarTopRightLinkCardInstagram").setAttribute("href", mainDataLinkInstagram)
-        document.querySelector(".footerBarBottom").innerHTML = `© 2023 - ${mainDataCurrentYear} &nbsp;<a href="http://${location.host}/?=${navBarMenu_1}" title="${app.data.title.logoName}">${app.data.title.logoName}</a>&nbsp;  &nbsp;|&nbsp; Sponsor &nbsp;<a href="https://ft-games.vercel.app/" target="_blank" title="FT GAMES">FT GAMES</a>&nbsp;`
 
-    }, 500);
     
     
     if (location.href.endsWith("index.html")) {
         location = `http://${location.host}/?=${navBarMenu_1}`;
     }else if (location.href.endsWith(`?=${navBarMenu_1}`)) {
         location.reload
+        FUNCfooterBarSendValue()
         document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?=${navBarMenu_2}`);
         document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?=${navBarMenu_3}`);
         document.querySelector(".navBarMenuItem_1").removeAttribute("href");
@@ -171,6 +375,7 @@ FUNCmainDataLinkInstagram()
         
     }else if (location.href.endsWith(`?=${navBarMenu_2}`)) {
         location.reload;
+        FUNCfooterBarSendValue()
         document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
         document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?=${navBarMenu_3}`);
         document.querySelector(".navBarMenuItem_2").removeAttribute("href");
@@ -195,6 +400,7 @@ FUNCmainDataLinkInstagram()
 
     }else if (location.href.endsWith(`?=${navBarMenu_3}`)) {
         location.reload;
+        FUNCfooterBarSendValue()
         document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
         document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?=${navBarMenu_2}`);
         document.querySelector(".navBarMenuItem_3").removeAttribute("href");
@@ -229,93 +435,114 @@ FUNCmainDataLinkInstagram()
             document.querySelector(".body").innerHTML = 
             `
             <style>
-        .NotFundBg{
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            background-color: rgb(20, 20, 20);
-            z-index: 900;
-            overflow: hidden;
-        }
-        .NotFundBg .NotFundIcon{
-            width: 100%;
-            height: 25%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 120px;
-            font-family: sans-serif;
-            font-weight: 1000;
-            letter-spacing: 8px;
-            cursor: default;
-            margin-top: 6%;
-        }
-        .NotFundBg .NotFundText{
-            width: 100%;
-            height: 25%;
-            display: flex;
-            justify-content: center;
-            align-items: start;
-            color: white;
-            font-size: 50px;
-            font-family: sans-serif;
-            letter-spacing: 8px;
-            cursor: default;
-            margin-top: -8%;
-        }
-        .NotFundBg .NotFundTextBtnBg{
-            width: 100%;
-            height: 25%;
-            display: flex;
-            justify-content: center;
-            align-items: start;
-            color: white;
-            font-size: 20px;
-            font-family: sans-serif;
-            letter-spacing: 2px;
-            cursor: default;
-            margin-top: -8%;
-        }
-        .NotFundBg .NotFundTextBtn{
-            width: 20%;
-            height: 30%;
-            border: 3px solid white;
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            padding: 0 0 0 20px;
-            box-sizing: border-box;
-            cursor: pointer;
-            border-radius: 10px;
-            font-weight: 600;
-            transition: 0.2s all;
-        }
-        .NotFundBg .NotFundTextBtn:hover{
-            background-color: white;
-            color: red;
-            transition: 0.2s all;
-        }
-        .NotFundBg .fa-bounce{
-            color: red;
-        }
+            .NotFundBg{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                background-color: rgb(20, 20, 20);
+                z-index: 900;
+                overflow: hidden;
+            }
+            .NotFundIconGif{
+                position: absolute;
+                background-image: url("../img/gif_blackGirl.gif");
+                background-repeat: no-repeat;
+                background-position-x: center;
+                background-position-y: 30px;
+                background-size: 67%;
+                width: 300px;
+                height: 150px;
+                margin-top: -38%;
+                z-index: 50;
+                border-bottom: solid white;
+                /* background-color: blue; */
+            }
+            .NotFundBg .NotFundIcon{
+                width: 100%;
+                height: 25%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-size: 150px;
+                font-family: sans-serif;
+                font-weight: 1000;
+                letter-spacing: 8px;
+                cursor: default;
+                margin-top: 6%;
+            }
+            .NotFundIconTextZero{
+                color: red;
+                font-size: 170px;
+                font-family: monospace;
+            }
+            .NotFundBg .NotFundText{
+                width: 100%;
+                height: 25%;
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                color: white;
+                font-size: 50px;
+                font-family: sans-serif;
+                letter-spacing: 8px;
+                cursor: default;
+                margin-top: -7%;
+            }
+            .NotFundBg .NotFundTextBtnBg{
+                width: 100%;
+                height: 25%;
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                color: white;
+                font-size: 20px;
+                font-family: sans-serif;
+                letter-spacing: 2px;
+                cursor: default;
+                margin-top: -8%;
+            }
+            .NotFundBg .NotFundTextBtn{
+                width: 20%;
+                height: 30%;
+                border: 3px solid white;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                padding: 0 0 0 20px;
+                box-sizing: border-box;
+                cursor: pointer;
+                border-radius: 10px;
+                font-weight: 600;
+                transition: 0.2s all;
+            }
+            .NotFundBg .NotFundTextBtn:hover{
+                background-color: white;
+                color: red;
+                transition: 0.2s all;
+            }
+            .NotFundBg .fa-bounce{
+                color: red;
+            }
         </style>
-        
-            <div class="NotFundBg">
-          <div class="NotFundIcon">
-            4<p class="fa-solid fa-ban fa-bounce">0</p>4
+      
+          <div class="NotFundBg">
+            <div class="NotFundIconGif"></div>
+            <div class="NotFundIcon">
+              4<span class="NotFundIconTextZero">0</span>4
+            </div>
+            <div class="NotFundText">Not Fund</div>
+            <div class="NotFundTextBtnBg">
+              <div class="NotFundTextBtn">Back to Home&nbsp; <i class="fa-solid fa-chevron-right"></i></div>
+            </div>
           </div>
-          <div class="NotFundText">Not Fund</div>
-          <div class="NotFundTextBtnBg">
-            <div class="NotFundTextBtn">Back to Home&nbsp; <i class="fa-solid fa-chevron-right"></i></div>
-          </div>
-        </div>
             `;
+
             document.querySelector("title").innerHTML = "404 Not Fund";
             console.warn("404 Not Fund \n\n"+`🔶Back to Home🔶 \nhttp://${location.host}/?=${navBarMenu_1}`);
             document.querySelector(".NotFundTextBtn").addEventListener("click", ()=>{

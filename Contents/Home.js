@@ -592,6 +592,7 @@
 
 
     let setContentHomePageCarusel = `
+    
         <div class="contentCaruselBg">
         <div class="contentCaruselPageBackBtnBg contentCaruselPageBtnBg">
           <div class="contentCaruselPageBackBtn">
