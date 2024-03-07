@@ -258,6 +258,7 @@ FUNCmainDataLinkInstagram()
 
 
 
+    function scrollResertBtnSend() {
 document.querySelector(".body").innerHTML +=
 `
 <style>
@@ -307,6 +308,8 @@ document.querySelector(".body").innerHTML +=
 document.querySelector(".contentsBgScrollRestartBtn").addEventListener("click", ()=>{
     document.querySelector(".conentsBg").scrollTop = 0;
 })
+
+
 setInterval(() => {
     if (document.querySelector(".conentsBg").scrollTop >= 120) {
             document.querySelector(".contentsBgScrollRestartBtn").style.opacity = "1"
@@ -316,6 +319,11 @@ setInterval(() => {
         document.querySelector(".contentsBgScrollRestartBtn").style.marginRight = "-200%"
     }
 });
+
+    }
+
+
+
 
     document.querySelector(".navBarLogo").innerHTML = documentLogName;
     document.querySelector(".navBarLogo").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
@@ -351,6 +359,7 @@ setInterval(() => {
     }else if (location.href.endsWith(`?=${navBarMenu_1}`)) {
         location.reload
         FUNCfooterBarSendValue()
+        scrollResertBtnSend()
         document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?=${navBarMenu_2}`);
         document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?=${navBarMenu_3}`);
         document.querySelector(".navBarMenuItem_1").removeAttribute("href");
@@ -376,6 +385,7 @@ setInterval(() => {
     }else if (location.href.endsWith(`?=${navBarMenu_2}`)) {
         location.reload;
         FUNCfooterBarSendValue()
+        scrollResertBtnSend()
         document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
         document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?=${navBarMenu_3}`);
         document.querySelector(".navBarMenuItem_2").removeAttribute("href");
@@ -401,6 +411,7 @@ setInterval(() => {
     }else if (location.href.endsWith(`?=${navBarMenu_3}`)) {
         location.reload;
         FUNCfooterBarSendValue()
+        scrollResertBtnSend()
         document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?=${navBarMenu_1}`);
         document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?=${navBarMenu_2}`);
         document.querySelector(".navBarMenuItem_3").removeAttribute("href");
