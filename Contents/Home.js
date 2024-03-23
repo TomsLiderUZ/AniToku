@@ -763,13 +763,23 @@
 
 
 
+
+
+
+
+
+
+
+    
+
+
     let contentCaruselPageNext = 1;
     let contentCaruselPageClicked = true;
     
     // if (contentCaruselPageClicked === true) {
       let caruselInterval = setInterval(() => {
         contentCaruselPageNext += 1
-    }, 20000);
+    }, 60000);
     // }else if (contentCaruselPageClicked === false) {
       // clearInterval(caruselInterval)
     // };
@@ -974,6 +984,8 @@
                 break;
         }
     });
+
+
 
 
 

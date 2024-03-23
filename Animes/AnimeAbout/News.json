@@ -1,0 +1,28 @@
+[
+    {
+        "About": " «Yolg'izlikda daraja ko'tarish» animesining 9-chi qismidan yangi lavha. <br> Yangi qismning premyerasi 9-mart kuni bo'lib o'tadi.",
+        "Date":{
+                "year": "2024",
+                "month": "2",
+                "day": "8",
+                "time": "13:00"
+            },
+        "Image": {
+                "mode": "file",
+                "src": "Img_2024_2_8_13-00.jpg"
+            }
+    },
+    {
+        "About": "Contnet not available !",
+        "Date":{
+                "year": "0",
+                "month": "0",
+                "day": "0",
+                "time": "00:00"
+            },
+        "Image": {
+                "mode": "file",
+                "src": " "
+            }
+    }
+  ]
