@@ -392,8 +392,8 @@ setInterval(() => {
     }
 
     let locHostPortAdd = `http://${location.hostname}:${location.port}/`
-    let locHostPortNot = `http://${location.hostname}/`
-    alert(locHostPortNot , locHostPortAdd)
+    let locHostPortNot = `http://${location.hostname}`
+    alert(locHostPortNot +"    |    "+ locHostPortAdd)
     function getPage404Seand() {
         location.reload;
         
@@ -403,9 +403,9 @@ setInterval(() => {
         let hashPart404 = url404.split('#')[1];
         
         if (location.href === locHostPortNot) {
-            alert()
+
         }else if (location.href === locHostPortAdd) {
-            alert()
+
         }else if (ipAddress404 || queryString404 || hashPart404) {
             document.querySelector(".body").innerHTML = 
             `
