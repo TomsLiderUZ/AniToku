@@ -401,7 +401,7 @@ setInterval(() => {
         // let queryString404 = url404.split('?')[2];
         // let hashPart404 = url404.split('#')[1];
         
-        if (location.href === `http://${location.hostname}/`) {
+        if (location.href === `https://aniwatch-uz.vercel.app/`) {
             location = `http://${location.host}/?/${navBarMenu_1}`;
         }else if (location.href === `http://${location.hostname}`) {
             location = `http://${location.host}/?/${navBarMenu_1}`;
