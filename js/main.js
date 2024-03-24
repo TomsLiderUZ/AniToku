@@ -11,7 +11,7 @@ document.querySelector(".body").innerHTML += `
     <a href="." class="UnicalMenuItemBg">Boshiga qaytish</a>
     <a href="./?/Profile/Owner" class="UnicalMenuItemBg">Admin bilan bog'lanish</a>
     <a href="./?/Profile" class="UnicalMenuItemBg">Vakolatli Shaxslar</a>
-    <a href="./?/News" class="UnicalMenuItemBg">Elonlar</a>
+    <a href="./?/Anime/Edit" class="UnicalMenuItemBg">Anime editlar</a>
     <a href="./?/About" class="UnicalMenuItemBg">Web-Sayt haqida</a>
   </div>
 </div>
@@ -320,7 +320,118 @@ FUNCmainDataLinkTelegram()
 FUNCmainDataLinkYoutube()
 FUNCmainDataLinkInstagram()
 
+let setContentPageFooterBar = `
 
+    <div class="footerBarBg">
+      <div class="footerBarTop">
+        <div class="footerBarTopLeft">
+          <div class="footerBarTopLeftTitleBg">
+            Kontaktlar
+          </div>
+
+          <div class="footerBarTopLeftCardBg">
+            <div class="footerBarTopLeftCardIconBg"><i class="fa-solid fa-envelope"></i></div>
+            <div class="footerBarTopLeftCardTextBg footerBarTopLeftCardTextEmailBg"> </div>
+          </div>
+          <div class="footerBarTopLeftCardBg">
+            <div class="footerBarTopLeftCardIconBg"><i class="fa-solid fa-square-phone-flip"></i></div>
+            <div class="footerBarTopLeftCardTextBg footerBarTopLeftCardTextNumberBg"> </div>
+          </div>
+
+        </div>
+        <div class="footerBarTopRight">
+          <div class="footerBarTopRightTitleBg">
+            Ijtimoiy tarmoqlar
+          </div>
+          <div class="footerBarTopRightLinksBg">
+            <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardTelegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardYoutube" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
+            <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardInstagram" title="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footerBarBottom"> </div>
+    </div>
+
+`;
+
+let setContentPageMainContentBar = `
+
+<div class="mainContentsBg">
+<div class="mainContentRow_1_AllBg mainContentRowBg">
+  <div class="mainContentRow_LeftBg mainContentBgImgFilter">
+    <div class="mainContentRow_LeftTextBg">
+      Reytingi baland, sifatli dubliyaj asosida animelarni 
+      <br>
+      o'zbek tilida tekinga tomosha qilmoqchimisiz,
+      <br>
+      Unda ushbu sayt aynan siz uchun
+    </div>
+    <div class="mainContentRow_LeftButtonBarBg">
+      <a href="./?/${navBarMenu_1}" class="mainContentRow_LeftButtonBarBtnBg">Boshlash uchun bosing&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    </div>
+  </div>
+  <div class="mainContentRow_RightBg mainContentBgImgFilter">
+    <img class="mainContentAnimetedImg" src="img/Manin-Content-imgs/img_12.jpg" alt="Img" width="90%" style="filter: drop-shadow(0px 3px 3px blue);">
+  </div>
+</div>
+
+<div class="mainContentRow_2_AllBg mainContentRowBg">
+  <div class="mainContentRow_RightBg">
+    <img class="mainContentAnimetedImg" src="img/Manin-Content-imgs/img_1.png" alt="Img" width="80%" style="filter: drop-shadow(0px 3px 3px yellow);">
+  </div>
+  <div class="mainContentRow_LeftBg">
+    <div class="mainContentRow_LeftTextBg">
+      Jangovor, sarguzasht, sehr, komedik, 
+      <br>
+      romantik, qo'rqinchli, oilaviy
+      <br>
+      Janrlaridagi animelar 
+    </div>
+    <div class="mainContentRow_LeftButtonBarBg">
+      <a href="./?/${navBarMenu_3}" class="mainContentRow_LeftButtonBarBtnBg">Boshlash&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    </div>
+  </div>
+</div>
+
+
+<div class="mainContentRow_3_AllBg mainContentRowBg">
+  <div class="mainContentRow_LeftBg">
+    <div class="mainContentRow_LeftTextBg">
+      Siz qidirgan, siz yoqtirgan animelar
+      <br>
+      ${documentLogNameFooter} siz kutgandan ko'roq
+    </div>
+    <div class="mainContentRow_LeftButtonBarBg">
+      <a href="./?/${navBarMenu_1}" class="mainContentRow_LeftButtonBarBtnBg">Boshlash&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    </div>
+  </div>
+  <div class="mainContentRow_RightBg">
+    <img class="mainContentAnimetedImg" src="img/Manin-Content-imgs/img_6.png" alt="Img" width="90%" style="filter: drop-shadow(0px 3px 3px brown);">
+  </div>
+</div>
+
+<div class="mainContentRow_4_AllBg mainContentRowBg">
+  <div class="mainContentRow_RightBg">
+    <img class="mainContentAnimetedImg" src="img/Manin-Content-imgs/img_4.png" alt="Img" width="70%" style="filter: drop-shadow(0px 3px 3px aqua);">
+  </div>
+  <div class="mainContentRow_LeftBg">
+    <div class="mainContentRow_LeftTextBg">
+      Eng sifatli animelar faqat bizda
+      <br>
+      Biz haqimizda ko'proq bilish uchun 
+      <br>
+      bosing
+    </div>
+    <div class="mainContentRow_LeftButtonBarBg">
+      <a href="./?/About" class="mainContentRow_LeftButtonBarBtnBg">Ko'proq&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    </div>
+  </div>
+</div>
+</div>
+
+`
 
 
 
@@ -440,28 +551,31 @@ setInterval(() => {
         
         
         if (location.href === decryptedURL) {
+            location.reload;
+            FUNCfooterBarSendValue()
+            scrollResertBtnSend()
+            document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
+            document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
+            document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
+            document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
+            document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
+            document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
+            document.querySelector("title").innerHTML = `${documentTitleName}`;
+            
+            document.querySelector(".navBarBg").style.display = 'flex';
+    
+            let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
+            navBarMenuItems.forEach(function(element) {
+                element.style.display = 'flex';
+            });
             document.querySelector(".conentsBg").innerHTML = `
 
-            <div class="mainContentsBg">
-            <div class="mainContentRow_1_AllBg mainContentRowBg">
-              <div class="mainContentRow_LeftBg mainContentBgImgFilter">
-                <div class="mainContentRow_LeftTextBg">
-                  Reytingi baland, sifatli dubliyaj asosida animelarni 
-                  <br>
-                  o'zbek tilida tekinga tomosha qilmoqchimisiz,
-                  <br>
-                  Unda ushbu sayt aynan siz uchun
-                </div>
-                <div class="mainContentRow_LeftButtonBarBg">
-                  <a href="./?/Home" class="mainContentRow_LeftButtonBarBtnBg">Boshlash uchun bosing</a>
-                </div>
-              </div>
-              <div class="mainContentRow_RightBg mainContentBgImgFilter">
-                <img src="img/Manin-Content-imgs/img_4.png" alt="Img" width="70%" style="filter: drop-shadow(0px 3px 3px blue);">
-              </div>
-            </div>
-          </div>
-            
+            ${setContentPageMainContentBar}
+            ${setContentPageFooterBar}
+ 
             `
         }else {
             document.querySelector(".body").innerHTML = 
@@ -591,7 +705,7 @@ setInterval(() => {
     
     if (location.href.endsWith("index.html")) {
         location = `http://${location.host}/?/${navBarMenu_1}`;
-    }else if (location.href.endsWith(`?/${navBarMenu_1}`)) {
+    }else if (location.href.endsWith(`/?/${navBarMenu_1}`)) {
         location.reload
         FUNCfooterBarSendValue()
         scrollResertBtnSend()
@@ -619,7 +733,7 @@ setInterval(() => {
         document.body.appendChild(link);
 
         
-    }else if (location.href.endsWith(`?/${navBarMenu_2}`)) {
+    }else if (location.href.endsWith(`/?/${navBarMenu_2}`)) {
         location.reload;
         FUNCfooterBarSendValue()
         scrollResertBtnSend()
@@ -647,7 +761,7 @@ setInterval(() => {
         link.src = `Contents/${navBarMenu_2}.js`;
         document.body.appendChild(link);
 
-    }else if (location.href.endsWith(`?/${navBarMenu_3}`)) {
+    }else if (location.href.endsWith(`/?/${navBarMenu_3}`)) {
         location.reload;
         FUNCfooterBarSendValue()
         scrollResertBtnSend()
@@ -675,7 +789,7 @@ setInterval(() => {
         link.src = `Contents/${navBarMenu_3}.js`;
         document.body.appendChild(link);
 
-    }else if (location.href.includes(`?/Profile`)) {
+    }else if (location.href.includes(`/?/Profile`)) {
         location.reload;
         FUNCfooterBarSendValue()
         scrollResertBtnSend()

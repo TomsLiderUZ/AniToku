@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(12, 12, 12);
 }
 *::selection{
     background-color: rgb(200, 28, 28);
@@ -260,28 +260,28 @@ body{
 
 .mainContentsBg{
     width: 100%;
-    height: 100%;
+    height: max-content;
+    min-height: 100%;
     display: flex;
     align-items: start;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.397);
 }
 .mainContentRowBg{
     width: 100%;
-    height: 100%;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: rgba(255, 0, 0, 0.137); */
+    margin-bottom: 80px;
 }
+
 .mainContentRow_LeftBg{
     width: 60%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: green; */
     flex-wrap: wrap;
 }
 
@@ -291,7 +291,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: yellow; */
     overflow: hidden;
 }
 .mainContentBgImgFilter{
@@ -304,13 +303,14 @@ body{
     height: 60%;
     display: flex;
     align-items: end;
-    justify-content: center;
+    justify-content: left;
     font-size: 30px;
     font-family: sans-serif;
     letter-spacing: 2px;
+    line-height: 38px;
     overflow: hidden;
     box-sizing: border-box;
-    padding: 0 0 80px 20px;
+    padding: 0 0 80px 40px;
 }
 .mainContentRow_LeftButtonBarBg{
     width: 100%;
@@ -321,7 +321,8 @@ body{
     padding: 0 0 0 40px;
 }
 .mainContentRow_LeftButtonBarBtnBg{
-    width: 50%;
+    width: max-content;
+    padding: 0 20px;
     height: 60px;
     font-size: 30px;
     font-family: sans-serif;
@@ -338,8 +339,9 @@ body{
     transition: 0.2s all;
 }
 .mainContentRow_LeftButtonBarBtnBg:hover{
-    background-color: rgb(134, 63, 63);
-    box-shadow: 0px 0px 5px 1px rgb(134, 63, 63);
+    background-color: white;
+    box-shadow: 0px 0px 5px 1px white;
+    color: red;
     transition: 0.2s all;
 }
 
@@ -349,6 +351,33 @@ body{
     background-position: center;
     background-size: cover;
 }
+.mainContentAnimetedImg{
+    /* animation: joinAnimationRight 5s linear 1;   */
+    animation: mainContentAnimetedImg 4s 0s linear infinite;  
+}
+
+@keyframes mainContentAnimetedImg {
+    0% {
+        margin-top: -7%;
+    }
+    50% {
+        margin-top: 7%;
+    }
+    100% {
+        margin-top: -7%;
+    }
+}
+/* @keyframes joinAnimationRight {
+    0% {
+        margin-top: -100%;
+        margin-right: -100%;
+    }
+    100% {
+        margin-top: 0;
+        margin-right: 0;
+    }
+} */
+
 
 
 
@@ -365,7 +394,6 @@ body{
     box-sizing: border-box;
     color: white;
     overflow: auto;
-    background-color: rgb(19, 19, 19);
 }
 .conentsBg::-webkit-scrollbar {
     width: 8px;
