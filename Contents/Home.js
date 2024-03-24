@@ -207,56 +207,56 @@
 
         function FUNCcaruselURL1() {
           if (CaruselValue.C1.URL === "") {
-            caruselURL1 = "?Anime/play?=undefined-1";
+            caruselURL1 = "./?/Anime/play?=undefined-1";
           }else if (CaruselValue.C1.URL === " ") {
-            caruselURL1 = "?Anime/play?=undefined-1";
+            caruselURL1 = "./?/Anime/play?=undefined-1";
           }else{
-            caruselURL1 = "?Anime/play?=" + CaruselValue.C1.URL;
+            caruselURL1 = "./?/Anime/play?=" + CaruselValue.C1.URL;
           };
         }
         function FUNCcaruselURL2() {
           if (CaruselValue.C2.URL === "") {
-            caruselURL2 = "?Anime/play?=undefined-2";
+            caruselURL2 = "./?/Anime/play?=undefined-2";
           }else if (CaruselValue.C2.URL === " ") {
-            caruselURL2 = "?Anime/play?=undefined-2";
+            caruselURL2 = "./?/Anime/play?=undefined-2";
           }else{
-            caruselURL2 = "?Anime/play?=" + CaruselValue.C2.URL;
+            caruselURL2 = "./?/Anime/play?=" + CaruselValue.C2.URL;
           };
         }
         function FUNCcaruselURL3() {
           if (CaruselValue.C3.URL === "") {
-            caruselURL3 = "?Anime/play?=undefined-3";
+            caruselURL3 = "./?/Anime/play?=undefined-3";
           }else if (CaruselValue.C3.URL === " ") {
-            caruselURL3 = "?Anime/play?=undefined-3";
+            caruselURL3 = "./?/Anime/play?=undefined-3";
           }else{
-            caruselURL3 = "?Anime/play?=" + CaruselValue.C3.URL;
+            caruselURL3 = "./?/Anime/play?=" + CaruselValue.C3.URL;
           };
         }
         function FUNCcaruselURL4() {
           if (CaruselValue.C4.URL === "") {
-            caruselURL4 = "?Anime/play?=undefined-4";
+            caruselURL4 = "./?/Anime/play?=undefined-4";
           }else if (CaruselValue.C4.URL === " ") {
-            caruselURL4 = "?Anime/play?=undefined-4";
+            caruselURL4 = "./?/Anime/play?=undefined-4";
           }else{
-            caruselURL4 = "?Anime/play?=" + CaruselValue.C4.URL;
+            caruselURL4 = "./?/Anime/play?=" + CaruselValue.C4.URL;
           };
         }
         function FUNCcaruselURL5() {
           if (CaruselValue.C5.URL === "") {
-            caruselURL5 = "?Anime/play?=undefined-5";
+            caruselURL5 = "./?/Anime/play?=undefined-5";
           }else if (CaruselValue.C5.URL === " ") {
-            caruselURL5 = "?Anime/play?=undefined-5";
+            caruselURL5 = "./?/Anime/play?=undefined-5";
           }else{
-            caruselURL5 = "?Anime/play?=" + CaruselValue.C5.URL;
+            caruselURL5 = "./?/Anime/play?=" + CaruselValue.C5.URL;
           };
         }
         function FUNCcaruselURL6() {
           if (CaruselValue.C6.URL === "") {
-            caruselURL6 = "?Anime/play?=undefined-6";
+            caruselURL6 = "./?/Anime/play?=undefined-6";
           }else if (CaruselValue.C6.URL === " ") {
-            caruselURL6 = "?Anime/play?=undefined-6";
+            caruselURL6 = "./?/Anime/play?=undefined-6";
           }else{
-            caruselURL6 = "?Anime/play?=" + CaruselValue.C6.URL;
+            caruselURL6 = "./?/Anime/play?=" + CaruselValue.C6.URL;
           };
         }
 

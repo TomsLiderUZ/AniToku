@@ -158,6 +158,95 @@ body{
 }
 
 
+.navBarUnicalMenuItemMenusBarBg{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.555);
+    position: absolute;
+    z-index: 9999;
+    backdrop-filter: blur(2px);
+    display: none;
+    justify-content: right;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.2s all;
+}
+.navBarUnicalMenuItemMenusBgCloseBtn{
+    width: 100%;
+    height: 100%;
+}
+.navBarUnicalMenuItemMenusBg{
+    width: 30%;
+    height: 100%;
+    background-color: rgb(80, 80, 80);
+    margin-right: -500px;
+    transition: 0.15s all;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.UnicalMenuItemTitleBg{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.UnicalMenuItemTitleCloseBtnBg{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s all;
+}
+.UnicalMenuItemTitleCloseBtnBg:hover{
+    color: red;
+    transition: 0.1s all;
+}
+
+.UnicalMenuItemTitleTextBg{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-family: sans-serif;
+    color: white;
+    cursor: default;
+    font-weight: 600;
+    padding: 0 35px 0 0;
+    box-sizing: border-box;
+}
+.UnicalMenuItemsAllBg{
+    width: 100%;
+    height: 90%;
+}
+
+.UnicalMenuItemBg{
+    width: 100%;
+    height: 10%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 10px;
+    /* background-color: red; */
+    padding: 0 0 0 50px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 20px;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
 
 
 

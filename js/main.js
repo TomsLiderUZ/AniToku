@@ -1,8 +1,43 @@
+let navBarUnicalMenuItemMenusBarValue = false
+
+function navBarUnicalMenuItemMenusGetBtn() {
+    if (navBarUnicalMenuItemMenusBarValue === true) {
+        navBarUnicalMenuItemMenusBarValue = false
+    }else if (navBarUnicalMenuItemMenusBarValue === false) {
+        navBarUnicalMenuItemMenusBarValue = true
+    }else{
+        navBarUnicalMenuItemMenusBarValue = true
+    }
+    navBarUnicalMenuItemMenusGetFuncOwn()
+}
+
+function navBarUnicalMenuItemMenusCloseBtn() {
+    navBarUnicalMenuItemMenusBarValue = false
+    navBarUnicalMenuItemMenusGetFuncOwn()
+}
+function navBarUnicalMenuItemMenusGetFuncOwn() {
+    document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.display = "flex"
+    if (navBarUnicalMenuItemMenusBarValue === true) {
+        setTimeout(() => {
+            document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.opacity = "1"
+                document.querySelector(".navBarUnicalMenuItemMenusBg").style.marginRight = "0px"
+        }, 200);
+    }else if (navBarUnicalMenuItemMenusBarValue === false) {
+        document.querySelector(".navBarUnicalMenuItemMenusBg").style.marginRight = "-700px"
+        setTimeout(() => {
+            document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.opacity = "0"
+            setTimeout(() => {
+                document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.display = "none"
+            }, 400);
+        }, 100);
+    }else{
+        
+    } 
+}
 
 fetch('../config.json')
   .then(response => response.json())
   .then(app => {
-
     let footerBarLinkStyle = document.createElement('link');
     footerBarLinkStyle.setAttribute("rel", "stylesheet");
     footerBarLinkStyle.setAttribute("href", "Contents/FooterBar.css");
@@ -258,6 +293,10 @@ FUNCmainDataLinkInstagram()
 
 
 
+
+
+
+
     function scrollResertBtnSend() {
 document.querySelector(".body").innerHTML +=
 `
@@ -352,7 +391,8 @@ setInterval(() => {
         }, 1000);
     }
 
-
+    let locHost = `http://${location.hostname}:${location.port}/`
+    alert(locHost)
     function getPage404Seand() {
         location.reload;
         
@@ -361,7 +401,9 @@ setInterval(() => {
         let queryString404 = url404.split('?')[2];
         let hashPart404 = url404.split('#')[1];
         
-        if (queryString404 || hashPart404) {
+        if (location.href === locHost) {
+            alert()
+        }else if (ipAddress404 || queryString404 || hashPart404) {
             document.querySelector(".body").innerHTML = 
             `
             <style>
