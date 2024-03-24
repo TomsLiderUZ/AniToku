@@ -393,7 +393,7 @@ setInterval(() => {
 
     let locHostPortAdd = `http://${location.hostname}:${location.port}/`
     let locHostPortNot = `http://${location.hostname}/`
-
+    alert(locHostPortNot , locHostPortAdd)
     function getPage404Seand() {
         location.reload;
         
