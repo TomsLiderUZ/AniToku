@@ -332,15 +332,20 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 0px 5px 1px white;
+    box-shadow: 0px 0px 5px 1px red;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s all;
 }
 .mainContentRow_LeftButtonBarBtnBg:hover{
-    background-color: brown;
+    background-color: rgb(134, 63, 63);
+    box-shadow: 0px 0px 5px 1px rgb(134, 63, 63);
+    transition: 0.2s all;
 }
 
 
 .mainContentRow_1_AllBg{
-    background-image: url("https://i.pinimg.com/originals/8a/e1/04/8ae104a88d8fd8e5c4d1a9cbea4d4c96.gif");
+    background-image: url("../img/Manin-Content-imgs/Row_1_BgGif");
     background-position: center;
     background-size: cover;
 }

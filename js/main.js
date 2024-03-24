@@ -440,7 +440,29 @@ setInterval(() => {
         
         
         if (location.href === decryptedURL) {
-            location = `http://${location.host}/?/${navBarMenu_1}`;
+            document.querySelector(".conentsBg").innerHTML = `
+
+            <div class="mainContentsBg">
+            <div class="mainContentRow_1_AllBg mainContentRowBg">
+              <div class="mainContentRow_LeftBg mainContentBgImgFilter">
+                <div class="mainContentRow_LeftTextBg">
+                  Reytingi baland, sifatli dubliyaj asosida animelarni 
+                  <br>
+                  o'zbek tilida tekinga tomosha qilmoqchimisiz,
+                  <br>
+                  Unda ushbu sayt aynan siz uchun
+                </div>
+                <div class="mainContentRow_LeftButtonBarBg">
+                  <a href="./?/Home" class="mainContentRow_LeftButtonBarBtnBg">Boshlash uchun bosing</a>
+                </div>
+              </div>
+              <div class="mainContentRow_RightBg mainContentBgImgFilter">
+                <img src="img/Manin-Content-imgs/img_4.png" alt="Img" width="70%" style="filter: drop-shadow(0px 3px 3px blue);">
+              </div>
+            </div>
+          </div>
+            
+            `
         }else {
             document.querySelector(".body").innerHTML = 
             `
