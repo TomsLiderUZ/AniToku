@@ -390,24 +390,28 @@ setInterval(() => {
                 document.querySelector(".footerBarBottom").innerHTML = `© 2023 - ${mainDataCurrentYear} &nbsp;<a href="http://${location.host}/?/${navBarMenu_1}" title="${documentLogNameFooter}">${documentLogNameFooter}</a>&nbsp;  &nbsp;|&nbsp;&nbsp;  Programmer &nbsp;<a href=".?/Profile/Programmer" target="_blank" title="TOMS LIDER">TOMS LIDER</a>&nbsp;`
         }, 1000);
     }
-    // `http://${location.hostname}:${location.port}/`
-    let locHostPortNot = `${location.hostname}`
-    // alert(locHostPortNot)
+
+    // setInterval(() => {
+        var currentURL = location.href;
+        var endIndex = currentURL.indexOf('/', 8);
+        var truncatedURL = currentURL.substring(0, endIndex);
+
+        var encryptedURL = btoa(truncatedURL);
+
+        localStorage.setItem('encryptedSavedURL', encryptedURL);
+
+        var savedEncryptedURL = localStorage.getItem('encryptedSavedURL');
+
+        var decryptedURL = atob(savedEncryptedURL)+"/";
+    // });
+
     function getPage404Seand() {
         location.reload;
         
-        // let url404 = window.location.href;
-        // let ipAddress404 = url404.split('/')[2];
-        // let queryString404 = url404.split('?')[2];
-        // let hashPart404 = url404.split('#')[1];
         
-        if (location.href === `https://aniwatch-uz.vercel.app/`) {
+        if (location.href === decryptedURL) {
             location = `http://${location.host}/?/${navBarMenu_1}`;
-        }else if (location.href === `http://${location.hostname}`) {
-            location = `http://${location.host}/?/${navBarMenu_1}`;
-        }else if (location.href === `http://${location.hostname}:${location.port}/`) {
-            location = `http://${location.host}/?/${navBarMenu_1}`;
-        } else {
+        }else {
             document.querySelector(".body").innerHTML = 
             `
             <style>
