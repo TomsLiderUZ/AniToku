@@ -390,23 +390,22 @@ setInterval(() => {
                 document.querySelector(".footerBarBottom").innerHTML = `© 2023 - ${mainDataCurrentYear} &nbsp;<a href="http://${location.host}/?/${navBarMenu_1}" title="${documentLogNameFooter}">${documentLogNameFooter}</a>&nbsp;  &nbsp;|&nbsp;&nbsp;  Programmer &nbsp;<a href=".?/Profile/Programmer" target="_blank" title="TOMS LIDER">TOMS LIDER</a>&nbsp;`
         }, 1000);
     }
-
-    let locHostPortAdd = `http://${location.hostname}:${location.port}/`
-    let locHostPortNot = `http://${location.hostname}`
-    alert(locHostPortNot +"    |    "+ locHostPortAdd)
+    // `http://${location.hostname}:${location.port}/`
+    let locHostPortNot = `${location.hostname}`
+    // alert(locHostPortNot)
     function getPage404Seand() {
         location.reload;
         
-        let url404 = window.location.href;
-        let ipAddress404 = url404.split('/')[2];
-        let queryString404 = url404.split('?')[2];
-        let hashPart404 = url404.split('#')[1];
+        // let url404 = window.location.href;
+        // let ipAddress404 = url404.split('/')[2];
+        // let queryString404 = url404.split('?')[2];
+        // let hashPart404 = url404.split('#')[1];
         
-        if (location.href === locHostPortNot) {
-
-        }else if (location.href === locHostPortAdd) {
-
-        }else if (ipAddress404 || queryString404 || hashPart404) {
+        if (location.href === `http://${location.hostname}`) {
+            location = `http://${location.host}/?/${navBarMenu_1}`;
+        }else if (location.href === `http://${location.hostname}:${location.port}/`) {
+            location = `http://${location.host}/?/${navBarMenu_1}`;
+        } else {
             document.querySelector(".body").innerHTML = 
             `
             <style>
@@ -523,8 +522,6 @@ setInterval(() => {
             document.querySelector(".NotFundTextBtn").addEventListener("click", ()=>{
             location = `http://${location.host}/?/${navBarMenu_1}`;
             })
-        } else {
-            location = `http://${location.host}/?/${navBarMenu_1}`;
         }
     }
     
