@@ -218,7 +218,7 @@ body{
     justify-content: center;
     font-size: 25px;
     font-family: sans-serif;
-    color: white;
+    color: orange;
     cursor: default;
     font-weight: 600;
     padding: 0 35px 0 0;
@@ -228,22 +228,31 @@ body{
     width: 100%;
     height: 90%;
 }
-
+.UnicalMenuItemBg:first-child{
+    border-top: 1px solid gray;
+    margin-top: 20px;
+}
 .UnicalMenuItemBg{
     width: 100%;
     height: 10%;
     display: inline-flex;
     align-items: center;
     justify-content: left;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     /* background-color: red; */
-    padding: 0 0 0 50px;
+    padding: 0 0 0 30px;
     box-sizing: border-box;
     color: white;
     font-size: 20px;
     font-family: sans-serif;
     cursor: pointer;
     text-decoration: none;
+    font-weight: 100;
+    border-bottom: 1px solid gray;
+}
+.UnicalMenuItemBg:hover{
+    background-color: rgba(255, 255, 255, 0.726);
+    color: orangered;
 }
 
 
