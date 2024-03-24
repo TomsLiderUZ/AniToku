@@ -258,6 +258,99 @@ body{
 }
 
 
+.mainContentsBg{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.397);
+}
+.mainContentRowBg{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgba(255, 0, 0, 0.137); */
+}
+.mainContentRow_LeftBg{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: green; */
+    flex-wrap: wrap;
+}
+
+.mainContentRow_RightBg{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: yellow; */
+    overflow: hidden;
+}
+.mainContentBgImgFilter{
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.755);
+}
+
+.mainContentRow_LeftTextBg{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 0 0 80px 20px;
+}
+.mainContentRow_LeftButtonBarBg{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    padding: 0 0 0 40px;
+}
+.mainContentRow_LeftButtonBarBtnBg{
+    width: 50%;
+    height: 60px;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: red;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px 1px white;
+}
+.mainContentRow_LeftButtonBarBtnBg:hover{
+    background-color: brown;
+}
+
+
+.mainContentRow_1_AllBg{
+    background-image: url("https://i.pinimg.com/originals/8a/e1/04/8ae104a88d8fd8e5c4d1a9cbea4d4c96.gif");
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+
+
+
+
 
 
 

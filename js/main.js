@@ -1,3 +1,33 @@
+document.querySelector(".body").innerHTML += `
+
+<div class="navBarUnicalMenuItemMenusBarBg">
+<div class="navBarUnicalMenuItemMenusBgCloseBtn" onclick="navBarUnicalMenuItemMenusCloseBtn()"></div>
+<div class="navBarUnicalMenuItemMenusBg">
+  <div class="UnicalMenuItemTitleBg">
+    <div class="UnicalMenuItemTitleCloseBtnBg" onclick="navBarUnicalMenuItemMenusCloseBtn()"><i class="fa-solid fa-xmark"></i></div>
+    <div class="UnicalMenuItemTitleTextBg">Menu</div>
+  </div>
+  <div class="UnicalMenuItemsAllBg">
+    <a href="." class="UnicalMenuItemBg">Boshiga qaytish</a>
+    <a href="./?/Profile/Owner" class="UnicalMenuItemBg">Admin bilan bog'lanish</a>
+    <a href="./?/Profile" class="UnicalMenuItemBg">Vakolatli Shaxslar</a>
+    <a href="./?/News" class="UnicalMenuItemBg">Elonlar</a>
+    <a href="./?/About" class="UnicalMenuItemBg">Web-Sayt haqida</a>
+  </div>
+</div>
+</div>
+
+`
+
+
+
+
+
+
+
+
+
+
 let navBarUnicalMenuItemMenusBarValue = false
 
 function navBarUnicalMenuItemMenusGetBtn() {
