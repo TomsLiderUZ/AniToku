@@ -1,69 +1,4 @@
-document.querySelector(".body").innerHTML += `
 
-<div class="navBarUnicalMenuItemMenusBarBg">
-<div class="navBarUnicalMenuItemMenusBgCloseBtn" onclick="navBarUnicalMenuItemMenusCloseBtn()"></div>
-<div class="navBarUnicalMenuItemMenusBg">
-  <div class="UnicalMenuItemTitleBg">
-    <div class="UnicalMenuItemTitleCloseBtnBg" onclick="navBarUnicalMenuItemMenusCloseBtn()"><i class="fa-solid fa-xmark"></i></div>
-    <div class="UnicalMenuItemTitleTextBg">Menu</div>
-  </div>
-  <div class="UnicalMenuItemsAllBg">
-    <a href="." class="UnicalMenuItemBg">Boshiga qaytish</a>
-    <a href="./?/Profile/Owner" class="UnicalMenuItemBg">Admin bilan bog'lanish</a>
-    <a href="./?/Profile" class="UnicalMenuItemBg">Vakolatli Shaxslar</a>
-    <a href="./?/Anime/Edit" class="UnicalMenuItemBg">Anime editlar</a>
-    <a href="./?/About" class="UnicalMenuItemBg">Web-Sayt haqida</a>
-  </div>
-</div>
-</div>
-
-`
-
-
-
-
-
-
-
-
-
-
-let navBarUnicalMenuItemMenusBarValue = false
-
-function navBarUnicalMenuItemMenusGetBtn() {
-    if (navBarUnicalMenuItemMenusBarValue === true) {
-        navBarUnicalMenuItemMenusBarValue = false
-    }else if (navBarUnicalMenuItemMenusBarValue === false) {
-        navBarUnicalMenuItemMenusBarValue = true
-    }else{
-        navBarUnicalMenuItemMenusBarValue = true
-    }
-    navBarUnicalMenuItemMenusGetFuncOwn()
-}
-
-function navBarUnicalMenuItemMenusCloseBtn() {
-    navBarUnicalMenuItemMenusBarValue = false
-    navBarUnicalMenuItemMenusGetFuncOwn()
-}
-function navBarUnicalMenuItemMenusGetFuncOwn() {
-    document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.display = "flex"
-    if (navBarUnicalMenuItemMenusBarValue === true) {
-        setTimeout(() => {
-            document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.opacity = "1"
-                document.querySelector(".navBarUnicalMenuItemMenusBg").style.marginRight = "0px"
-        }, 200);
-    }else if (navBarUnicalMenuItemMenusBarValue === false) {
-        document.querySelector(".navBarUnicalMenuItemMenusBg").style.marginRight = "-700px"
-        setTimeout(() => {
-            document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.opacity = "0"
-            setTimeout(() => {
-                document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.display = "none"
-            }, 400);
-        }, 100);
-    }else{
-        
-    } 
-}
 
 fetch('../config.json')
   .then(response => response.json())
@@ -379,7 +314,7 @@ let setContentPageMainContentBar = `
 
 <div class="mainContentRow_2_AllBg mainContentRowBg">
   <div class="mainContentRow_RightBg">
-    <img class="mainContentAnimetedImg" src="img/Manin-Content-imgs/img_1.png" alt="Img" width="80%" style="filter: drop-shadow(0px 3px 3px yellow);">
+    <img class="mainContentAnimetedImg" src="img/Manin-Content-imgs/img_15.png" alt="Img" width="60%" style="filter: drop-shadow(0px 3px 3px orange);">
   </div>
   <div class="mainContentRow_LeftBg">
     <div class="mainContentRow_LeftTextBg">
@@ -408,13 +343,13 @@ let setContentPageMainContentBar = `
     </div>
   </div>
   <div class="mainContentRow_RightBg">
-    <img class="mainContentAnimetedImg" src="img/Manin-Content-imgs/img_6.png" alt="Img" width="90%" style="filter: drop-shadow(0px 3px 3px brown);">
+    <img class="mainContentAnimetedImg" src="img/Manin-Content-imgs/img_13.png" alt="Img" width="95%" style="filter: drop-shadow(0px 3px 3px red);">
   </div>
 </div>
 
 <div class="mainContentRow_4_AllBg mainContentRowBg">
   <div class="mainContentRow_RightBg">
-    <img class="mainContentAnimetedImg" src="img/Manin-Content-imgs/img_4.png" alt="Img" width="70%" style="filter: drop-shadow(0px 3px 3px aqua);">
+    <img class="mainContentAnimetedImg" src="img/Manin-Content-imgs/img_14.png" alt="Img" width="110%" style="filter: drop-shadow(0px 3px 3px white);">
   </div>
   <div class="mainContentRow_LeftBg">
     <div class="mainContentRow_LeftTextBg">
@@ -523,13 +458,15 @@ setInterval(() => {
 
     function FUNCfooterBarSendValue() {
         setTimeout(() => {
+            setInterval(() => {
                 document.querySelector(".footerBarTopLeftCardTextEmailBg").textContent = mainDataEmail
                 document.querySelector(".footerBarTopLeftCardTextNumberBg").textContent = mainDataNumber
                 document.querySelector(".footerBarTopRightLinkCardTelegram").setAttribute("href", mainDataLinkTelegram)
                 document.querySelector(".footerBarTopRightLinkCardYoutube").setAttribute("href", mainDataLinkYoutube)
                 document.querySelector(".footerBarTopRightLinkCardInstagram").setAttribute("href", mainDataLinkInstagram)
                 document.querySelector(".footerBarBottom").innerHTML = `© 2023 - ${mainDataCurrentYear} &nbsp;<a href="http://${location.host}/?/${navBarMenu_1}" title="${documentLogNameFooter}">${documentLogNameFooter}</a>&nbsp;  &nbsp;|&nbsp;&nbsp;  Programmer &nbsp;<a href=".?/Profile/Programmer" target="_blank" title="TOMS LIDER">TOMS LIDER</a>&nbsp;`
-        }, 1000);
+            });
+        }, 1100);
     }
 
     // setInterval(() => {
@@ -682,15 +619,15 @@ setInterval(() => {
             <div class="NotFundIcon">
               4<span class="NotFundIconTextZero">0</span>4
             </div>
-            <div class="NotFundText">Not Fund</div>
+            <div class="NotFundText">Not Found</div>
             <div class="NotFundTextBtnBg">
               <div class="NotFundTextBtn">Back to Home&nbsp; <i class="fa-solid fa-chevron-right"></i></div>
             </div>
           </div>
             `;
 
-            document.querySelector("title").innerHTML = "404 Not Fund";
-            console.warn("404 Not Fund \n\n"+`🔶Back to Home🔶 \nhttp://${location.host}/?/${navBarMenu_1}`);
+            document.querySelector("title").innerHTML = "404 Not Found";
+            console.warn("404 Not Found \n\n"+`🔶Back to Home🔶 \nhttp://${location.host}/?/${navBarMenu_1}`);
             document.querySelector(".NotFundTextBtn").addEventListener("click", ()=>{
             location = `http://${location.host}/?/${navBarMenu_1}`;
             })
@@ -704,7 +641,7 @@ setInterval(() => {
 
     
     if (location.href.endsWith("index.html")) {
-        location = `http://${location.host}/?/${navBarMenu_1}`;
+        location = `.`;
     }else if (location.href.endsWith(`/?/${navBarMenu_1}`)) {
         location.reload
         FUNCfooterBarSendValue()
@@ -849,3 +786,64 @@ setInterval(() => {
     console.error('Xatolik yuz berdi:', error);
   });
 
+
+
+  document.querySelector(".body").innerHTML += `
+
+  <div class="navBarUnicalMenuItemMenusBarBg">
+  <div class="navBarUnicalMenuItemMenusBgCloseBtn" onclick="navBarUnicalMenuItemMenusCloseBtn()"></div>
+  <div class="navBarUnicalMenuItemMenusBg">
+    <div class="UnicalMenuItemTitleBg">
+      <div class="UnicalMenuItemTitleCloseBtnBg" onclick="navBarUnicalMenuItemMenusCloseBtn()"><i class="fa-solid fa-xmark"></i></div>
+      <div class="UnicalMenuItemTitleTextBg">Menu</div>
+    </div>
+    <div class="UnicalMenuItemsAllBg">
+      <a href="." class="UnicalMenuItemBg">Boshiga qaytish</a>
+      <a href="./?/Profile/Owner" class="UnicalMenuItemBg">Admin bilan bog'lanish</a>
+      <a href="./?/Profile" class="UnicalMenuItemBg">Vakolatli Shaxslar</a>
+      <a href="./?/Anime/Edit" class="UnicalMenuItemBg">Anime editlar</a>
+      <a href="./?/About" class="UnicalMenuItemBg">Web-Sayt haqida</a>
+    </div>
+  </div>
+  </div>
+  
+  `
+  
+  
+  
+  let navBarUnicalMenuItemMenusBarValue = false
+  
+  function navBarUnicalMenuItemMenusGetBtn() {
+      if (navBarUnicalMenuItemMenusBarValue === true) {
+          navBarUnicalMenuItemMenusBarValue = false
+      }else if (navBarUnicalMenuItemMenusBarValue === false) {
+          navBarUnicalMenuItemMenusBarValue = true
+      }else{
+          navBarUnicalMenuItemMenusBarValue = true
+      }
+      navBarUnicalMenuItemMenusGetFuncOwn()
+  }
+  
+  function navBarUnicalMenuItemMenusCloseBtn() {
+      navBarUnicalMenuItemMenusBarValue = false
+      navBarUnicalMenuItemMenusGetFuncOwn()
+  }
+  function navBarUnicalMenuItemMenusGetFuncOwn() {
+      document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.display = "flex"
+      if (navBarUnicalMenuItemMenusBarValue === true) {
+          setTimeout(() => {
+              document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.opacity = "1"
+                  document.querySelector(".navBarUnicalMenuItemMenusBg").style.marginRight = "0px"
+          }, 200);
+      }else if (navBarUnicalMenuItemMenusBarValue === false) {
+          document.querySelector(".navBarUnicalMenuItemMenusBg").style.marginRight = "-700px"
+          setTimeout(() => {
+              document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.opacity = "0"
+              setTimeout(() => {
+                  document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.display = "none"
+              }, 400);
+          }, 100);
+      }else{
+          
+      } 
+  }
