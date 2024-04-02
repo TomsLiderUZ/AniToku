@@ -918,4 +918,68 @@ body{
 
 
 
+.LiveStreamAlertCardBg{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
 
+.LiveStreamAlertCardItemBg{
+    width: 95%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(70, 70, 70);
+    background-color: rgb(10, 10, 10); 
+    border-radius: 20px;
+    padding: 0 20px 0 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+}
+.LiveStreamAlertCardItemBg:hover{
+    background-color: rgb(30, 30, 30); 
+}
+
+.LiveStreamAlertLeft{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: green; */
+}
+
+
+.LiveStreamAlertRight{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    font-size: 25px;
+    padding: 50px 15px 10px 15px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+
+.LiveStreamAlertLeftImgBg{
+    width: 640px;
+    height: 360px;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: 1px solid rgb(70, 70, 70);
+    border-radius: 20px;
+    background-image: url("../Animes/Alert-Imgs/Live.jpg");
+}

@@ -1,261 +1,261 @@
 
 
 fetch('../config.json')
-  .then(response => response.json())
-  .then(app => {
-    let footerBarLinkStyle = document.createElement('link');
-    footerBarLinkStyle.setAttribute("rel", "stylesheet");
-    footerBarLinkStyle.setAttribute("href", "Contents/FooterBar.css");
-    document.head.appendChild(footerBarLinkStyle);
+    .then(response => response.json())
+    .then(app => {
+        let footerBarLinkStyle = document.createElement('link');
+        footerBarLinkStyle.setAttribute("rel", "stylesheet");
+        footerBarLinkStyle.setAttribute("href", "Contents/FooterBar.css");
+        document.head.appendChild(footerBarLinkStyle);
 
 
-    let version = app.config.document_version;
+        let version = app.config.document_version;
 
 
 
-    let documentTitleName = "";
-    let documentLogName = "";
-    let documentLogNameFooter = "";
-    
+        let documentTitleName = "";
+        let documentLogName = "";
+        let documentLogNameFooter = "";
 
-    function FUNCdocumentTitleName() {
-        if (app.data.title.titleName === "") {
-            documentTitleName = "Document"
-        }else if (app.data.title.titleName === " ") {
-            documentTitleName = "Document"
-        }else{
-            documentTitleName = app.data.title.titleName
+
+        function FUNCdocumentTitleName() {
+            if (app.data.title.titleName === "") {
+                documentTitleName = "Document"
+            } else if (app.data.title.titleName === " ") {
+                documentTitleName = "Document"
+            } else {
+                documentTitleName = app.data.title.titleName
+            }
         }
-    }
-    function FUNCdocumentLogName() {
-        if (app.data.title.logoName === "") {
-            documentLogName = `<i class="fa-solid fa-feather-pointed"></i>` + "Document"
-        }else if (app.data.title.logoName === " ") {
-            documentLogName = `<i class="fa-solid fa-feather-pointed"></i>` + "Document"
-        }else{
-            documentLogName = `<i class="fa-solid fa-feather-pointed"></i>` + app.data.title.logoName
+        function FUNCdocumentLogName() {
+            if (app.data.title.logoName === "") {
+                documentLogName = `<i class="fa-solid fa-feather-pointed"></i>` + "Document"
+            } else if (app.data.title.logoName === " ") {
+                documentLogName = `<i class="fa-solid fa-feather-pointed"></i>` + "Document"
+            } else {
+                documentLogName = `<i class="fa-solid fa-feather-pointed"></i>` + app.data.title.logoName
+            }
         }
-    }
-    function FUNCdocumentLogNameFooter() {
-        if (app.data.title.logoName === "") {
-            documentLogNameFooter = "Document"
-        }else if (app.data.title.logoName === " ") {
-            documentLogNameFooter = "Document"
-        }else{
-            documentLogNameFooter = app.data.title.logoName
+        function FUNCdocumentLogNameFooter() {
+            if (app.data.title.logoName === "") {
+                documentLogNameFooter = "Document"
+            } else if (app.data.title.logoName === " ") {
+                documentLogNameFooter = "Document"
+            } else {
+                documentLogNameFooter = app.data.title.logoName
+            }
         }
-    }
 
 
-    FUNCdocumentTitleName()
-    FUNCdocumentLogName()
-    FUNCdocumentLogNameFooter()
+        FUNCdocumentTitleName()
+        FUNCdocumentLogName()
+        FUNCdocumentLogNameFooter()
 
 
 
 
-    let documentNavMenuContnet_1 = "";
-    let documentNavMenuContnet_2 = "";
-    let documentNavMenuContnet_3 = "";
+        let documentNavMenuContnet_1 = "";
+        let documentNavMenuContnet_2 = "";
+        let documentNavMenuContnet_3 = "";
 
-    function FUNCdocumentNavMenuContnet_1() {
-        if (app.data.nawBarMenus.menu_1.content === "") {
-            documentNavMenuContnet_1 = "Menu-1"
-        }else if (app.data.nawBarMenus.menu_1.content === " ") {
-            documentNavMenuContnet_1 = "Menu-1"
-        }else{
-            documentNavMenuContnet_1 = app.data.nawBarMenus.menu_1.content
+        function FUNCdocumentNavMenuContnet_1() {
+            if (app.data.nawBarMenus.menu_1.content === "") {
+                documentNavMenuContnet_1 = "Menu-1"
+            } else if (app.data.nawBarMenus.menu_1.content === " ") {
+                documentNavMenuContnet_1 = "Menu-1"
+            } else {
+                documentNavMenuContnet_1 = app.data.nawBarMenus.menu_1.content
+            }
         }
-    }
-    function FUNCdocumentNavMenuContnet_2() {
-        if (app.data.nawBarMenus.menu_2.content === "") {
-            documentNavMenuContnet_2 = "Menu-2"
-        }else if (app.data.nawBarMenus.menu_2.content === " ") {
-            documentNavMenuContnet_2 = "Menu-2"
-        }else{
-            documentNavMenuContnet_2 = app.data.nawBarMenus.menu_2.content
+        function FUNCdocumentNavMenuContnet_2() {
+            if (app.data.nawBarMenus.menu_2.content === "") {
+                documentNavMenuContnet_2 = "Menu-2"
+            } else if (app.data.nawBarMenus.menu_2.content === " ") {
+                documentNavMenuContnet_2 = "Menu-2"
+            } else {
+                documentNavMenuContnet_2 = app.data.nawBarMenus.menu_2.content
+            }
         }
-    }
-    function FUNCdocumentNavMenuContnet_3() {
-        if (app.data.nawBarMenus.menu_3.content === "") {
-            documentNavMenuContnet_3 = "Menu-3"
-        }else if (app.data.nawBarMenus.menu_3.content === " ") {
-            documentNavMenuContnet_3 = "Menu-3"
-        }else{
-            documentNavMenuContnet_3 = app.data.nawBarMenus.menu_3.content
+        function FUNCdocumentNavMenuContnet_3() {
+            if (app.data.nawBarMenus.menu_3.content === "") {
+                documentNavMenuContnet_3 = "Menu-3"
+            } else if (app.data.nawBarMenus.menu_3.content === " ") {
+                documentNavMenuContnet_3 = "Menu-3"
+            } else {
+                documentNavMenuContnet_3 = app.data.nawBarMenus.menu_3.content
+            }
         }
-    }
 
 
-    FUNCdocumentNavMenuContnet_1()
-    FUNCdocumentNavMenuContnet_2()
-    FUNCdocumentNavMenuContnet_3()
-
-
-
-    let documentNavMenuTitle_1 = "";
-    let documentNavMenuTitle_2 = "";
-    let documentNavMenuTitle_3 = "";
+        FUNCdocumentNavMenuContnet_1()
+        FUNCdocumentNavMenuContnet_2()
+        FUNCdocumentNavMenuContnet_3()
 
 
 
-    function FUNCdocumentNavMenuTitle_1() {
-        if (app.data.nawBarMenus.menu_1.title === "") {
-            documentNavMenuTitle_1 = "Menu-1"
-        }else if (app.data.nawBarMenus.menu_1.title === " ") {
-            documentNavMenuTitle_1 = "Menu-1"
-        }else{
-            documentNavMenuTitle_1 = app.data.nawBarMenus.menu_1.title
+        let documentNavMenuTitle_1 = "";
+        let documentNavMenuTitle_2 = "";
+        let documentNavMenuTitle_3 = "";
+
+
+
+        function FUNCdocumentNavMenuTitle_1() {
+            if (app.data.nawBarMenus.menu_1.title === "") {
+                documentNavMenuTitle_1 = "Menu-1"
+            } else if (app.data.nawBarMenus.menu_1.title === " ") {
+                documentNavMenuTitle_1 = "Menu-1"
+            } else {
+                documentNavMenuTitle_1 = app.data.nawBarMenus.menu_1.title
+            }
         }
-    }
-    function FUNCdocumentNavMenuTitle_2() {
-        if (app.data.nawBarMenus.menu_2.title === "") {
-            documentNavMenuTitle_2 = "Menu-2"
-        }else if (app.data.nawBarMenus.menu_2.title === " ") {
-            documentNavMenuTitle_2 = "Menu-2"
-        }else{
-            documentNavMenuTitle_2 = app.data.nawBarMenus.menu_2.title
+        function FUNCdocumentNavMenuTitle_2() {
+            if (app.data.nawBarMenus.menu_2.title === "") {
+                documentNavMenuTitle_2 = "Menu-2"
+            } else if (app.data.nawBarMenus.menu_2.title === " ") {
+                documentNavMenuTitle_2 = "Menu-2"
+            } else {
+                documentNavMenuTitle_2 = app.data.nawBarMenus.menu_2.title
+            }
         }
-    }
-    function FUNCdocumentNavMenuTitle_3() {
-        if (app.data.nawBarMenus.menu_3.title === "") {
-            documentNavMenuTitle_3 = "Menu-3"
-        }else if (app.data.nawBarMenus.menu_3.title === " ") {
-            documentNavMenuTitle_3 = "Menu-3"
-        }else{
-            documentNavMenuTitle_3 = app.data.nawBarMenus.menu_3.title
+        function FUNCdocumentNavMenuTitle_3() {
+            if (app.data.nawBarMenus.menu_3.title === "") {
+                documentNavMenuTitle_3 = "Menu-3"
+            } else if (app.data.nawBarMenus.menu_3.title === " ") {
+                documentNavMenuTitle_3 = "Menu-3"
+            } else {
+                documentNavMenuTitle_3 = app.data.nawBarMenus.menu_3.title
+            }
         }
-    }
 
-    FUNCdocumentNavMenuTitle_1()
-    FUNCdocumentNavMenuTitle_2()
-    FUNCdocumentNavMenuTitle_3()
+        FUNCdocumentNavMenuTitle_1()
+        FUNCdocumentNavMenuTitle_2()
+        FUNCdocumentNavMenuTitle_3()
 
 
-    let documentNavMenuURL_1 = "";
-    let documentNavMenuURL_2 = "";
-    let documentNavMenuURL_3 = "";
+        let documentNavMenuURL_1 = "";
+        let documentNavMenuURL_2 = "";
+        let documentNavMenuURL_3 = "";
 
-    function FUNCdocumentNavMenuURL_1() {
-        if (app.data.nawBarMenus.menu_1.url === "") {
-            documentNavMenuURL_1 = "Menu-1"
-        }else if (app.data.nawBarMenus.menu_1.url === " ") {
-            documentNavMenuURL_1 = "Menu-1"
-        }else{
-            documentNavMenuURL_1 = app.data.nawBarMenus.menu_1.url
+        function FUNCdocumentNavMenuURL_1() {
+            if (app.data.nawBarMenus.menu_1.url === "") {
+                documentNavMenuURL_1 = "Menu-1"
+            } else if (app.data.nawBarMenus.menu_1.url === " ") {
+                documentNavMenuURL_1 = "Menu-1"
+            } else {
+                documentNavMenuURL_1 = app.data.nawBarMenus.menu_1.url
+            }
         }
-    }
-    function FUNCdocumentNavMenuURL_2() {
-        if (app.data.nawBarMenus.menu_2.url === "") {
-            documentNavMenuURL_2 = "Menu-2"
-        }else if (app.data.nawBarMenus.menu_2.url === " ") {
-            documentNavMenuURL_2 = "Menu-2"
-        }else{
-            documentNavMenuURL_2 = app.data.nawBarMenus.menu_2.url
+        function FUNCdocumentNavMenuURL_2() {
+            if (app.data.nawBarMenus.menu_2.url === "") {
+                documentNavMenuURL_2 = "Menu-2"
+            } else if (app.data.nawBarMenus.menu_2.url === " ") {
+                documentNavMenuURL_2 = "Menu-2"
+            } else {
+                documentNavMenuURL_2 = app.data.nawBarMenus.menu_2.url
+            }
         }
-    }
-    function FUNCdocumentNavMenuURL_3() {
-        if (app.data.nawBarMenus.menu_3.url === "") {
-            documentNavMenuURL_3 = "Menu-3"
-        }else if (app.data.nawBarMenus.menu_3.url === " ") {
-            documentNavMenuURL_3 = "Menu-3"
-        }else{
-            documentNavMenuURL_3 = app.data.nawBarMenus.menu_3.url
+        function FUNCdocumentNavMenuURL_3() {
+            if (app.data.nawBarMenus.menu_3.url === "") {
+                documentNavMenuURL_3 = "Menu-3"
+            } else if (app.data.nawBarMenus.menu_3.url === " ") {
+                documentNavMenuURL_3 = "Menu-3"
+            } else {
+                documentNavMenuURL_3 = app.data.nawBarMenus.menu_3.url
+            }
         }
-    }
 
 
-    FUNCdocumentNavMenuURL_1()
-    FUNCdocumentNavMenuURL_2()
-    FUNCdocumentNavMenuURL_3()
-
-
-
-
-    
-    let navBarMenu_1 = documentNavMenuURL_1;
-    let navBarMenu_2 = documentNavMenuURL_2;
-    let navBarMenu_3 = documentNavMenuURL_3;
-
-
-
-const currentYear = new Date().getFullYear(); 
-let mainDataNumber = ""
-let mainDataEmail = ""
-let mainDataCurrentYear = ""
-let mainDataLinkTelegram = ""
-let mainDataLinkYoutube = ""
-let mainDataLinkInstagram = ""
-
-
-function FUNCmainDataNumber() {
-    if (app.config.contact_number === "") {
-        mainDataNumber = "Number not available"
-    }else if (app.config.contact_number === " ") {
-        mainDataNumber = "Number not available"
-    }else{
-        mainDataNumber = app.config.contact_number
-    }
-}
-function FUNCmainDataEmail() {
-    if (app.config.contact_email === "") {
-        mainDataEmail = "Email not available"
-    }else if (app.config.contact_email === " ") {
-        mainDataEmail = "Email not available"
-    }else{
-        mainDataEmail = app.config.contact_email
-    }
-}
-function FUNCmainDataCurrentYear() {
-    if (app.config.current_year === "") {
-        mainDataCurrentYear = `${currentYear}`
-    }else if (app.config.current_year === " ") {
-        mainDataCurrentYear = `${currentYear}`
-    }else{
-        mainDataCurrentYear = app.config.current_year
-    }
-}
-
-
-function FUNCmainDataLinkTelegram() {
-    if (app.config.contact_telegarm === "") {
-        mainDataLinkTelegram = `http://${location.host}/?/${navBarMenu_1}`
-    }else if (app.config.contact_telegarm === " ") {
-        mainDataLinkTelegram = `http://${location.host}/?/${navBarMenu_1}`
-    }else{
-        mainDataLinkTelegram = app.config.contact_telegarm
-    }
-}
-function FUNCmainDataLinkYoutube() {
-    if (app.config.contact_youtube === "") {
-        mainDataLinkYoutube = `http://${location.host}/?/${navBarMenu_1}`
-    }else if (app.config.contact_youtube === " ") {
-        mainDataLinkYoutube = `http://${location.host}/?/${navBarMenu_1}`
-    }else{
-        mainDataLinkYoutube = app.config.contact_youtube
-    }
-}
-function FUNCmainDataLinkInstagram() {
-    if (app.config.contact_instagram === "") {
-        mainDataLinkInstagram = `http://${location.host}/?/${navBarMenu_1}`
-    }else if (app.config.contact_instagram === " ") {
-        mainDataLinkInstagram = `http://${location.host}/?/${navBarMenu_1}`
-    }else{
-        mainDataLinkInstagram = app.config.contact_instagram
-    }
-}
+        FUNCdocumentNavMenuURL_1()
+        FUNCdocumentNavMenuURL_2()
+        FUNCdocumentNavMenuURL_3()
 
 
 
 
-FUNCmainDataNumber()
-FUNCmainDataEmail()
-FUNCmainDataCurrentYear()
-FUNCmainDataLinkTelegram()
-FUNCmainDataLinkYoutube()
-FUNCmainDataLinkInstagram()
 
-let setContentPageFooterBar = `
+        let navBarMenu_1 = documentNavMenuURL_1;
+        let navBarMenu_2 = documentNavMenuURL_2;
+        let navBarMenu_3 = documentNavMenuURL_3;
+
+
+
+        const currentYear = new Date().getFullYear();
+        let mainDataNumber = ""
+        let mainDataEmail = ""
+        let mainDataCurrentYear = ""
+        let mainDataLinkTelegram = ""
+        let mainDataLinkYoutube = ""
+        let mainDataLinkInstagram = ""
+
+
+        function FUNCmainDataNumber() {
+            if (app.config.contact_number === "") {
+                mainDataNumber = "Number not available"
+            } else if (app.config.contact_number === " ") {
+                mainDataNumber = "Number not available"
+            } else {
+                mainDataNumber = app.config.contact_number
+            }
+        }
+        function FUNCmainDataEmail() {
+            if (app.config.contact_email === "") {
+                mainDataEmail = "Email not available"
+            } else if (app.config.contact_email === " ") {
+                mainDataEmail = "Email not available"
+            } else {
+                mainDataEmail = app.config.contact_email
+            }
+        }
+        function FUNCmainDataCurrentYear() {
+            if (app.config.current_year === "") {
+                mainDataCurrentYear = `${currentYear}`
+            } else if (app.config.current_year === " ") {
+                mainDataCurrentYear = `${currentYear}`
+            } else {
+                mainDataCurrentYear = app.config.current_year
+            }
+        }
+
+
+        function FUNCmainDataLinkTelegram() {
+            if (app.config.contact_telegarm === "") {
+                mainDataLinkTelegram = `http://${location.host}/?/${navBarMenu_1}`
+            } else if (app.config.contact_telegarm === " ") {
+                mainDataLinkTelegram = `http://${location.host}/?/${navBarMenu_1}`
+            } else {
+                mainDataLinkTelegram = app.config.contact_telegarm
+            }
+        }
+        function FUNCmainDataLinkYoutube() {
+            if (app.config.contact_youtube === "") {
+                mainDataLinkYoutube = `http://${location.host}/?/${navBarMenu_1}`
+            } else if (app.config.contact_youtube === " ") {
+                mainDataLinkYoutube = `http://${location.host}/?/${navBarMenu_1}`
+            } else {
+                mainDataLinkYoutube = app.config.contact_youtube
+            }
+        }
+        function FUNCmainDataLinkInstagram() {
+            if (app.config.contact_instagram === "") {
+                mainDataLinkInstagram = `http://${location.host}/?/${navBarMenu_1}`
+            } else if (app.config.contact_instagram === " ") {
+                mainDataLinkInstagram = `http://${location.host}/?/${navBarMenu_1}`
+            } else {
+                mainDataLinkInstagram = app.config.contact_instagram
+            }
+        }
+
+
+
+
+        FUNCmainDataNumber()
+        FUNCmainDataEmail()
+        FUNCmainDataCurrentYear()
+        FUNCmainDataLinkTelegram()
+        FUNCmainDataLinkYoutube()
+        FUNCmainDataLinkInstagram()
+
+        let setContentPageFooterBar = `
 
     <div class="footerBarBg">
       <div class="footerBarTop">
@@ -291,7 +291,7 @@ let setContentPageFooterBar = `
 
 `;
 
-let setContentPageMainContentBar = `
+        let setContentPageMainContentBar = `
 
 <div class="mainContentsBg">
 <div class="mainContentRow_1_AllBg mainContentRowBg">
@@ -373,9 +373,9 @@ let setContentPageMainContentBar = `
 
 
 
-    function scrollResertBtnSend() {
-document.querySelector(".body").innerHTML +=
-`
+        function scrollResertBtnSend() {
+            document.querySelector(".body").innerHTML +=
+                `
 <style>
 .contentsBgScrollRestartBtnBg{
     width: 150px;
@@ -420,56 +420,56 @@ document.querySelector(".body").innerHTML +=
 </div>
 `
 
-document.querySelector(".contentsBgScrollRestartBtn").addEventListener("click", ()=>{
-    document.querySelector(".conentsBg").scrollTop = 0;
-})
+            document.querySelector(".contentsBgScrollRestartBtn").addEventListener("click", () => {
+                document.querySelector(".conentsBg").scrollTop = 0;
+            })
 
 
-setInterval(() => {
-    if (document.querySelector(".conentsBg").scrollTop >= 120) {
-            document.querySelector(".contentsBgScrollRestartBtn").style.opacity = "1"
-            document.querySelector(".contentsBgScrollRestartBtn").style.marginRight = "0%"
-    }else{
-        document.querySelector(".contentsBgScrollRestartBtn").style.opacity = "0"
-        document.querySelector(".contentsBgScrollRestartBtn").style.marginRight = "-200%"
-    }
-});
-
-    }
-
-
-
-
-    document.querySelector(".navBarLogo").innerHTML = documentLogName;
-    document.querySelector(".navBarLogo").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
-    
-    document.querySelector(".navBarMenuItem_1").textContent = documentNavMenuContnet_1;
-    document.querySelector(".navBarMenuItem_2").textContent = documentNavMenuContnet_2;
-    document.querySelector(".navBarMenuItem_3").textContent = documentNavMenuContnet_3;
-    
-    document.querySelector(".navBarBg").style.display = 'flex';
-
-    let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
-    navBarMenuItems.forEach(function(element) {
-        element.style.display = 'flex';
-    });
-    
-
-
-    function FUNCfooterBarSendValue() {
-        setTimeout(() => {
             setInterval(() => {
-                document.querySelector(".footerBarTopLeftCardTextEmailBg").textContent = mainDataEmail
-                document.querySelector(".footerBarTopLeftCardTextNumberBg").textContent = mainDataNumber
-                document.querySelector(".footerBarTopRightLinkCardTelegram").setAttribute("href", mainDataLinkTelegram)
-                document.querySelector(".footerBarTopRightLinkCardYoutube").setAttribute("href", mainDataLinkYoutube)
-                document.querySelector(".footerBarTopRightLinkCardInstagram").setAttribute("href", mainDataLinkInstagram)
-                document.querySelector(".footerBarBottom").innerHTML = `© 2023 - ${mainDataCurrentYear} &nbsp;<a href="http://${location.host}/?/${navBarMenu_1}" title="${documentLogNameFooter}">${documentLogNameFooter}</a>&nbsp;  &nbsp;|&nbsp;&nbsp;  Programmer &nbsp;<a href=".?/Profile/Programmer" target="_blank" title="TOMS LIDER">TOMS LIDER</a>&nbsp;`
+                if (document.querySelector(".conentsBg").scrollTop >= 120) {
+                    document.querySelector(".contentsBgScrollRestartBtn").style.opacity = "1"
+                    document.querySelector(".contentsBgScrollRestartBtn").style.marginRight = "0%"
+                } else {
+                    document.querySelector(".contentsBgScrollRestartBtn").style.opacity = "0"
+                    document.querySelector(".contentsBgScrollRestartBtn").style.marginRight = "-200%"
+                }
             });
-        }, 1100);
-    }
 
-    // setInterval(() => {
+        }
+
+
+
+
+        document.querySelector(".navBarLogo").innerHTML = documentLogName;
+        document.querySelector(".navBarLogo").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
+
+        document.querySelector(".navBarMenuItem_1").textContent = documentNavMenuContnet_1;
+        document.querySelector(".navBarMenuItem_2").textContent = documentNavMenuContnet_2;
+        document.querySelector(".navBarMenuItem_3").textContent = documentNavMenuContnet_3;
+
+        document.querySelector(".navBarBg").style.display = 'flex';
+
+        let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
+        navBarMenuItems.forEach(function (element) {
+            element.style.display = 'flex';
+        });
+
+
+
+        function FUNCfooterBarSendValue() {
+            setTimeout(() => {
+                setInterval(() => {
+                    document.querySelector(".footerBarTopLeftCardTextEmailBg").textContent = mainDataEmail
+                    document.querySelector(".footerBarTopLeftCardTextNumberBg").textContent = mainDataNumber
+                    document.querySelector(".footerBarTopRightLinkCardTelegram").setAttribute("href", mainDataLinkTelegram)
+                    document.querySelector(".footerBarTopRightLinkCardYoutube").setAttribute("href", mainDataLinkYoutube)
+                    document.querySelector(".footerBarTopRightLinkCardInstagram").setAttribute("href", mainDataLinkInstagram)
+                    document.querySelector(".footerBarBottom").innerHTML = `© 2023 - ${mainDataCurrentYear} &nbsp;<a href="http://${location.host}/?/${navBarMenu_1}" title="${documentLogNameFooter}">${documentLogNameFooter}</a>&nbsp;  &nbsp;|&nbsp;&nbsp;  Programmer &nbsp;<a href=".?/Profile/Programmer" target="_blank" title="TOMS LIDER">TOMS LIDER</a>&nbsp;`
+                });
+            }, 1100);
+        }
+
+        // setInterval(() => {
         var currentURL = location.href;
         var endIndex = currentURL.indexOf('/', 8);
         var truncatedURL = currentURL.substring(0, endIndex);
@@ -480,43 +480,43 @@ setInterval(() => {
 
         var savedEncryptedURL = localStorage.getItem('encryptedSavedURL');
 
-        var decryptedURL = atob(savedEncryptedURL)+"/";
-    // });
+        var decryptedURL = atob(savedEncryptedURL) + "/";
+        // });
 
-    function getPage404Seand() {
-        location.reload;
-        
-        
-        if (location.href === decryptedURL) {
+        function getPage404Seand() {
             location.reload;
-            FUNCfooterBarSendValue()
-            scrollResertBtnSend()
-            document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
-            document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
-            document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
-            document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
-            document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
-            document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
-            document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
-            document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
-            document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
-            document.querySelector("title").innerHTML = `${documentTitleName}`;
-            
-            document.querySelector(".navBarBg").style.display = 'flex';
-    
-            let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
-            navBarMenuItems.forEach(function(element) {
-                element.style.display = 'flex';
-            });
-            document.querySelector(".conentsBg").innerHTML = `
+
+
+            if (location.href === decryptedURL) {
+                location.reload;
+                FUNCfooterBarSendValue()
+                scrollResertBtnSend()
+                document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
+                document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
+                document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
+                document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
+                document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
+                document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
+                document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
+                document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
+                document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
+                document.querySelector("title").innerHTML = `${documentTitleName}`;
+
+                document.querySelector(".navBarBg").style.display = 'flex';
+
+                let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
+                navBarMenuItems.forEach(function (element) {
+                    element.style.display = 'flex';
+                });
+                document.querySelector(".conentsBg").innerHTML = `
 
             ${setContentPageMainContentBar}
             ${setContentPageFooterBar}
  
             `
-        }else {
-            document.querySelector(".body").innerHTML = 
-            `
+            } else {
+                document.querySelector(".body").innerHTML =
+                    `
             <style>
             .NotFundBg{
                 width: 100%;
@@ -626,169 +626,174 @@ setInterval(() => {
           </div>
             `;
 
-            document.querySelector("title").innerHTML = "404 Not Found";
-            console.warn("404 Not Found \n\n"+`🔶Back to Home🔶 \nhttp://${location.host}/?/${navBarMenu_1}`);
-            document.querySelector(".NotFundTextBtn").addEventListener("click", ()=>{
-            location = `http://${location.host}/?/${navBarMenu_1}`;
-            })
+                document.querySelector("title").innerHTML = "404 Not Found";
+                console.warn("404 Not Found \n\n" + `🔶Back to Home🔶 \nhttp://${location.host}/?/${navBarMenu_1}`);
+                document.querySelector(".NotFundTextBtn").addEventListener("click", () => {
+                    location = `http://${location.host}/?/${navBarMenu_1}`;
+                })
+            }
         }
-    }
+
+
+
+
+
+
+
+        if (location.href.endsWith("index.html")) {
+            location = `.`;
+        } else if (location.href.endsWith(`/?/${navBarMenu_1}`)) {
+            location.reload
+            FUNCfooterBarSendValue()
+            scrollResertBtnSend()
+            document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
+            document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
+            document.querySelector(".navBarMenuItem_1").removeAttribute("href");
+            document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemOwn");
+            document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
+            document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
+            document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_1}`;
+
+            document.querySelector(".navBarBg").style.display = 'flex';
+
+            let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
+            navBarMenuItems.forEach(function (element) {
+                element.style.display = 'flex';
+            });
+
+
+            let link = document.createElement('script');
+            link.src = `Contents/${navBarMenu_1}.js`;
+            document.body.appendChild(link);
+            
+            let LiveStreamBarLink = document.createElement('script');
+            LiveStreamBarLink.setAttribute("src", "Live-Stream/Live-Stream.js");
+            document.body.appendChild(LiveStreamBarLink);
     
 
 
-
-
-
-    
-    if (location.href.endsWith("index.html")) {
-        location = `.`;
-    }else if (location.href.endsWith(`/?/${navBarMenu_1}`)) {
-        location.reload
-        FUNCfooterBarSendValue()
-        scrollResertBtnSend()
-        document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
-        document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
-        document.querySelector(".navBarMenuItem_1").removeAttribute("href");
-        document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemOwn");
-        document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemNotOwn");
-        document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
-        document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
-        document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
-        document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
-        document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_1}`;
-    
-        document.querySelector(".navBarBg").style.display = 'flex';
-
-        let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
-        navBarMenuItems.forEach(function(element) {
-            element.style.display = 'flex';
-        });
-
-
-        let link = document.createElement('script');
-        link.src = `Contents/${navBarMenu_1}.js`;
-        document.body.appendChild(link);
-
-        
-    }else if (location.href.endsWith(`/?/${navBarMenu_2}`)) {
-        location.reload;
-        FUNCfooterBarSendValue()
-        scrollResertBtnSend()
-        document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
-        document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
-        document.querySelector(".navBarMenuItem_2").removeAttribute("href");
-        document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemOwn");
-        document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemNotOwn");
-        document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
-        document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
-        document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
-        document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
-        document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_2}`;
-        
-        document.querySelector(".navBarBg").style.display = 'flex';
-
-        let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
-        navBarMenuItems.forEach(function(element) {
-            element.style.display = 'flex';
-        });
-
-    
-        
-        let link = document.createElement('script');
-        link.src = `Contents/${navBarMenu_2}.js`;
-        document.body.appendChild(link);
-
-    }else if (location.href.endsWith(`/?/${navBarMenu_3}`)) {
-        location.reload;
-        FUNCfooterBarSendValue()
-        scrollResertBtnSend()
-        document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
-        document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
-        document.querySelector(".navBarMenuItem_3").removeAttribute("href");
-        document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemOwn");
-        document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemNotOwn");
-        document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
-        document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
-        document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
-        document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
-        document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_3}`;
-        
-        document.querySelector(".navBarBg").style.display = 'flex';
-
-        let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
-        navBarMenuItems.forEach(function(element) {
-            element.style.display = 'flex';
-        });
-    
-        
-
-        let link = document.createElement('script');
-        link.src = `Contents/${navBarMenu_3}.js`;
-        document.body.appendChild(link);
-
-    }else if (location.href.includes(`/?/Profile`)) {
-        location.reload;
-        FUNCfooterBarSendValue()
-        scrollResertBtnSend()
-        document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
-        document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
-        document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
-        document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
-        document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
-        document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
-        document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
-        document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
-        document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
-        document.querySelector("title").innerHTML = `${documentTitleName} - Profile`;
-        
-        document.querySelector(".navBarBg").style.display = 'flex';
-
-        let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
-        navBarMenuItems.forEach(function(element) {
-            element.style.display = 'flex';
-        });
-
-
-        if (location.href.endsWith(`/Profile`)) {
+        } else if (location.href.endsWith(`/?/${navBarMenu_2}`)) {
             location.reload;
             FUNCfooterBarSendValue()
+            scrollResertBtnSend()
+            document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
+            document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
+            document.querySelector(".navBarMenuItem_2").removeAttribute("href");
+            document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemOwn");
+            document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
+            document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
+            document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_2}`;
+
+            document.querySelector(".navBarBg").style.display = 'flex';
+
+            let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
+            navBarMenuItems.forEach(function (element) {
+                element.style.display = 'flex';
+            });
+
+
+
             let link = document.createElement('script');
-            link.src = `AdminProfiles/Profile.js`;
-            document.body.appendChild(link); 
+            link.src = `Contents/${navBarMenu_2}.js`;
+            document.body.appendChild(link);
 
-
-        }else if (location.href.endsWith(`/Programmer`)) {
+        } else if (location.href.endsWith(`/?/${navBarMenu_3}`)) {
             location.reload;
-            document.querySelector("title").innerHTML = `${documentTitleName} - Profile | Programmer`;
+            FUNCfooterBarSendValue()
+            scrollResertBtnSend()
+            document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
+            document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
+            document.querySelector(".navBarMenuItem_3").removeAttribute("href");
+            document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemOwn");
+            document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
+            document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
+            document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_3}`;
+
+            document.querySelector(".navBarBg").style.display = 'flex';
+
+            let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
+            navBarMenuItems.forEach(function (element) {
+                element.style.display = 'flex';
+            });
+
+
+
             let link = document.createElement('script');
-            link.src = `AdminProfiles/Admin/Programmer/Programmer.js`;
-            document.body.appendChild(link); 
+            link.src = `Contents/${navBarMenu_3}.js`;
+            document.body.appendChild(link);
 
-
-        }else if (location.href.endsWith(`/Owner`)) {
+        } else if (location.href.includes(`/?/Profile`)) {
             location.reload;
-            document.querySelector("title").innerHTML = `${documentTitleName} - Profile | Owner`;
-            let link = document.createElement('script');
-            link.src = `AdminProfiles/Admin/Manager/Manager.js`;
-            document.body.appendChild(link); 
-        }else(
+            FUNCfooterBarSendValue()
+            scrollResertBtnSend()
+            document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
+            document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
+            document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
+            document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
+            document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
+            document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
+            document.querySelector("title").innerHTML = `${documentTitleName} - Profile`;
+
+            document.querySelector(".navBarBg").style.display = 'flex';
+
+            let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
+            navBarMenuItems.forEach(function (element) {
+                element.style.display = 'flex';
+            });
+
+
+            if (location.href.endsWith(`/Profile`)) {
+                location.reload;
+                FUNCfooterBarSendValue()
+                let link = document.createElement('script');
+                link.src = `AdminProfiles/Profile.js`;
+                document.body.appendChild(link);
+
+
+            } else if (location.href.endsWith(`/Programmer`)) {
+                location.reload;
+                document.querySelector("title").innerHTML = `${documentTitleName} - Profile | Programmer`;
+                let link = document.createElement('script');
+                link.src = `AdminProfiles/Admin/Programmer/Programmer.js`;
+                document.body.appendChild(link);
+
+
+            } else if (location.href.endsWith(`/Owner`)) {
+                location.reload;
+                document.querySelector("title").innerHTML = `${documentTitleName} - Profile | Owner`;
+                let link = document.createElement('script');
+                link.src = `AdminProfiles/Admin/Manager/Manager.js`;
+                document.body.appendChild(link);
+            } else (
+                getPage404Seand()
+            )
+
+        } else {
             getPage404Seand()
-        )
-
-    }else{
-        getPage404Seand()
-    }
-    
-
-
-  })
-  .catch(error => {
-    console.error('Xatolik yuz berdi:', error);
-  });
+        }
 
 
 
-  document.querySelector(".body").innerHTML += `
+    })
+    .catch(error => {
+        console.error('Xatolik yuz berdi:', error);
+    });
+
+
+
+document.querySelector(".body").innerHTML += `
 
   <div class="navBarUnicalMenuItemMenusBarBg">
   <div class="navBarUnicalMenuItemMenusBgCloseBtn" onclick="navBarUnicalMenuItemMenusCloseBtn()"></div>
@@ -808,42 +813,42 @@ setInterval(() => {
   </div>
   
   `
-  
-  
-  
-  let navBarUnicalMenuItemMenusBarValue = false
-  
-  function navBarUnicalMenuItemMenusGetBtn() {
-      if (navBarUnicalMenuItemMenusBarValue === true) {
-          navBarUnicalMenuItemMenusBarValue = false
-      }else if (navBarUnicalMenuItemMenusBarValue === false) {
-          navBarUnicalMenuItemMenusBarValue = true
-      }else{
-          navBarUnicalMenuItemMenusBarValue = true
-      }
-      navBarUnicalMenuItemMenusGetFuncOwn()
-  }
-  
-  function navBarUnicalMenuItemMenusCloseBtn() {
-      navBarUnicalMenuItemMenusBarValue = false
-      navBarUnicalMenuItemMenusGetFuncOwn()
-  }
-  function navBarUnicalMenuItemMenusGetFuncOwn() {
-      document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.display = "flex"
-      if (navBarUnicalMenuItemMenusBarValue === true) {
-          setTimeout(() => {
-              document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.opacity = "1"
-                  document.querySelector(".navBarUnicalMenuItemMenusBg").style.marginRight = "0px"
-          }, 200);
-      }else if (navBarUnicalMenuItemMenusBarValue === false) {
-          document.querySelector(".navBarUnicalMenuItemMenusBg").style.marginRight = "-700px"
-          setTimeout(() => {
-              document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.opacity = "0"
-              setTimeout(() => {
-                  document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.display = "none"
-              }, 400);
-          }, 100);
-      }else{
-          
-      } 
-  }
+
+
+
+let navBarUnicalMenuItemMenusBarValue = false
+
+function navBarUnicalMenuItemMenusGetBtn() {
+    if (navBarUnicalMenuItemMenusBarValue === true) {
+        navBarUnicalMenuItemMenusBarValue = false
+    } else if (navBarUnicalMenuItemMenusBarValue === false) {
+        navBarUnicalMenuItemMenusBarValue = true
+    } else {
+        navBarUnicalMenuItemMenusBarValue = true
+    }
+    navBarUnicalMenuItemMenusGetFuncOwn()
+}
+
+function navBarUnicalMenuItemMenusCloseBtn() {
+    navBarUnicalMenuItemMenusBarValue = false
+    navBarUnicalMenuItemMenusGetFuncOwn()
+}
+function navBarUnicalMenuItemMenusGetFuncOwn() {
+    document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.display = "flex"
+    if (navBarUnicalMenuItemMenusBarValue === true) {
+        setTimeout(() => {
+            document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.opacity = "1"
+            document.querySelector(".navBarUnicalMenuItemMenusBg").style.marginRight = "0px"
+        }, 200);
+    } else if (navBarUnicalMenuItemMenusBarValue === false) {
+        document.querySelector(".navBarUnicalMenuItemMenusBg").style.marginRight = "-700px"
+        setTimeout(() => {
+            document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.opacity = "0"
+            setTimeout(() => {
+                document.querySelector(".navBarUnicalMenuItemMenusBarBg").style.display = "none"
+            }, 400);
+        }, 100);
+    } else {
+
+    }
+}
