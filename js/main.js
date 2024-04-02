@@ -349,7 +349,7 @@ let setContentPageMainContentBar = `
 
 <div class="mainContentRow_4_AllBg mainContentRowBg">
   <div class="mainContentRow_RightBg">
-    <img class="mainContentAnimetedImg" src="img/Manin-Content-imgs/img_14.png" alt="Img" width="110%" style="filter: drop-shadow(0px 3px 3px white);">
+    <img class="mainContentAnimetedImg" src="img/Manin-Content-imgs/img_19.png" alt="Img" width="60%" style="filter: drop-shadow(0px 3px 3px red);">
   </div>
   <div class="mainContentRow_LeftBg">
     <div class="mainContentRow_LeftTextBg">
