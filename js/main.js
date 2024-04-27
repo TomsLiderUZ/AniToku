@@ -1,3 +1,11 @@
+fetch('../config.json')
+    .then(response => response.json())
+    .then(app => {
+        console.log('%c' + "Welcome", 'background-color: black; padding: 20px; border-radius: 20px; text-wrap: nowrap; font-size: 30px; color: white; font-weight: 1000; text-shadow: green 1.41px 1.41px, green 2px 0px, green 1.41px -1.41px, green 0px -2px, green -1.41px -1.41px, green -2px 0px, green -1.41px 1.41px, green 0px 2px;'); console.log('%c' + `${app.data.title.logoName}`, 'font-size: 40px; text-wrap: nowrap; color: red; font-weight: 1000; text-shadow: #ffffff 1.41px 1.41px, #ffffff 2px 0px, #ffffff 1.41px -1.41px, #ffffff 0px -2px, #ffffff -1.41px -1.41px, #ffffff -2px 0px, #ffffff -1.41px 1.41px, #ffffff 0px 2px;');
+    })
+    .catch(error => {
+        console.error('Xatolik yuz berdi:', error);
+    });
 
 
 fetch('../config.json')
@@ -627,7 +635,8 @@ fetch('../config.json')
             `;
 
                 document.querySelector("title").innerHTML = "404 Not Found";
-                console.warn("404 Not Found \n\n" + `🔶Back to Home🔶 \nhttp://${location.host}/?/${navBarMenu_1}`);
+                console.error('%c' + "404 Not Found \n\n\n\n" + `Back to Home \nhttp://${location.host}/?/${navBarMenu_1}`, 'font-size: 20px; color: yellow; font-weight: 1000; ');
+                // console.warn("404 Not Found \n\n" + `🔶Back to Home🔶 \nhttp://${location.host}/?/${navBarMenu_1}`);
                 document.querySelector(".NotFundTextBtn").addEventListener("click", () => {
                     location = `http://${location.host}/?/${navBarMenu_1}`;
                 })
@@ -668,11 +677,11 @@ fetch('../config.json')
             let link = document.createElement('script');
             link.src = `Contents/${navBarMenu_1}.js`;
             document.body.appendChild(link);
-            
+
             let LiveStreamBarLink = document.createElement('script');
-            LiveStreamBarLink.setAttribute("src", "Live-Stream/Live-Stream.js");
+            LiveStreamBarLink.setAttribute("src", "Live-Stream/Live-Stream-card.js");
             document.body.appendChild(LiveStreamBarLink);
-    
+
 
 
         } else if (location.href.endsWith(`/?/${navBarMenu_2}`)) {
@@ -779,6 +788,34 @@ fetch('../config.json')
             } else (
                 getPage404Seand()
             )
+
+        } else if (location.href.endsWith(`/?/Live-Stream`)) {
+            location.reload;
+            FUNCfooterBarSendValue()
+            scrollResertBtnSend()
+            document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
+            document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
+            document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
+            document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
+            document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
+            document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
+            document.querySelector("title").innerHTML = `${documentTitleName} - Live Stream`;
+
+            document.querySelector(".navBarBg").style.display = 'flex';
+
+            let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
+            navBarMenuItems.forEach(function (element) {
+                element.style.display = 'flex';
+            });
+
+            let LiveStreamBarLinkPage = document.createElement('script');
+            LiveStreamBarLinkPage.setAttribute("src", "Live-Stream/Live-Stream.js");
+            document.body.appendChild(LiveStreamBarLinkPage);
+
+
 
         } else {
             getPage404Seand()

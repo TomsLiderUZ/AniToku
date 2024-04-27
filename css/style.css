@@ -983,3 +983,23 @@ body{
     border-radius: 20px;
     background-image: url("../Animes/Alert-Imgs/Live.jpg");
 }
+
+
+
+
+
+.liveStreamBarBg{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    flex-wrap: wrap;
+}
+.liveStreamBarContentName{
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    
+    
+}
