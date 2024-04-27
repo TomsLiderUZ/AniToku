@@ -1,7 +1,7 @@
 fetch('../config.json')
   .then(response => response.json())
   .then(app => {
-    setTimeout(() => {console.clear(); console.log('%c' + "Welcome", 'background-color: black; padding: 20px; border-radius: 20px; text-wrap: nowrap; font-size: 30px; color: white; font-weight: 1000; text-shadow: green 1.41px 1.41px, green 2px 0px, green 1.41px -1.41px, green 0px -2px, green -1.41px -1.41px, green -2px 0px, green -1.41px 1.41px, green 0px 2px;'); console.log('%c' + `${app.data.title.logoName}`, 'font-size: 40px; text-wrap: nowrap; color: red; font-weight: 1000; text-shadow: #ffffff 1.41px 1.41px, #ffffff 2px 0px, #ffffff 1.41px -1.41px, #ffffff 0px -2px, #ffffff -1.41px -1.41px, #ffffff -2px 0px, #ffffff -1.41px 1.41px, #ffffff 0px 2px;');setInterval(() => {console.clear(); console.log('%c' + "Welcome", 'background-color: black; padding: 20px; border-radius: 20px; text-wrap: nowrap; font-size: 30px; color: white; font-weight: 1000; text-shadow: green 1.41px 1.41px, green 2px 0px, green 1.41px -1.41px, green 0px -2px, green -1.41px -1.41px, green -2px 0px, green -1.41px 1.41px, green 0px 2px;'); console.log('%c' + `${app.data.title.logoName}`, 'font-size: 40px; text-wrap: nowrap; color: red; font-weight: 1000; text-shadow: #ffffff 1.41px 1.41px, #ffffff 2px 0px, #ffffff 1.41px -1.41px, #ffffff 0px -2px, #ffffff -1.41px -1.41px, #ffffff -2px 0px, #ffffff -1.41px 1.41px, #ffffff 0px 2px;');}, 25000);}, 15000);
+    setTimeout(() => {console.clear(); console.log('%c' + "Welcome", 'background-color: black; padding: 20px; border-radius: 20px; text-wrap: nowrap; font-size: 30px; color: white; font-weight: 1000; text-shadow: green 1.41px 1.41px, green 2px 0px, green 1.41px -1.41px, green 0px -2px, green -1.41px -1.41px, green -2px 0px, green -1.41px 1.41px, green 0px 2px;'); console.log('%c' + `${app.data.title.logoName}`, 'font-size: 40px; text-wrap: nowrap; color: red; padding: 0 0 0 10px; font-weight: 1000; text-shadow: #ffffff 1.41px 1.41px, #ffffff 2px 0px, #ffffff 1.41px -1.41px, #ffffff 0px -2px, #ffffff -1.41px -1.41px, #ffffff -2px 0px, #ffffff -1.41px 1.41px, #ffffff 0px 2px;');setInterval(() => {console.clear(); console.log('%c' + "Welcome", 'background-color: black; padding: 20px; border-radius: 20px; text-wrap: nowrap; font-size: 30px; color: white; font-weight: 1000; text-shadow: green 1.41px 1.41px, green 2px 0px, green 1.41px -1.41px, green 0px -2px, green -1.41px -1.41px, green -2px 0px, green -1.41px 1.41px, green 0px 2px;'); console.log('%c' + `${app.data.title.logoName}`, 'font-size: 40px; text-wrap: nowrap; color: red; font-weight: 1000; text-shadow: #ffffff 1.41px 1.41px, #ffffff 2px 0px, #ffffff 1.41px -1.41px, #ffffff 0px -2px, #ffffff -1.41px -1.41px, #ffffff -2px 0px, #ffffff -1.41px 1.41px, #ffffff 0px 2px;');}, 25000);}, 15000);
   })
   .catch(error => {
     console.error('Xatolik yuz berdi:', error);
@@ -49,7 +49,7 @@ fetch('../Live-Stream/Config-Live-Stream.json')
         </div>
       </div>
       
-      <div class="footerBarBottom"> </div>
+      <div class="footerBarBottom">© 2023 - <div class="footerBarBottomYear"></div> &nbsp;<a class="footerBarBottomLink_1"></a>&nbsp;  &nbsp;|&nbsp;&nbsp;  Programmer &nbsp;<a href=".?/Profile/Programmer" target="_blank" title="TOMS LIDER">TOMS LIDER</a>&nbsp;</div>
     </div>
 
 `;

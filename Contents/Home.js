@@ -4,6 +4,8 @@ xhr.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
     var CaruselValue = JSON.parse(this.responseText);
 
+    
+
     let setContentPageFooterBar = `
 
         <div class="footerBarBg">
@@ -30,12 +32,12 @@ xhr.onreadystatechange = function () {
               <div class="footerBarTopRightLinksBg">
                 <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardTelegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
                 <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardYoutube" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
-                <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardInstagram" title="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+                <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardInstagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
               </div>
             </div>
           </div>
           
-          <div class="footerBarBottom"> </div>
+          <div class="footerBarBottom">© 2023 - <div class="footerBarBottomYear"></div> &nbsp;<a class="footerBarBottomLink_1"></a>&nbsp;  &nbsp;|&nbsp;&nbsp;  Programmer &nbsp;<a href=".?/Profile/Programmer" target="_blank" title="TOMS LIDER">TOMS LIDER</a>&nbsp;</div>
         </div>
     
     `;
@@ -600,149 +602,151 @@ xhr.onreadystatechange = function () {
     let setContentHomePageCarusel = `
     
         <div class="contentCaruselBg">
-        <div class="contentCaruselPageBackBtnBg contentCaruselPageBtnBg">
-          <div class="contentCaruselPageBackBtn">
-            <i class="fa-solid fa-chevron-left"></i>
+          <div class="contentCaruselBgColorWrapper conentsBgItemsWrapper">
+            <div class="contentCaruselPageBackBtnBg contentCaruselPageBtnBg">
+              <div class="contentCaruselPageBackBtn">
+                <i class="fa-solid fa-chevron-left"></i>
+              </div>
+            </div>
+            <div class="contentCaruselPageCenterItem">
+              <div class="contentCaruselPageItemsBg">
+                <div class="contentCaruselPage_1 contentCaruselPageOwn contentCaruselPage">
+
+                  <div class="contentCaruselPageItmes">
+                    <div class="contentCaruselPageLeftItem">
+                      <div class="contentCaruselPageLeftItemTitel">${caruselTitle1}</div>
+                      <div class="contentCaruselPageLeftItemAbout">
+                        ${caruselAbout1}
+                      </div>
+                      <div class="contentCaruselPageLeftItemBtnBg">
+                        <a href="${caruselURL1}" class="contentCaruselPageLeftItemBtn"><i class="fa-solid fa-eye"></i>&nbsp;Ko'rish</a>
+                      </div>
+                    </div>
+                    <div class="contentCaruselPageRightItem">
+                      <div class="contentCaruselPageRightItemImgBg" style="background-image: url('${caruselIMG1}');">
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="contentCaruselPage_2 contentCaruselPageNotOwn contentCaruselPage">
+
+                  <div class="contentCaruselPageItmes">
+                    <div class="contentCaruselPageLeftItem">
+                      <div class="contentCaruselPageLeftItemTitel">${caruselTitle2}</div>
+                      <div class="contentCaruselPageLeftItemAbout">
+                        ${caruselAbout2}
+                      </div>
+                      <div class="contentCaruselPageLeftItemBtnBg">
+                        <a href="${caruselURL2}" class="contentCaruselPageLeftItemBtn"><i class="fa-solid fa-eye"></i>&nbsp;Ko'rish</a>
+                      </div>
+                    </div>
+                    <div class="contentCaruselPageRightItem">
+                      <div class="contentCaruselPageRightItemImgBg" style="background-image: url('${caruselIMG2}');">
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="contentCaruselPage_3 contentCaruselPageNotOwn contentCaruselPage">
+
+                  <div class="contentCaruselPageItmes">
+                    <div class="contentCaruselPageLeftItem">
+                      <div class="contentCaruselPageLeftItemTitel">${caruselTitle3}</div>
+                      <div class="contentCaruselPageLeftItemAbout">
+                        ${caruselAbout3}
+                      </div>
+                      <div class="contentCaruselPageLeftItemBtnBg">
+                        <a href="${caruselURL3}" class="contentCaruselPageLeftItemBtn"><i class="fa-solid fa-eye"></i>&nbsp;Ko'rish</a>
+                      </div>
+                    </div>
+                    <div class="contentCaruselPageRightItem">
+                      <div class="contentCaruselPageRightItemImgBg" style="background-image: url('${caruselIMG3}');">
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="contentCaruselPage_4 contentCaruselPageNotOwn contentCaruselPage">
+
+                  <div class="contentCaruselPageItmes">
+                    <div class="contentCaruselPageLeftItem">
+                      <div class="contentCaruselPageLeftItemTitel">${caruselTitle4}</div>
+                      <div class="contentCaruselPageLeftItemAbout">
+                        ${caruselAbout4}
+                      </div>
+                      <div class="contentCaruselPageLeftItemBtnBg">
+                        <a href="${caruselURL4}" class="contentCaruselPageLeftItemBtn"><i class="fa-solid fa-eye"></i>&nbsp;Ko'rish</a>
+                      </div>
+                    </div>
+                    <div class="contentCaruselPageRightItem">
+                      <div class="contentCaruselPageRightItemImgBg" style="background-image: url('${caruselIMG4}');">
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="contentCaruselPage_5 contentCaruselPageNotOwn contentCaruselPage">
+
+                  <div class="contentCaruselPageItmes">
+                    <div class="contentCaruselPageLeftItem">
+                      <div class="contentCaruselPageLeftItemTitel">${caruselTitle5}</div>
+                      <div class="contentCaruselPageLeftItemAbout">
+                        ${caruselAbout5}
+                      </div>
+                      <div class="contentCaruselPageLeftItemBtnBg">
+                        <a href="${caruselURL5}" class="contentCaruselPageLeftItemBtn"><i class="fa-solid fa-eye"></i>&nbsp;Ko'rish</a>
+                      </div>
+                    </div>
+                    <div class="contentCaruselPageRightItem">
+                      <div class="contentCaruselPageRightItemImgBg" style="background-image: url('${caruselIMG5}');">
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="contentCaruselPage_6 contentCaruselPageNotOwn contentCaruselPage">
+
+                  <div class="contentCaruselPageItmes">
+                    <div class="contentCaruselPageLeftItem">
+                      <div class="contentCaruselPageLeftItemTitel">${caruselTitle6}</div>
+                      <div class="contentCaruselPageLeftItemAbout">
+                        ${caruselAbout6}
+                      </div>
+                      <div class="contentCaruselPageLeftItemBtnBg">
+                        <a href="${caruselURL6}" class="contentCaruselPageLeftItemBtn"><i class="fa-solid fa-eye"></i>&nbsp;Ko'rish</a>
+                      </div>
+                    </div>
+                    <div class="contentCaruselPageRightItem">
+                      <div class="contentCaruselPageRightItemImgBg" style="background-image: url('${caruselIMG6}');">
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="contentCaruselPageNumbersBg">
+                <div class="contentCaruselPageNumber_1 contentCaruselPageNumber contentCaruselPageNumberOwn"></div>
+                <div class="contentCaruselPageNumber_2 contentCaruselPageNumber"></div>
+                <div class="contentCaruselPageNumber_3 contentCaruselPageNumber"></div>
+                <div class="contentCaruselPageNumber_4 contentCaruselPageNumber"></div>
+                <div class="contentCaruselPageNumber_5 contentCaruselPageNumber" ></div>
+                <div class="contentCaruselPageNumber_6 contentCaruselPageNumber"></div>
+              </div>
+            </div>
+            <div class="contentCaruselPageNextBtnBg contentCaruselPageBtnBg">
+              <div class="contentCaruselPageNextBtn">
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="contentCaruselPageCenterItem">
-          <div class="contentCaruselPageItemsBg">
-            <div class="contentCaruselPage_1 contentCaruselPageOwn contentCaruselPage">
-              
-              <div class="contentCaruselPageItmes">
-                <div class="contentCaruselPageLeftItem">
-                  <div class="contentCaruselPageLeftItemTitel">${caruselTitle1}</div>
-                  <div class="contentCaruselPageLeftItemAbout">
-                    ${caruselAbout1}
-                  </div>
-                  <div class="contentCaruselPageLeftItemBtnBg">
-                    <a href="${caruselURL1}" class="contentCaruselPageLeftItemBtn"><i class="fa-solid fa-eye"></i>&nbsp;Ko'rish</a>
-                  </div>
-                </div>
-                <div class="contentCaruselPageRightItem">
-                  <div class="contentCaruselPageRightItemImgBg" style="background-image: url('${caruselIMG1}');">
-                    
-                  </div>
-                </div>
-              </div>
-  
-            </div>
-            <div class="contentCaruselPage_2 contentCaruselPageNotOwn contentCaruselPage">
-              
-              <div class="contentCaruselPageItmes">
-                <div class="contentCaruselPageLeftItem">
-                  <div class="contentCaruselPageLeftItemTitel">${caruselTitle2}</div>
-                  <div class="contentCaruselPageLeftItemAbout">
-                    ${caruselAbout2}
-                  </div>
-                  <div class="contentCaruselPageLeftItemBtnBg">
-                    <a href="${caruselURL2}" class="contentCaruselPageLeftItemBtn"><i class="fa-solid fa-eye"></i>&nbsp;Ko'rish</a>
-                  </div>
-                </div>
-                <div class="contentCaruselPageRightItem">
-                  <div class="contentCaruselPageRightItemImgBg" style="background-image: url('${caruselIMG2}');">
-                    
-                  </div>
-                </div>
-              </div>
-  
-            </div>
-            <div class="contentCaruselPage_3 contentCaruselPageNotOwn contentCaruselPage">
-  
-              <div class="contentCaruselPageItmes">
-                <div class="contentCaruselPageLeftItem">
-                  <div class="contentCaruselPageLeftItemTitel">${caruselTitle3}</div>
-                  <div class="contentCaruselPageLeftItemAbout">
-                    ${caruselAbout3}
-                  </div>
-                  <div class="contentCaruselPageLeftItemBtnBg">
-                    <a href="${caruselURL3}" class="contentCaruselPageLeftItemBtn"><i class="fa-solid fa-eye"></i>&nbsp;Ko'rish</a>
-                  </div>
-                </div>
-                <div class="contentCaruselPageRightItem">
-                  <div class="contentCaruselPageRightItemImgBg" style="background-image: url('${caruselIMG3}');">
-                    
-                  </div>
-                </div>
-              </div>
-  
-            </div>
-            <div class="contentCaruselPage_4 contentCaruselPageNotOwn contentCaruselPage">
-  
-              <div class="contentCaruselPageItmes">
-                <div class="contentCaruselPageLeftItem">
-                  <div class="contentCaruselPageLeftItemTitel">${caruselTitle4}</div>
-                  <div class="contentCaruselPageLeftItemAbout">
-                    ${caruselAbout4}
-                  </div>
-                  <div class="contentCaruselPageLeftItemBtnBg">
-                    <a href="${caruselURL4}" class="contentCaruselPageLeftItemBtn"><i class="fa-solid fa-eye"></i>&nbsp;Ko'rish</a>
-                  </div>
-                </div>
-                <div class="contentCaruselPageRightItem">
-                  <div class="contentCaruselPageRightItemImgBg" style="background-image: url('${caruselIMG4}');">
-                    
-                  </div>
-                </div>
-              </div>
-  
-            </div>
-            <div class="contentCaruselPage_5 contentCaruselPageNotOwn contentCaruselPage">
-  
-              <div class="contentCaruselPageItmes">
-                <div class="contentCaruselPageLeftItem">
-                  <div class="contentCaruselPageLeftItemTitel">${caruselTitle5}</div>
-                  <div class="contentCaruselPageLeftItemAbout">
-                    ${caruselAbout5}
-                  </div>
-                  <div class="contentCaruselPageLeftItemBtnBg">
-                    <a href="${caruselURL5}" class="contentCaruselPageLeftItemBtn"><i class="fa-solid fa-eye"></i>&nbsp;Ko'rish</a>
-                  </div>
-                </div>
-                <div class="contentCaruselPageRightItem">
-                  <div class="contentCaruselPageRightItemImgBg" style="background-image: url('${caruselIMG5}');">
-                    
-                  </div>
-                </div>
-              </div>
-  
-            </div>
-            <div class="contentCaruselPage_6 contentCaruselPageNotOwn contentCaruselPage">
-  
-              <div class="contentCaruselPageItmes">
-                <div class="contentCaruselPageLeftItem">
-                  <div class="contentCaruselPageLeftItemTitel">${caruselTitle6}</div>
-                  <div class="contentCaruselPageLeftItemAbout">
-                    ${caruselAbout6}
-                  </div>
-                  <div class="contentCaruselPageLeftItemBtnBg">
-                    <a href="${caruselURL6}" class="contentCaruselPageLeftItemBtn"><i class="fa-solid fa-eye"></i>&nbsp;Ko'rish</a>
-                  </div>
-                </div>
-                <div class="contentCaruselPageRightItem">
-                  <div class="contentCaruselPageRightItemImgBg" style="background-image: url('${caruselIMG6}');">
-                    
-                  </div>
-                </div>
-              </div>
-  
-            </div>
-          </div>
-          <div class="contentCaruselPageNumbersBg">
-            <div class="contentCaruselPageNumber_1 contentCaruselPageNumber contentCaruselPageNumberOwn"></div>
-            <div class="contentCaruselPageNumber_2 contentCaruselPageNumber"></div>
-            <div class="contentCaruselPageNumber_3 contentCaruselPageNumber"></div>
-            <div class="contentCaruselPageNumber_4 contentCaruselPageNumber"></div>
-            <div class="contentCaruselPageNumber_5 contentCaruselPageNumber" ></div>
-            <div class="contentCaruselPageNumber_6 contentCaruselPageNumber"></div>
-          </div>
-        </div>
-        <div class="contentCaruselPageNextBtnBg contentCaruselPageBtnBg">
-          <div class="contentCaruselPageNextBtn">
-            <i class="fa-solid fa-chevron-right"></i>
-          </div>
-        </div>
-      </div>
     `;
 
 
@@ -1002,5 +1006,8 @@ xhr.onreadystatechange = function () {
 
 xhr.open("GET", "../Animes/AnimeAbout/Carusel.json", true);
 xhr.send();
+
+
+
 
 

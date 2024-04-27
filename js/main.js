@@ -1,7 +1,17 @@
+// setInterval(() => {
+    if (location.href.includes("file:/")) {
+        setTimeout(() => {
+            console.clear()
+        }, 500);
+        document.body.innerHTML = ""
+    }
+// });
+
+
 fetch('../config.json')
     .then(response => response.json())
     .then(app => {
-        console.log('%c' + "Welcome", 'background-color: black; padding: 20px; border-radius: 20px; text-wrap: nowrap; font-size: 30px; color: white; font-weight: 1000; text-shadow: green 1.41px 1.41px, green 2px 0px, green 1.41px -1.41px, green 0px -2px, green -1.41px -1.41px, green -2px 0px, green -1.41px 1.41px, green 0px 2px;'); console.log('%c' + `${app.data.title.logoName}`, 'font-size: 40px; text-wrap: nowrap; color: red; font-weight: 1000; text-shadow: #ffffff 1.41px 1.41px, #ffffff 2px 0px, #ffffff 1.41px -1.41px, #ffffff 0px -2px, #ffffff -1.41px -1.41px, #ffffff -2px 0px, #ffffff -1.41px 1.41px, #ffffff 0px 2px;');
+        console.log('%c' + "Welcome", 'background-color: black; padding: 20px; border-radius: 20px; text-wrap: nowrap; font-size: 30px; color: white; font-weight: 1000; text-shadow: green 1.41px 1.41px, green 2px 0px, green 1.41px -1.41px, green 0px -2px, green -1.41px -1.41px, green -2px 0px, green -1.41px 1.41px, green 0px 2px;'); console.log('%c' + `${app.data.title.logoName}`, 'font-size: 40px; text-wrap: nowrap; padding: 0 0 0 10px; color: red; font-weight: 1000; text-shadow: #ffffff 1.41px 1.41px, #ffffff 2px 0px, #ffffff 1.41px -1.41px, #ffffff 0px -2px, #ffffff -1.41px -1.41px, #ffffff -2px 0px, #ffffff -1.41px 1.41px, #ffffff 0px 2px;');
     })
     .catch(error => {
         console.error('Xatolik yuz berdi:', error);
@@ -15,6 +25,31 @@ fetch('../config.json')
         footerBarLinkStyle.setAttribute("rel", "stylesheet");
         footerBarLinkStyle.setAttribute("href", "Contents/FooterBar.css");
         document.head.appendChild(footerBarLinkStyle);
+
+
+        function sendNavBarColor1() {
+            setInterval(() => {
+                if (document.querySelector(".conentsBg").scrollTop >= 1) {
+                    document.querySelector(".navBarBg").style.backgroundColor = "black"
+                    document.querySelector(".navBarBg").style.boxShadow = "0px 0px 10px 3px black"
+                    document.querySelector(".navBarBg").style.transition = "all 0.1s linear"
+                } else {
+                    document.querySelector(".navBarBg").style.backgroundColor = "transparent"
+                    document.querySelector(".navBarBg").style.boxShadow = "0px 0px 0px 0px transparent"
+                    document.querySelector(".navBarBg").style.transition = "all 0.22s linear"
+                }
+            });
+        }
+
+
+        function sendNavBarColor2() {
+            setInterval(() => {
+                document.querySelector(".navBarBg").style.backgroundColor = "black"
+                document.querySelector(".navBarBg").style.boxShadow = "0px 0px 10px 3px black"
+            });
+        }
+
+
 
 
         let version = app.config.document_version;
@@ -289,12 +324,12 @@ fetch('../config.json')
           <div class="footerBarTopRightLinksBg">
             <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardTelegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
             <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardYoutube" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
-            <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardInstagram" title="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+            <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardInstagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
       </div>
       
-      <div class="footerBarBottom"> </div>
+      <div class="footerBarBottom">© 2023 - <div class="footerBarBottomYear"></div> &nbsp;<a class="footerBarBottomLink_1"></a>&nbsp;  &nbsp;|&nbsp;&nbsp;  Programmer &nbsp;<a href=".?/Profile/Programmer" target="_blank" title="TOMS LIDER">TOMS LIDER</a>&nbsp;</div>
     </div>
 
 `;
@@ -303,7 +338,7 @@ fetch('../config.json')
 
 <div class="mainContentsBg">
 <div class="mainContentRow_1_AllBg mainContentRowBg">
-  <div class="mainContentRow_LeftBg mainContentBgImgFilter">
+  <div class="mainContentRow_LeftBg mainContentBgImgFilter conentsBgItemsWrapper">
     <div class="mainContentRow_LeftTextBg">
       Reytingi baland, sifatli dubliyaj asosida animelarni 
       <br>
@@ -351,7 +386,7 @@ fetch('../config.json')
     </div>
   </div>
   <div class="mainContentRow_RightBg">
-    <img class="mainContentAnimetedImg" src="img/Manin-Content-imgs/img_13.png" alt="Img" width="95%" style="filter: drop-shadow(0px 3px 3px red);">
+    <img class="mainContentAnimetedImg" src="img/Manin-Content-imgs/img_13.png" alt="Img" width="96%" style="filter: drop-shadow(0px 3px 3px red);">
   </div>
 </div>
 
@@ -472,7 +507,10 @@ fetch('../config.json')
                     document.querySelector(".footerBarTopRightLinkCardTelegram").setAttribute("href", mainDataLinkTelegram)
                     document.querySelector(".footerBarTopRightLinkCardYoutube").setAttribute("href", mainDataLinkYoutube)
                     document.querySelector(".footerBarTopRightLinkCardInstagram").setAttribute("href", mainDataLinkInstagram)
-                    document.querySelector(".footerBarBottom").innerHTML = `© 2023 - ${mainDataCurrentYear} &nbsp;<a href="http://${location.host}/?/${navBarMenu_1}" title="${documentLogNameFooter}">${documentLogNameFooter}</a>&nbsp;  &nbsp;|&nbsp;&nbsp;  Programmer &nbsp;<a href=".?/Profile/Programmer" target="_blank" title="TOMS LIDER">TOMS LIDER</a>&nbsp;`
+                    document.querySelector(".footerBarBottomYear").innerHTML = `&nbsp;${mainDataCurrentYear}`
+                    document.querySelector(".footerBarBottomLink_1").setAttribute("href", `http://${location.host}`)
+                    document.querySelector(".footerBarBottomLink_1").setAttribute("title", `${documentLogNameFooter}`)
+                    document.querySelector(".footerBarBottomLink_1").innerHTML = documentLogNameFooter
                 });
             }, 1100);
         }
@@ -499,6 +537,7 @@ fetch('../config.json')
                 location.reload;
                 FUNCfooterBarSendValue()
                 scrollResertBtnSend()
+                sendNavBarColor1()
                 document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
                 document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
                 document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
@@ -622,7 +661,7 @@ fetch('../config.json')
             }
         </style>
       
-          <div class="NotFundBg">
+          <div class="NotFundBg conentsBgItemsWrapper">
             <div class="NotFundIconGif"></div>
             <div class="NotFundIcon">
               4<span class="NotFundIconTextZero">0</span>4
@@ -655,6 +694,7 @@ fetch('../config.json')
             location.reload
             FUNCfooterBarSendValue()
             scrollResertBtnSend()
+            sendNavBarColor1()
             document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
             document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
             document.querySelector(".navBarMenuItem_1").removeAttribute("href");
@@ -688,6 +728,7 @@ fetch('../config.json')
             location.reload;
             FUNCfooterBarSendValue()
             scrollResertBtnSend()
+            sendNavBarColor2()
             document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
             document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
             document.querySelector(".navBarMenuItem_2").removeAttribute("href");
@@ -716,6 +757,7 @@ fetch('../config.json')
             location.reload;
             FUNCfooterBarSendValue()
             scrollResertBtnSend()
+            sendNavBarColor2()
             document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
             document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
             document.querySelector(".navBarMenuItem_3").removeAttribute("href");
@@ -744,6 +786,7 @@ fetch('../config.json')
             location.reload;
             FUNCfooterBarSendValue()
             scrollResertBtnSend()
+            sendNavBarColor2()
             document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
             document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
             document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
@@ -793,6 +836,7 @@ fetch('../config.json')
             location.reload;
             FUNCfooterBarSendValue()
             scrollResertBtnSend()
+            sendNavBarColor2()
             document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
             document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
             document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
@@ -889,3 +933,4 @@ function navBarUnicalMenuItemMenusGetFuncOwn() {
 
     }
 }
+

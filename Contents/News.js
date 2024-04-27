@@ -24,12 +24,12 @@ let setContentPageFooterBar = `
           <div class="footerBarTopRightLinksBg">
             <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardTelegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
             <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardYoutube" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
-            <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardInstagram" title="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+            <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardInstagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
       </div>
       
-      <div class="footerBarBottom"> </div>
+      <div class="footerBarBottom">© 2023 - <div class="footerBarBottomYear"></div> &nbsp;<a class="footerBarBottomLink_1"></a>&nbsp;  &nbsp;|&nbsp;&nbsp;  Programmer &nbsp;<a href=".?/Profile/Programmer" target="_blank" title="TOMS LIDER">TOMS LIDER</a>&nbsp;</div>
     </div>
 
 `;
@@ -45,7 +45,7 @@ let setContentPageFooterBar = `
 
 let setContentNewsPageValues = `
 
-<div class="contentNewsBg">
+<div class="contentNewsBg conentsBgItemsWrapper">
   <div class="contentNewsTitleBg"><i class="fa-solid fa-newspaper"></i>&nbsp;Yangliklar</div>
   <div class="contentNewsCardsBg"></div>
 </div>
@@ -119,3 +119,5 @@ let setContentNewsPage = `
 `;
 
 document.querySelector(".conentsBg").innerHTML = setContentNewsPage;
+
+
