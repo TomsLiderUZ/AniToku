@@ -1,0 +1,127 @@
+
+.navBarBg{
+    width: 99.7%;
+    /* min-height: 12%; */
+    height: 75px;
+    /* background-color: black; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    position: fixed;
+    opacity: 0;
+    animation: JoinAnimatoinNav 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes JoinAnimatoinNav {
+    0% {
+        opacity: 0;
+        /* margin-top: -30%; */
+    }
+    100% {
+        opacity: 1;
+        /* margin-top: 0; */
+    }
+  }
+
+
+.navBarLogo{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 550;
+    cursor: pointer;
+    /* background-color: aqua; */
+    margin-left: 30px;
+    text-decoration: none;
+    overflow: hidden;
+}
+.navBarLogo .fa-feather-pointed{
+    color: red;
+    font-size: 35px;
+}
+
+.navBarMenus{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: sans-serif;
+    /* background-color: green; */
+    margin-left: 110px;
+}
+/* .navBarMenuItem{
+    display: none;
+} */
+.navBarMenuItemOwn{
+    height: 60%;
+    width: max-content;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    /* border-radius: 10px; */
+    /* background-color: red; */
+    transition: 0.2s all;
+    border-bottom: 4px solid red;
+    margin-right: 10px;
+    font-weight: 1000;
+    color: red;
+    text-decoration: none;
+    overflow: hidden;
+    animation: JoinAnimatoinNavMenuOwn 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes JoinAnimatoinNavMenuOwn {
+    0% {
+        opacity: 0;
+        /* margin-top: -30%; */
+    }
+    100% {
+        opacity: 1;
+        /* margin-top: 0; */
+    }
+  }
+
+
+.navBarMenuItemNotOwn{
+    height: 60%;
+    width: max-content;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s all;
+    border-bottom: 3px solid transparent;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    font-weight: 100;
+}
+
+
+
+.navBarMenuItemNotOwn:hover{
+    border-color: gray;
+    transition: 0.2s all;
+    color: gray;
+}
+
+
+

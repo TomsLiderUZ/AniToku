@@ -2,12 +2,14 @@ body{
     margin: 0;
     padding: 0;
     background-color: rgb(12, 12, 12);
+    width: 100%;
+    height: 100vh;
 }
 *::selection{
     background-color: rgb(200, 28, 28);
     color: white;
 }
-.body{
+.app{
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -16,117 +18,27 @@ body{
     justify-content: center;
     align-items: start;
     flex-wrap: wrap;
+    overflow: auto;
+}
+.app::-webkit-scrollbar {
+    width: 5px;
+} 
+.app::-webkit-scrollbar-track {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background-color: transparent;
+}  
+.app::-webkit-scrollbar-thumb {
+    background: rgb(46, 46, 46);  
+    transition: 1s all;
+    height: 10px;
+}
+.app::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;    
+    background: rgba(255, 0, 0, 0.568); 
 }
 
 
-.navBarBg{
-    width: 100%;
-    /* min-height: 12%; */
-    height: 75px;
-    /* background-color: black; */
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    position: fixed;
-}
-.navBarLogo{
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 20%;
-    font-size: 30px;
-    font-family: sans-serif;
-    font-weight: 550;
-    cursor: pointer;
-    /* background-color: aqua; */
-    margin-left: 30px;
-    text-decoration: none;
-    overflow: hidden;
-}
-.navBarLogo .fa-feather-pointed{
-    color: red;
-    font-size: 35px;
-}
-
-.navBarMenus{
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    width: 50%;
-    font-size: 25px;
-    font-weight: 500;
-    font-family: sans-serif;
-    /* background-color: green; */
-    margin-left: 110px;
-}
-/* .navBarMenuItem{
-    display: none;
-} */
-.navBarMenuItemOwn{
-    height: 60%;
-    width: max-content;
-    padding: 0 20px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: default;
-    /* border-radius: 10px; */
-    /* background-color: red; */
-    transition: 0.2s all;
-    border-bottom: 4px solid red;
-    margin-right: 10px;
-    font-weight: 1000;
-    color: red;
-    text-decoration: none;
-    overflow: hidden;
-    animation: JoinAnimatoinNavMenuOwn 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-@keyframes JoinAnimatoinNavMenuOwn {
-    0% {
-        opacity: 0;
-        /* margin-top: -30%; */
-    }
-    100% {
-        opacity: 1;
-        /* margin-top: 0; */
-    }
-  }
-
-
-.navBarMenuItemNotOwn{
-    height: 60%;
-    width: max-content;
-    padding: 0 20px;
-    box-sizing: border-box;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.2s all;
-    border-bottom: 3px solid transparent;
-    margin-right: 10px;
-    color: white;
-    text-decoration: none;
-    overflow: hidden;
-    font-weight: 100;
-}
-
-
-
-.navBarMenuItemNotOwn:hover{
-    border-color: gray;
-    transition: 0.2s all;
-    color: gray;
-}
 
 
 
@@ -154,22 +66,21 @@ body{
     cursor: pointer;
     border-radius: 50px;
     font-size: 20px;
-    transition: 0.2s all;
+    transition: all 0.2s linear;
     background-color: red;
 }
 
 .navBarUnicalMenuItem:hover{
     background-color: white;
     color: red;
-    transition: 0.2s all;
 }
 
 
 .navBarUnicalMenuItemMenusBarBg{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.555);
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     backdrop-filter: blur(2px);
     display: none;
@@ -193,6 +104,7 @@ body{
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .UnicalMenuItemTitleBg{
     width: 100%;
     height: 10%;
@@ -210,11 +122,10 @@ body{
     font-size: 30px;
     color: white;
     cursor: pointer;
-    transition: 0.1s all;
+    transition: all 0.1s linear;
 }
 .UnicalMenuItemTitleCloseBtnBg:hover{
     color: red;
-    transition: 0.1s all;
 }
 
 .UnicalMenuItemTitleTextBg{
@@ -256,12 +167,11 @@ body{
     text-decoration: none;
     font-weight: 100;
     border-bottom: 1px solid gray;
-    transition: 0.1s all;
+    /* transition: all 0.1s linear; */
 }
 .UnicalMenuItemBg:hover{
     background-color: rgba(255, 255, 255, 0.726);
     color: orangered;
-    transition: 0.1s all;
 }
 
 
@@ -397,37 +307,29 @@ body{
 
 .conentsBg{
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
+    height: max-content;
     box-sizing: border-box;
     color: white;
-    overflow: auto;
-}
-.conentsBg::-webkit-scrollbar {
-    width: 5px;
-} 
-.conentsBg::-webkit-scrollbar-track {
-    border: 1px solid transparent;
-    border-radius: 10px;
-    background-color: transparent;
-}  
-.conentsBg::-webkit-scrollbar-thumb {
-    background: rgb(46, 46, 46);  
-    transition: 1s all;
-    height: 10px;
-}
-.conentsBg::-webkit-scrollbar-thumb:hover {
-    cursor: pointer;    
-    background: rgba(255, 0, 0, 0.568); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 
+hr{
+    width: 100%;
+    border: 2px solid red;
+    box-shadow: 0px 0px 10px 3px red;
+}
 
 
 
 
 .contentCaruselBg{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin-bottom: 80px;
     display: flex;
     justify-content: left;
@@ -570,7 +472,7 @@ body{
     box-sizing: border-box;
 }
 
-.contentCaruselPageLeftItemTitel{
+.contentCaruselPageLeftItemTitle{
     width: 100%;
     height: 17%;
     /* background-color: blueviolet; */
@@ -790,12 +692,13 @@ body{
 
 
 
-
-
-
+.profileBarAllContentsBg{
+    width: 100%;
+    height: max-content;
+}
 
 .profileBarTitleCardsBg{
-    width: 100%;
+    width: 100% !important;
     height: 60px;
     margin-bottom: 25px;
     display: flex;

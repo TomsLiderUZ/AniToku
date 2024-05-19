@@ -1,41 +1,15 @@
-let setContentPageFooterBar = `
-
-    <div class="footerBarBg">
-      <div class="footerBarTop">
-        <div class="footerBarTopLeft">
-          <div class="footerBarTopLeftTitleBg">
-            Kontaktlar
-          </div>
-
-          <div class="footerBarTopLeftCardBg">
-            <div class="footerBarTopLeftCardIconBg"><i class="fa-solid fa-envelope"></i></div>
-            <div class="footerBarTopLeftCardTextBg footerBarTopLeftCardTextEmailBg"> </div>
-          </div>
-          <div class="footerBarTopLeftCardBg">
-            <div class="footerBarTopLeftCardIconBg"><i class="fa-solid fa-square-phone-flip"></i></div>
-            <div class="footerBarTopLeftCardTextBg footerBarTopLeftCardTextNumberBg"> </div>
-          </div>
-
-        </div>
-        <div class="footerBarTopRight">
-          <div class="footerBarTopRightTitleBg">
-            Ijtimoiy tarmoqlar
-          </div>
-          <div class="footerBarTopRightLinksBg">
-            <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardTelegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
-            <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardYoutube" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
-            <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardInstagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="footerBarBottom">© 2023 - <div class="footerBarBottomYear"></div> &nbsp;<a class="footerBarBottomLink_1"></a>&nbsp;  &nbsp;|&nbsp;&nbsp;  Programmer &nbsp;<a href=".?/Profile/Programmer" target="_blank" title="TOMS LIDER">TOMS LIDER</a>&nbsp;</div>
-    </div>
-
-`;
-
-
-
+location.reload
+document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/Home`);
+document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/Genres`);
+document.querySelector(".navBarMenuItem_2").removeAttribute("href");
+document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemOwn");
+document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemNotOwn");
+document.querySelector("title").innerHTML = `${document.querySelector("title").innerHTML} - Yangliklar`;
+document.querySelector(".navBarBg").style.display = 'flex';
+let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
+navBarMenuItems.forEach(function (element) {
+  element.style.display = 'flex';
+});
 
 
 
@@ -115,7 +89,6 @@ fetch('../Animes/AnimeAbout/News.json')
 
 let setContentNewsPage = `
     ${setContentNewsPageValues}
-    ${setContentPageFooterBar}
 `;
 
 document.querySelector(".conentsBg").innerHTML = setContentNewsPage;

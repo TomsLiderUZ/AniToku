@@ -1,46 +1,27 @@
+location.reload
+document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/News`);
+document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/Genres`);
+document.querySelector(".navBarMenuItem_1").removeAttribute("href");
+document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemOwn");
+document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemNotOwn");
+document.querySelector("title").innerHTML = `${document.querySelector("title").innerHTML} - Asosiy`;
+document.querySelector(".navBarBg").style.display = 'flex';
+let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
+navBarMenuItems.forEach(function (element) {
+  element.style.display = 'flex';
+});
+
+
+
+
+
+
+
 
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
-    var CaruselValue = JSON.parse(this.responseText);
-
-    
-
-    let setContentPageFooterBar = `
-
-        <div class="footerBarBg">
-          <div class="footerBarTop">
-            <div class="footerBarTopLeft">
-              <div class="footerBarTopLeftTitleBg">
-                Kontaktlar
-              </div>
-    
-              <div class="footerBarTopLeftCardBg">
-                <div class="footerBarTopLeftCardIconBg"><i class="fa-solid fa-envelope"></i></div>
-                <div class="footerBarTopLeftCardTextBg footerBarTopLeftCardTextEmailBg"> </div>
-              </div>
-              <div class="footerBarTopLeftCardBg">
-                <div class="footerBarTopLeftCardIconBg"><i class="fa-solid fa-square-phone-flip"></i></div>
-                <div class="footerBarTopLeftCardTextBg footerBarTopLeftCardTextNumberBg"> </div>
-              </div>
-    
-            </div>
-            <div class="footerBarTopRight">
-              <div class="footerBarTopRightTitleBg">
-                Ijtimoiy tarmoqlar
-              </div>
-              <div class="footerBarTopRightLinksBg">
-                <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardTelegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
-                <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardYoutube" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
-                <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardInstagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="footerBarBottom">© 2023 - <div class="footerBarBottomYear"></div> &nbsp;<a class="footerBarBottomLink_1"></a>&nbsp;  &nbsp;|&nbsp;&nbsp;  Programmer &nbsp;<a href=".?/Profile/Programmer" target="_blank" title="TOMS LIDER">TOMS LIDER</a>&nbsp;</div>
-        </div>
-    
-    `;
+    var CaruselValue = JSON.parse(this.responseText)
 
 
     let LiveStreamConfig = `
@@ -614,7 +595,7 @@ xhr.onreadystatechange = function () {
 
                   <div class="contentCaruselPageItmes">
                     <div class="contentCaruselPageLeftItem">
-                      <div class="contentCaruselPageLeftItemTitel">${caruselTitle1}</div>
+                      <div class="contentCaruselPageLeftItemTitle">${caruselTitle1}</div>
                       <div class="contentCaruselPageLeftItemAbout">
                         ${caruselAbout1}
                       </div>
@@ -634,7 +615,7 @@ xhr.onreadystatechange = function () {
 
                   <div class="contentCaruselPageItmes">
                     <div class="contentCaruselPageLeftItem">
-                      <div class="contentCaruselPageLeftItemTitel">${caruselTitle2}</div>
+                      <div class="contentCaruselPageLeftItemTitle">${caruselTitle2}</div>
                       <div class="contentCaruselPageLeftItemAbout">
                         ${caruselAbout2}
                       </div>
@@ -654,7 +635,7 @@ xhr.onreadystatechange = function () {
 
                   <div class="contentCaruselPageItmes">
                     <div class="contentCaruselPageLeftItem">
-                      <div class="contentCaruselPageLeftItemTitel">${caruselTitle3}</div>
+                      <div class="contentCaruselPageLeftItemTitle">${caruselTitle3}</div>
                       <div class="contentCaruselPageLeftItemAbout">
                         ${caruselAbout3}
                       </div>
@@ -674,7 +655,7 @@ xhr.onreadystatechange = function () {
 
                   <div class="contentCaruselPageItmes">
                     <div class="contentCaruselPageLeftItem">
-                      <div class="contentCaruselPageLeftItemTitel">${caruselTitle4}</div>
+                      <div class="contentCaruselPageLeftItemTitle">${caruselTitle4}</div>
                       <div class="contentCaruselPageLeftItemAbout">
                         ${caruselAbout4}
                       </div>
@@ -694,7 +675,7 @@ xhr.onreadystatechange = function () {
 
                   <div class="contentCaruselPageItmes">
                     <div class="contentCaruselPageLeftItem">
-                      <div class="contentCaruselPageLeftItemTitel">${caruselTitle5}</div>
+                      <div class="contentCaruselPageLeftItemTitle">${caruselTitle5}</div>
                       <div class="contentCaruselPageLeftItemAbout">
                         ${caruselAbout5}
                       </div>
@@ -714,7 +695,7 @@ xhr.onreadystatechange = function () {
 
                   <div class="contentCaruselPageItmes">
                     <div class="contentCaruselPageLeftItem">
-                      <div class="contentCaruselPageLeftItemTitel">${caruselTitle6}</div>
+                      <div class="contentCaruselPageLeftItemTitle">${caruselTitle6}</div>
                       <div class="contentCaruselPageLeftItemAbout">
                         ${caruselAbout6}
                       </div>
@@ -764,8 +745,6 @@ xhr.onreadystatechange = function () {
 
           ${setContentHomePageCarusel}
           ${LiveStreamConfig}
-
-          ${setContentPageFooterBar}
 
         `;
 
@@ -1006,6 +985,10 @@ xhr.onreadystatechange = function () {
 
 xhr.open("GET", "../Animes/AnimeAbout/Carusel.json", true);
 xhr.send();
+
+
+
+
 
 
 

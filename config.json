@@ -1,34 +1,20 @@
 {
-    "data":{
-        "title":{
+    "versions": {
+        "update": "1.0.1",
+        "mine": {}
+    },
+    "data": {
+        "title": {
             "titleName": "AniToku",
             "logoName": "AniToku"
-        },
-        "nawBarMenus":{
-            "menu_1":{
-                "content": "Asosiy",
-                "url": "Home",
-                "title": "Asosoy"
-            },
-            "menu_2":{
-                "content": "Yangiliklar",
-                "url": "News",
-                "title": "Yangiliklar"
-            },
-            "menu_3":{
-                "content": "Janrlar",
-                "url": "Genres",
-                "title": "Janrlar"
-            }
         }
     },
-    "config":{
-        "contact_number": " ",
-        "contact_email": " ",
-        "contact_telegarm": " ",
+    "config": {
+        "contact_number": "+998 (93) 506 94 12",
+        "contact_email": "lidirgame@gmail.com",
+        "contact_telegarm": "https://t.me/AniToku",
         "contact_youtube": " ",
-        "contact_instagram": " ",
-        "current_year": " ",
-        "document_version": "1.7.3"
+        "contact_instagram": "https://www.instagram.com/anitoku.uz",
+        "current_year": " "
     }
 }

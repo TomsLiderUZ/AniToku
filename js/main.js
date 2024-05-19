@@ -1,11 +1,32 @@
 // setInterval(() => {
-    if (location.href.includes("file:/")) {
-        setTimeout(() => {
-            console.clear()
-        }, 500);
-        document.body.innerHTML = ""
-    }
+if (location.href.includes("file:/")) {
+    setTimeout(() => {
+        console.clear()
+    }, 500);
+    document.body.innerHTML = ""
+}
 // });
+
+
+let NavBarBarLinkJs = document.createElement('script');
+NavBarBarLinkJs.setAttribute("src", "Contents/Elements/NavBar/NavBar.js");
+document.querySelector(".app").appendChild(NavBarBarLinkJs);
+
+document.querySelector(".app").innerHTML += `
+<div class="conentsBg"></div>
+`
+
+let footerBarLinkJs = document.createElement('script');
+footerBarLinkJs.setAttribute("src", "Contents/Elements/Footer/Footer.js");
+document.querySelector(".app").appendChild(footerBarLinkJs);
+
+
+let UpdateAlerJS = document.createElement('script');
+UpdateAlerJS.setAttribute("src", "Contents/Elements/UpdateAlert/Alert.js");
+document.querySelector(".app").appendChild(UpdateAlerJS);
+
+
+
 
 
 fetch('../config.json')
@@ -21,15 +42,12 @@ fetch('../config.json')
 fetch('../config.json')
     .then(response => response.json())
     .then(app => {
-        let footerBarLinkStyle = document.createElement('link');
-        footerBarLinkStyle.setAttribute("rel", "stylesheet");
-        footerBarLinkStyle.setAttribute("href", "Contents/FooterBar.css");
-        document.head.appendChild(footerBarLinkStyle);
+
 
 
         function sendNavBarColor1() {
             setInterval(() => {
-                if (document.querySelector(".conentsBg").scrollTop >= 1) {
+                if (document.querySelector(".app").scrollTop >= 1) {
                     document.querySelector(".navBarBg").style.backgroundColor = "black"
                     document.querySelector(".navBarBg").style.boxShadow = "0px 0px 10px 3px black"
                     document.querySelector(".navBarBg").style.transition = "all 0.1s linear"
@@ -52,7 +70,73 @@ fetch('../config.json')
 
 
 
-        let version = app.config.document_version;
+        function scrollResertBtnSend() {
+            document.querySelector("body").innerHTML +=
+                `
+                    <style>
+                    .contentsBgScrollRestartBtnBg{
+                        width: 150px;
+                        height: 80px;
+                        z-index: 999;
+                        position: absolute;
+                        top: 85%;
+                        right: 0;
+                        margin-right: 1%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: 0.3s all;
+                        overflow: hidden;
+                    }
+                    .contentsBgScrollRestartBtn{
+                        width: 55px;
+                        height: 55px;
+                        border-radius: 50000px;
+                        background-color: rgba(255, 0, 0, 0.4);
+                        position: absolute;
+                        display: flex;
+                        opacity: 0;
+                        margin-right: -200%;
+                        align-items: center;
+                        justify-content: center;
+                        color: rgba(255, 255, 255, 0.4);
+                        cursor: pointer;
+                        transition: 0.3s all;
+                        font-size: 20px;
+                    }
+                    .contentsBgScrollRestartBtn:hover{
+                        background-color: red;
+                        color: white;
+                        width: 58px;
+                        height: 58px;
+                        transition: 0.3s all;
+                    }
+                    </style>
+                    <div class="contentsBgScrollRestartBtnBg">
+                    <div class="contentsBgScrollRestartBtn"><i class="fa-solid fa-chevron-up"></i></div>
+                    </div>
+                `
+
+            document.querySelector(".contentsBgScrollRestartBtn").addEventListener("click", () => {
+                document.querySelector(".app").scrollTop = 0;
+            })
+
+
+            setInterval(() => {
+                if (document.querySelector(".app").scrollTop >= 120) {
+                    document.querySelector(".contentsBgScrollRestartBtn").style.opacity = "1"
+                    document.querySelector(".contentsBgScrollRestartBtn").style.marginRight = "0%"
+                } else {
+                    document.querySelector(".contentsBgScrollRestartBtn").style.opacity = "0"
+                    document.querySelector(".contentsBgScrollRestartBtn").style.marginRight = "-200%"
+                }
+            });
+
+        }
+
+
+
+
 
 
 
@@ -97,131 +181,6 @@ fetch('../config.json')
 
 
 
-        let documentNavMenuContnet_1 = "";
-        let documentNavMenuContnet_2 = "";
-        let documentNavMenuContnet_3 = "";
-
-        function FUNCdocumentNavMenuContnet_1() {
-            if (app.data.nawBarMenus.menu_1.content === "") {
-                documentNavMenuContnet_1 = "Menu-1"
-            } else if (app.data.nawBarMenus.menu_1.content === " ") {
-                documentNavMenuContnet_1 = "Menu-1"
-            } else {
-                documentNavMenuContnet_1 = app.data.nawBarMenus.menu_1.content
-            }
-        }
-        function FUNCdocumentNavMenuContnet_2() {
-            if (app.data.nawBarMenus.menu_2.content === "") {
-                documentNavMenuContnet_2 = "Menu-2"
-            } else if (app.data.nawBarMenus.menu_2.content === " ") {
-                documentNavMenuContnet_2 = "Menu-2"
-            } else {
-                documentNavMenuContnet_2 = app.data.nawBarMenus.menu_2.content
-            }
-        }
-        function FUNCdocumentNavMenuContnet_3() {
-            if (app.data.nawBarMenus.menu_3.content === "") {
-                documentNavMenuContnet_3 = "Menu-3"
-            } else if (app.data.nawBarMenus.menu_3.content === " ") {
-                documentNavMenuContnet_3 = "Menu-3"
-            } else {
-                documentNavMenuContnet_3 = app.data.nawBarMenus.menu_3.content
-            }
-        }
-
-
-        FUNCdocumentNavMenuContnet_1()
-        FUNCdocumentNavMenuContnet_2()
-        FUNCdocumentNavMenuContnet_3()
-
-
-
-        let documentNavMenuTitle_1 = "";
-        let documentNavMenuTitle_2 = "";
-        let documentNavMenuTitle_3 = "";
-
-
-
-        function FUNCdocumentNavMenuTitle_1() {
-            if (app.data.nawBarMenus.menu_1.title === "") {
-                documentNavMenuTitle_1 = "Menu-1"
-            } else if (app.data.nawBarMenus.menu_1.title === " ") {
-                documentNavMenuTitle_1 = "Menu-1"
-            } else {
-                documentNavMenuTitle_1 = app.data.nawBarMenus.menu_1.title
-            }
-        }
-        function FUNCdocumentNavMenuTitle_2() {
-            if (app.data.nawBarMenus.menu_2.title === "") {
-                documentNavMenuTitle_2 = "Menu-2"
-            } else if (app.data.nawBarMenus.menu_2.title === " ") {
-                documentNavMenuTitle_2 = "Menu-2"
-            } else {
-                documentNavMenuTitle_2 = app.data.nawBarMenus.menu_2.title
-            }
-        }
-        function FUNCdocumentNavMenuTitle_3() {
-            if (app.data.nawBarMenus.menu_3.title === "") {
-                documentNavMenuTitle_3 = "Menu-3"
-            } else if (app.data.nawBarMenus.menu_3.title === " ") {
-                documentNavMenuTitle_3 = "Menu-3"
-            } else {
-                documentNavMenuTitle_3 = app.data.nawBarMenus.menu_3.title
-            }
-        }
-
-        FUNCdocumentNavMenuTitle_1()
-        FUNCdocumentNavMenuTitle_2()
-        FUNCdocumentNavMenuTitle_3()
-
-
-        let documentNavMenuURL_1 = "";
-        let documentNavMenuURL_2 = "";
-        let documentNavMenuURL_3 = "";
-
-        function FUNCdocumentNavMenuURL_1() {
-            if (app.data.nawBarMenus.menu_1.url === "") {
-                documentNavMenuURL_1 = "Menu-1"
-            } else if (app.data.nawBarMenus.menu_1.url === " ") {
-                documentNavMenuURL_1 = "Menu-1"
-            } else {
-                documentNavMenuURL_1 = app.data.nawBarMenus.menu_1.url
-            }
-        }
-        function FUNCdocumentNavMenuURL_2() {
-            if (app.data.nawBarMenus.menu_2.url === "") {
-                documentNavMenuURL_2 = "Menu-2"
-            } else if (app.data.nawBarMenus.menu_2.url === " ") {
-                documentNavMenuURL_2 = "Menu-2"
-            } else {
-                documentNavMenuURL_2 = app.data.nawBarMenus.menu_2.url
-            }
-        }
-        function FUNCdocumentNavMenuURL_3() {
-            if (app.data.nawBarMenus.menu_3.url === "") {
-                documentNavMenuURL_3 = "Menu-3"
-            } else if (app.data.nawBarMenus.menu_3.url === " ") {
-                documentNavMenuURL_3 = "Menu-3"
-            } else {
-                documentNavMenuURL_3 = app.data.nawBarMenus.menu_3.url
-            }
-        }
-
-
-        FUNCdocumentNavMenuURL_1()
-        FUNCdocumentNavMenuURL_2()
-        FUNCdocumentNavMenuURL_3()
-
-
-
-
-
-        let navBarMenu_1 = documentNavMenuURL_1;
-        let navBarMenu_2 = documentNavMenuURL_2;
-        let navBarMenu_3 = documentNavMenuURL_3;
-
-
-
         const currentYear = new Date().getFullYear();
         let mainDataNumber = ""
         let mainDataEmail = ""
@@ -262,33 +221,47 @@ fetch('../config.json')
 
         function FUNCmainDataLinkTelegram() {
             if (app.config.contact_telegarm === "") {
-                mainDataLinkTelegram = `http://${location.host}/?/${navBarMenu_1}`
+                mainDataLinkTelegram = `http://${location.host}/?/Links`
             } else if (app.config.contact_telegarm === " ") {
-                mainDataLinkTelegram = `http://${location.host}/?/${navBarMenu_1}`
+                mainDataLinkTelegram = `http://${location.host}/?/Links`
             } else {
                 mainDataLinkTelegram = app.config.contact_telegarm
             }
         }
         function FUNCmainDataLinkYoutube() {
             if (app.config.contact_youtube === "") {
-                mainDataLinkYoutube = `http://${location.host}/?/${navBarMenu_1}`
+                mainDataLinkYoutube = `http://${location.host}/?/Links`
             } else if (app.config.contact_youtube === " ") {
-                mainDataLinkYoutube = `http://${location.host}/?/${navBarMenu_1}`
+                mainDataLinkYoutube = `http://${location.host}/?/Links`
             } else {
                 mainDataLinkYoutube = app.config.contact_youtube
             }
         }
         function FUNCmainDataLinkInstagram() {
             if (app.config.contact_instagram === "") {
-                mainDataLinkInstagram = `http://${location.host}/?/${navBarMenu_1}`
+                mainDataLinkInstagram = `http://${location.host}/?/Links`
             } else if (app.config.contact_instagram === " ") {
-                mainDataLinkInstagram = `http://${location.host}/?/${navBarMenu_1}`
+                mainDataLinkInstagram = `http://${location.host}/?/Links`
             } else {
                 mainDataLinkInstagram = app.config.contact_instagram
             }
         }
 
-
+        function FUNCfooterBarSendValue() {
+            setTimeout(() => {
+                setInterval(() => {
+                    document.querySelector(".footerBarTopLeftCardTextEmailBg").textContent = mainDataEmail
+                    document.querySelector(".footerBarTopLeftCardTextNumberBg").textContent = mainDataNumber
+                    document.querySelector(".footerBarTopRightLinkCardTelegram").setAttribute("href", mainDataLinkTelegram)
+                    document.querySelector(".footerBarTopRightLinkCardYoutube").setAttribute("href", mainDataLinkYoutube)
+                    document.querySelector(".footerBarTopRightLinkCardInstagram").setAttribute("href", mainDataLinkInstagram)
+                    document.querySelector(".footerBarBottomYear").innerHTML = `&nbsp;${mainDataCurrentYear}`
+                    document.querySelector(".footerBarBottomLink_1").setAttribute("href", `http://${location.host}`)
+                    document.querySelector(".footerBarBottomLink_1").setAttribute("title", `${documentLogNameFooter}`)
+                    document.querySelector(".footerBarBottomLink_1").innerHTML = documentLogNameFooter
+                });
+            }, 1100);
+        }
 
 
         FUNCmainDataNumber()
@@ -297,42 +270,6 @@ fetch('../config.json')
         FUNCmainDataLinkTelegram()
         FUNCmainDataLinkYoutube()
         FUNCmainDataLinkInstagram()
-
-        let setContentPageFooterBar = `
-
-    <div class="footerBarBg">
-      <div class="footerBarTop">
-        <div class="footerBarTopLeft">
-          <div class="footerBarTopLeftTitleBg">
-            Kontaktlar
-          </div>
-
-          <div class="footerBarTopLeftCardBg">
-            <div class="footerBarTopLeftCardIconBg"><i class="fa-solid fa-envelope"></i></div>
-            <div class="footerBarTopLeftCardTextBg footerBarTopLeftCardTextEmailBg"> </div>
-          </div>
-          <div class="footerBarTopLeftCardBg">
-            <div class="footerBarTopLeftCardIconBg"><i class="fa-solid fa-square-phone-flip"></i></div>
-            <div class="footerBarTopLeftCardTextBg footerBarTopLeftCardTextNumberBg"> </div>
-          </div>
-
-        </div>
-        <div class="footerBarTopRight">
-          <div class="footerBarTopRightTitleBg">
-            Ijtimoiy tarmoqlar
-          </div>
-          <div class="footerBarTopRightLinksBg">
-            <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardTelegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
-            <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardYoutube" title="Youtube"><i class="fa-brands fa-youtube"></i></a>
-            <a target="_blank" class="footerBarTopRightLinkCard footerBarTopRightLinkCardInstagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="footerBarBottom">© 2023 - <div class="footerBarBottomYear"></div> &nbsp;<a class="footerBarBottomLink_1"></a>&nbsp;  &nbsp;|&nbsp;&nbsp;  Programmer &nbsp;<a href=".?/Profile/Programmer" target="_blank" title="TOMS LIDER">TOMS LIDER</a>&nbsp;</div>
-    </div>
-
-`;
 
         let setContentPageMainContentBar = `
 
@@ -347,7 +284,7 @@ fetch('../config.json')
       Unda ushbu sayt aynan siz uchun
     </div>
     <div class="mainContentRow_LeftButtonBarBg">
-      <a href="./?/${navBarMenu_1}" class="mainContentRow_LeftButtonBarBtnBg">Boshlash uchun bosing&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+      <a href="./?/Home" class="mainContentRow_LeftButtonBarBtnBg">Boshlash uchun bosing&nbsp;<i class="fa-solid fa-angle-right"></i></a>
     </div>
   </div>
   <div class="mainContentRow_RightBg mainContentBgImgFilter">
@@ -368,7 +305,7 @@ fetch('../config.json')
       Janrlaridagi animelar 
     </div>
     <div class="mainContentRow_LeftButtonBarBg">
-      <a href="./?/${navBarMenu_3}" class="mainContentRow_LeftButtonBarBtnBg">Boshlash&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+      <a href="./?/Genres" class="mainContentRow_LeftButtonBarBtnBg">Boshlash&nbsp;<i class="fa-solid fa-angle-right"></i></a>
     </div>
   </div>
 </div>
@@ -382,7 +319,7 @@ fetch('../config.json')
       ${documentLogNameFooter} siz kutgandan ko'roq
     </div>
     <div class="mainContentRow_LeftButtonBarBg">
-      <a href="./?/${navBarMenu_1}" class="mainContentRow_LeftButtonBarBtnBg">Boshlash&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+      <a href="./?/Home" class="mainContentRow_LeftButtonBarBtnBg">Boshlash&nbsp;<i class="fa-solid fa-angle-right"></i></a>
     </div>
   </div>
   <div class="mainContentRow_RightBg">
@@ -416,79 +353,15 @@ fetch('../config.json')
 
 
 
-        function scrollResertBtnSend() {
-            document.querySelector(".body").innerHTML +=
-                `
-<style>
-.contentsBgScrollRestartBtnBg{
-    width: 150px;
-    height: 80px;
-    z-index: 999;
-    position: absolute;
-    top: 85%;
-    right: 0;
-    margin-right: 1%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s all;
-    overflow: hidden;
-}
-.contentsBgScrollRestartBtn{
-    width: 55px;
-    height: 55px;
-    border-radius: 50000px;
-    background-color: rgba(255, 0, 0, 0.4);
-    position: absolute;
-    display: flex;
-    opacity: 0;
-    margin-right: -200%;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255, 255, 255, 0.4);
-    cursor: pointer;
-    transition: 0.3s all;
-    font-size: 20px;
-}
-.contentsBgScrollRestartBtn:hover{
-    background-color: red;
-    color: white;
-    width: 58px;
-    height: 58px;
-    transition: 0.3s all;
-}
-</style>
-<div class="contentsBgScrollRestartBtnBg">
-<div class="contentsBgScrollRestartBtn"><i class="fa-solid fa-chevron-up"></i></div>
-</div>
-`
 
-            document.querySelector(".contentsBgScrollRestartBtn").addEventListener("click", () => {
-                document.querySelector(".conentsBg").scrollTop = 0;
-            })
-
-
-            setInterval(() => {
-                if (document.querySelector(".conentsBg").scrollTop >= 120) {
-                    document.querySelector(".contentsBgScrollRestartBtn").style.opacity = "1"
-                    document.querySelector(".contentsBgScrollRestartBtn").style.marginRight = "0%"
-                } else {
-                    document.querySelector(".contentsBgScrollRestartBtn").style.opacity = "0"
-                    document.querySelector(".contentsBgScrollRestartBtn").style.marginRight = "-200%"
-                }
-            });
-
-        }
 
 
 
 
         document.querySelector(".navBarLogo").innerHTML = documentLogName;
-        document.querySelector(".navBarLogo").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
+        document.querySelector(".navBarLogo").setAttribute("href", `http://${location.host}/`);
 
-        document.querySelector(".navBarMenuItem_1").textContent = documentNavMenuContnet_1;
-        document.querySelector(".navBarMenuItem_2").textContent = documentNavMenuContnet_2;
-        document.querySelector(".navBarMenuItem_3").textContent = documentNavMenuContnet_3;
+
 
         document.querySelector(".navBarBg").style.display = 'flex';
 
@@ -499,21 +372,7 @@ fetch('../config.json')
 
 
 
-        function FUNCfooterBarSendValue() {
-            setTimeout(() => {
-                setInterval(() => {
-                    document.querySelector(".footerBarTopLeftCardTextEmailBg").textContent = mainDataEmail
-                    document.querySelector(".footerBarTopLeftCardTextNumberBg").textContent = mainDataNumber
-                    document.querySelector(".footerBarTopRightLinkCardTelegram").setAttribute("href", mainDataLinkTelegram)
-                    document.querySelector(".footerBarTopRightLinkCardYoutube").setAttribute("href", mainDataLinkYoutube)
-                    document.querySelector(".footerBarTopRightLinkCardInstagram").setAttribute("href", mainDataLinkInstagram)
-                    document.querySelector(".footerBarBottomYear").innerHTML = `&nbsp;${mainDataCurrentYear}`
-                    document.querySelector(".footerBarBottomLink_1").setAttribute("href", `http://${location.host}`)
-                    document.querySelector(".footerBarBottomLink_1").setAttribute("title", `${documentLogNameFooter}`)
-                    document.querySelector(".footerBarBottomLink_1").innerHTML = documentLogNameFooter
-                });
-            }, 1100);
-        }
+
 
         // setInterval(() => {
         var currentURL = location.href;
@@ -535,12 +394,12 @@ fetch('../config.json')
 
             if (location.href === decryptedURL) {
                 location.reload;
-                FUNCfooterBarSendValue()
                 scrollResertBtnSend()
                 sendNavBarColor1()
-                document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
-                document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
-                document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
+                FUNCfooterBarSendValue()
+                document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/Home`);
+                document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/News`);
+                document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/Genres`);
                 document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
                 document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
                 document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
@@ -558,11 +417,10 @@ fetch('../config.json')
                 document.querySelector(".conentsBg").innerHTML = `
 
             ${setContentPageMainContentBar}
-            ${setContentPageFooterBar}
  
             `
             } else {
-                document.querySelector(".body").innerHTML =
+                document.querySelector("body").innerHTML =
                     `
             <style>
             .NotFundBg{
@@ -674,10 +532,10 @@ fetch('../config.json')
             `;
 
                 document.querySelector("title").innerHTML = "404 Not Found";
-                console.error('%c' + "404 Not Found \n\n\n\n" + `Back to Home \nhttp://${location.host}/?/${navBarMenu_1}`, 'font-size: 20px; color: yellow; font-weight: 1000; ');
-                // console.warn("404 Not Found \n\n" + `🔶Back to Home🔶 \nhttp://${location.host}/?/${navBarMenu_1}`);
+                console.error('%c' + "404 Not Found \n\n\n\n" + `Back to Home \nhttp://${location.host}/?/Home`, 'font-size: 20px; color: yellow; font-weight: 1000; ');
+                // console.warn("404 Not Found \n\n" + `🔶Back to Home🔶 \nhttp://${location.host}/?/Home`);
                 document.querySelector(".NotFundTextBtn").addEventListener("click", () => {
-                    location = `http://${location.host}/?/${navBarMenu_1}`;
+                    location = `http://${location.host}/?/Home`;
                 })
             }
         }
@@ -690,113 +548,49 @@ fetch('../config.json')
 
         if (location.href.endsWith("index.html")) {
             location = `.`;
-        } else if (location.href.endsWith(`/?/${navBarMenu_1}`)) {
-            location.reload
-            FUNCfooterBarSendValue()
+        } else if (location.href.endsWith(`/?/Home`)) {
             scrollResertBtnSend()
             sendNavBarColor1()
-            document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
-            document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
-            document.querySelector(".navBarMenuItem_1").removeAttribute("href");
-            document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemOwn");
-            document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemNotOwn");
-            document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
-            document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
-            document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
-            document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
-            document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_1}`;
-
-            document.querySelector(".navBarBg").style.display = 'flex';
-
-            let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
-            navBarMenuItems.forEach(function (element) {
-                element.style.display = 'flex';
-            });
-
-
+            FUNCfooterBarSendValue()
             let link = document.createElement('script');
-            link.src = `Contents/${navBarMenu_1}.js`;
+            link.src = `Contents/Home/Home.js`;
             document.body.appendChild(link);
 
-            let LiveStreamBarLink = document.createElement('script');
-            LiveStreamBarLink.setAttribute("src", "Live-Stream/Live-Stream-card.js");
-            document.body.appendChild(LiveStreamBarLink);
+            // let LiveStreamBarLink = document.createElement('script');
+            // LiveStreamBarLink.setAttribute("src", "Live-Stream/Live-Stream-card.js");
+            // document.body.appendChild(LiveStreamBarLink);
 
-
-
-        } else if (location.href.endsWith(`/?/${navBarMenu_2}`)) {
-            location.reload;
-            FUNCfooterBarSendValue()
+        } else if (location.href.endsWith(`/?/News`)) {
             scrollResertBtnSend()
             sendNavBarColor2()
-            document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
-            document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
-            document.querySelector(".navBarMenuItem_2").removeAttribute("href");
-            document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemOwn");
-            document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemNotOwn");
-            document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
-            document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
-            document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
-            document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
-            document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_2}`;
-
-            document.querySelector(".navBarBg").style.display = 'flex';
-
-            let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
-            navBarMenuItems.forEach(function (element) {
-                element.style.display = 'flex';
-            });
-
-
-
+            FUNCfooterBarSendValue()
             let link = document.createElement('script');
-            link.src = `Contents/${navBarMenu_2}.js`;
+            link.src = `Contents/News/News.js`;
             document.body.appendChild(link);
 
-        } else if (location.href.endsWith(`/?/${navBarMenu_3}`)) {
-            location.reload;
-            FUNCfooterBarSendValue()
+        } else if (location.href.endsWith(`/?/Genres`)) {
             scrollResertBtnSend()
             sendNavBarColor2()
-            document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
-            document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
-            document.querySelector(".navBarMenuItem_3").removeAttribute("href");
-            document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemOwn");
-            document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemNotOwn");
-            document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
-            document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
-            document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
-            document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
-            document.querySelector("title").innerHTML = `${documentTitleName} - ${documentNavMenuTitle_3}`;
-
-            document.querySelector(".navBarBg").style.display = 'flex';
-
-            let navBarMenuItems = document.querySelectorAll('.navBarMenuItem');
-            navBarMenuItems.forEach(function (element) {
-                element.style.display = 'flex';
-            });
-
-
-
+            FUNCfooterBarSendValue()
             let link = document.createElement('script');
-            link.src = `Contents/${navBarMenu_3}.js`;
+            link.src = `Contents/Genres/Genres.js`;
             document.body.appendChild(link);
 
         } else if (location.href.includes(`/?/Profile`)) {
             location.reload;
-            FUNCfooterBarSendValue()
             scrollResertBtnSend()
             sendNavBarColor2()
-            document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
-            document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
-            document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
+            FUNCfooterBarSendValue()
+            document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/Home`);
+            document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/News`);
+            document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/Genres`);
             document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
             document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
             document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
             document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
             document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
             document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
-            document.querySelector("title").innerHTML = `${documentTitleName} - Profile`;
+            document.querySelector("title").innerHTML = `${document.querySelector("title").innerHTML} - Profile`;
 
             document.querySelector(".navBarBg").style.display = 'flex';
 
@@ -808,7 +602,7 @@ fetch('../config.json')
 
             if (location.href.endsWith(`/Profile`)) {
                 location.reload;
-                FUNCfooterBarSendValue()
+
                 let link = document.createElement('script');
                 link.src = `AdminProfiles/Profile.js`;
                 document.body.appendChild(link);
@@ -816,7 +610,7 @@ fetch('../config.json')
 
             } else if (location.href.endsWith(`/Programmer`)) {
                 location.reload;
-                document.querySelector("title").innerHTML = `${documentTitleName} - Profile | Programmer`;
+                document.querySelector("title").innerHTML = `${document.querySelector("title").innerHTML} | Programmer`;
                 let link = document.createElement('script');
                 link.src = `AdminProfiles/Admin/Programmer/Programmer.js`;
                 document.body.appendChild(link);
@@ -824,7 +618,7 @@ fetch('../config.json')
 
             } else if (location.href.endsWith(`/Owner`)) {
                 location.reload;
-                document.querySelector("title").innerHTML = `${documentTitleName} - Profile | Owner`;
+                document.querySelector("title").innerHTML = `${document.querySelector("title").innerHTML} | Owner`;
                 let link = document.createElement('script');
                 link.src = `AdminProfiles/Admin/Manager/Manager.js`;
                 document.body.appendChild(link);
@@ -834,19 +628,19 @@ fetch('../config.json')
 
         } else if (location.href.endsWith(`/?/Live-Stream`)) {
             location.reload;
-            FUNCfooterBarSendValue()
             scrollResertBtnSend()
             sendNavBarColor2()
-            document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/${navBarMenu_1}`);
-            document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/${navBarMenu_2}`);
-            document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/${navBarMenu_3}`);
+            FUNCfooterBarSendValue()
+            document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/Home`);
+            document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/News`);
+            document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/Genres`);
             document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
             document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
             document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
             document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
             document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
             document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
-            document.querySelector("title").innerHTML = `${documentTitleName} - Live Stream`;
+            document.querySelector("title").innerHTML = `${document.querySelector("title").innerHTML} - Live Stream`;
 
             document.querySelector(".navBarBg").style.display = 'flex';
 
@@ -858,6 +652,27 @@ fetch('../config.json')
             let LiveStreamBarLinkPage = document.createElement('script');
             LiveStreamBarLinkPage.setAttribute("src", "Live-Stream/Live-Stream.js");
             document.body.appendChild(LiveStreamBarLinkPage);
+
+
+
+        } else if (location.href.endsWith(`/?/Message`)) {
+            scrollResertBtnSend()
+            sendNavBarColor2()
+            FUNCfooterBarSendValue()
+            document.querySelector(".navBarMenuItem_1").setAttribute("href", `http://${location.host}/?/Home`);
+            document.querySelector(".navBarMenuItem_2").setAttribute("href", `http://${location.host}/?/News`);
+            document.querySelector(".navBarMenuItem_3").setAttribute("href", `http://${location.host}/?/Genres`);
+            document.querySelector(".navBarMenuItem_3").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_3").classList.remove("navBarMenuItemOwn");
+            document.querySelector(".navBarMenuItem_1").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_1").classList.remove("navBarMenuItemOwn");
+            document.querySelector(".navBarMenuItem_2").classList.add("navBarMenuItemNotOwn");
+            document.querySelector(".navBarMenuItem_2").classList.remove("navBarMenuItemOwn");
+
+
+            let MessageSetJs = document.createElement('script');
+            MessageSetJs.setAttribute("src", "Contents/Message/Message.js");
+            document.body.appendChild(MessageSetJs);
 
 
 
@@ -874,7 +689,7 @@ fetch('../config.json')
 
 
 
-document.querySelector(".body").innerHTML += `
+document.querySelector("body").innerHTML += `
 
   <div class="navBarUnicalMenuItemMenusBarBg">
   <div class="navBarUnicalMenuItemMenusBgCloseBtn" onclick="navBarUnicalMenuItemMenusCloseBtn()"></div>
@@ -885,7 +700,7 @@ document.querySelector(".body").innerHTML += `
     </div>
     <div class="UnicalMenuItemsAllBg">
       <a href="." class="UnicalMenuItemBg">Boshiga qaytish</a>
-      <a href="./?/Profile/Owner" class="UnicalMenuItemBg">Admin bilan bog'lanish</a>
+      <a href="./?/Message" class="UnicalMenuItemBg">Admin bilan bog'lanish</a>
       <a href="./?/Profile" class="UnicalMenuItemBg">Vakolatli Shaxslar</a>
       <a href="./?/Anime/Edit" class="UnicalMenuItemBg">Anime editlar</a>
       <a href="./?/About" class="UnicalMenuItemBg">Web-Sayt haqida</a>
