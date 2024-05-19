@@ -1,0 +1,41 @@
+[
+    {
+        "About": "Tez kunda  «Shiliq sifatida qayta tug'ilganim haqida» animesining 3-fasli ham primyera qlinadi. <br> Animenig 3-fasl premyerasi aprel oyida bo'lib o'tadi.",
+        "Date":{
+                "year": "2024",
+                "month": "4",
+                "day": "2",
+                "time": "15:50"
+            },
+        "Image": {
+                "mode": "file",
+                "src": "photo_2024-04-01_23-31-05.jpg"
+            }
+    },
+    {
+        "About": " «Yolg'izlikda daraja ko'tarish» animesining 9-chi qismidan yangi lavha. <br> Yangi qismning premyerasi 9-mart kuni bo'lib o'tadi.",
+        "Date":{
+                "year": "2024",
+                "month": "2",
+                "day": "8",
+                "time": "13:00"
+            },
+        "Image": {
+                "mode": "file",
+                "src": "Img_2024_2_8_13-00.jpg"
+            }
+    },
+    {
+        "About": "Content not available !",
+        "Date":{
+                "year": "0",
+                "month": "0",
+                "day": "0",
+                "time": "00:00"
+            },
+        "Image": {
+                "mode": "file",
+                "src": " "
+            }
+    }
+  ]
