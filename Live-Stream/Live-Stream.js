@@ -9,7 +9,7 @@ fetch('../config.json')
 
 // https://anitokulivestreamconfig.vercel.app/Config-Live-Stream.json
 
-fetch('../Live-Stream/Config-Live-Stream.json')
+fetch('https://anitokulivestreamconfig.vercel.app/Config-Live-Stream.json')
   .then(response => response.json())
   .then(configData => {
     let setContentLivePageValues = `
