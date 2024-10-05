@@ -7,7 +7,7 @@ fetch('https://anitokulivestreamconfig.vercel.app/Config-Live-Stream.json')
     .then(configData => {
 
 
-        if (configData.Live_Active === "on") {
+        // if (configData.Live_Active === "on") {
             document.querySelector(".LiveStreamAlertCardBg").innerHTML = `
                 <a href="./?/Live-Stream" class="LiveStreamAlertCardItemBg" title="Jonli Efirni ko'rish uchun bosing">
                     <div class="LiveStreamAlertLeft">
@@ -16,9 +16,9 @@ fetch('https://anitokulivestreamconfig.vercel.app/Config-Live-Stream.json')
                     <div class="LiveStreamAlertRight">${configData.LiveStream_Settings.Live_Name}</div>
                 </a>
             `
-        }else{
+        // }else{
 
-        }
+        // }
 
 
 
